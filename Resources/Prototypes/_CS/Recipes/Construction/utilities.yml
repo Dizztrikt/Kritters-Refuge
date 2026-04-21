@@ -3,11 +3,6 @@
   graph: WallmountForceFieldGenerator
   startNode: start
   targetNode: generator
-  name: wallmount force field generator
-  description: A wall-mounted generator that projects linked holographic force fields between paired units when powered.
-  icon:
-    sprite: Structures/Power/Generation/wallmount_forcefield_generator.rsi
-    state: panel
   category: construction-category-utilities
   objectType: Structure
   placementMode: SnapgridCenter
