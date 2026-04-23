@@ -9,8 +9,11 @@ public sealed partial class ContentAudioSystem
 {
     private const string AndyAnnouncementPathPrefix = "/Audio/_NF/Announcements/PocketSizedAndy/";
     private const float AndyAnnouncementMaxVolume = 0f;
+    // Options sliders display whole percents. Treat <= 1% as muted so "0%" cannot leak quiet playback.
+    private const float AndyAnnouncementMuteThreshold = 0.01f;
 
     private float _andyAnnouncementVolume;
+    private bool _andyAnnouncementsEnabled = true;
     private bool _andyAnnouncementsMuted;
     private readonly Dictionary<EntityUid, float> _andyAnnouncementBaseVolumes = new();
     private bool _andyAnnouncementsInitialized;
@@ -21,12 +24,24 @@ public sealed partial class ContentAudioSystem
             return;
 
         _andyAnnouncementsInitialized = true;
+        Subs.CVar(_configManager, CCVars.AndyAnnouncementsEnabled, AndyAnnouncementEnabledChanged, true);
         Subs.CVar(_configManager, CCVars.AndyAnnouncementVolume, AndyAnnouncementVolumeChanged, true);
+    }
+
+    private void AndyAnnouncementEnabledChanged(bool enabled)
+    {
+        _andyAnnouncementsEnabled = enabled;
+
+        var query = EntityQueryEnumerator<AudioComponent>();
+        while (query.MoveNext(out var uid, out var component))
+        {
+            UpdateAndyAnnouncementVolume(uid, component);
+        }
     }
 
     private void AndyAnnouncementVolumeChanged(float volume)
     {
-        _andyAnnouncementsMuted = volume <= 0.0001f;
+        _andyAnnouncementsMuted = volume <= AndyAnnouncementMuteThreshold;
         _andyAnnouncementVolume = SharedAudioSystem.GainToVolume(volume);
 
         var query = EntityQueryEnumerator<AudioComponent>();
@@ -50,18 +65,20 @@ public sealed partial class ContentAudioSystem
         if (!IsAndyAnnouncement(component.FileName))
             return;
 
+        if (!_andyAnnouncementsEnabled || _andyAnnouncementsMuted)
+        {
+            if (component.Playing)
+                _audio.Stop(uid, component);
+            return;
+        }
+
         if (!_andyAnnouncementBaseVolumes.TryGetValue(uid, out var baseVolume))
         {
             baseVolume = component.Params.Volume;
             _andyAnnouncementBaseVolumes[uid] = baseVolume;
         }
 
-        var expected = _andyAnnouncementsMuted
-            ? float.NegativeInfinity
-            : baseVolume + _andyAnnouncementVolume;
-
-        if (!_andyAnnouncementsMuted)
-            expected = MathF.Min(expected, AndyAnnouncementMaxVolume);
+        var expected = MathF.Min(baseVolume + _andyAnnouncementVolume, AndyAnnouncementMaxVolume);
 
         if (MathF.Abs(component.Volume - expected) < 0.001f)
             return;
