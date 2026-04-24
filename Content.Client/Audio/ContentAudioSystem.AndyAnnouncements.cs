@@ -1,13 +1,16 @@
 using Content.Shared.CCVar;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Player;
 
 namespace Content.Client.Audio;
 
 public sealed partial class ContentAudioSystem
 {
-    private const string AndyAnnouncementPathPrefix = "/Audio/_NF/Announcements/PocketSizedAndy/";
+    private const string PocketSizedAndyFolderSegment = "/PocketSizedAndy/";
+    private const string AndyAnnouncementFallbackPath = "/Audio/Announcements/announce.ogg";
     private const float AndyAnnouncementMaxVolume = 0f;
     // Options sliders display whole percents. Treat <= 1% as muted so "0%" cannot leak quiet playback.
     private const float AndyAnnouncementMuteThreshold = 0.01f;
@@ -16,6 +19,8 @@ public sealed partial class ContentAudioSystem
     private bool _andyAnnouncementsEnabled = true;
     private bool _andyAnnouncementsMuted;
     private readonly Dictionary<EntityUid, float> _andyAnnouncementBaseVolumes = new();
+    private readonly HashSet<EntityUid> _andyAnnouncementFallbackPlayed = new();
+    private readonly HashSet<EntityUid> _andyAnnouncementDisabledHandled = new();
     private bool _andyAnnouncementsInitialized;
 
     private void InitializeAndyAnnouncements()
@@ -24,19 +29,56 @@ public sealed partial class ContentAudioSystem
             return;
 
         _andyAnnouncementsInitialized = true;
+
+        // Prime from current config immediately so startup audio cannot use stale defaults.
+        _andyAnnouncementsEnabled = _configManager.GetCVar(CCVars.AndyAnnouncementsEnabled);
+        var currentVolume = _configManager.GetCVar(CCVars.AndyAnnouncementVolume);
+        _andyAnnouncementsMuted = currentVolume <= AndyAnnouncementMuteThreshold;
+        _andyAnnouncementVolume = SharedAudioSystem.GainToVolume(currentVolume);
+
         Subs.CVar(_configManager, CCVars.AndyAnnouncementsEnabled, AndyAnnouncementEnabledChanged, true);
         Subs.CVar(_configManager, CCVars.AndyAnnouncementVolume, AndyAnnouncementVolumeChanged, true);
+        TrySubscribeAndyAudioEvents();
+    }
+
+    private void TrySubscribeAndyAudioEvents()
+    {
+        try
+        {
+            SubscribeLocalEvent<AudioComponent, ComponentStartup>(OnAudioStartup);
+            SubscribeLocalEvent<AudioComponent, ComponentShutdown>(OnAudioShutdown);
+        }
+        catch (InvalidOperationException ex)
+            when (ex.Message.Contains("Duplicate Subscriptions", StringComparison.Ordinal))
+        {
+            // Can happen when reconnecting without a full process restart.
+        }
+    }
+
+    private void OnAudioStartup(EntityUid uid, AudioComponent component, ComponentStartup args)
+    {
+        // Apply toggle/volume immediately so short one-shot announcements can't slip through.
+        UpdateAndyAnnouncementVolume(uid, component);
+    }
+
+    private void OnAudioShutdown(EntityUid uid, AudioComponent component, ComponentShutdown args)
+    {
+        _andyAnnouncementBaseVolumes.Remove(uid);
+        _andyAnnouncementFallbackPlayed.Remove(uid);
+        _andyAnnouncementDisabledHandled.Remove(uid);
     }
 
     private void AndyAnnouncementEnabledChanged(bool enabled)
     {
         _andyAnnouncementsEnabled = enabled;
 
-        var query = EntityQueryEnumerator<AudioComponent>();
-        while (query.MoveNext(out var uid, out var component))
+        if (enabled)
         {
-            UpdateAndyAnnouncementVolume(uid, component);
+            _andyAnnouncementDisabledHandled.Clear();
+            _andyAnnouncementFallbackPlayed.Clear();
         }
+
+        UpdateAndyAnnouncementVolumes();
     }
 
     private void AndyAnnouncementVolumeChanged(float volume)
@@ -44,31 +86,53 @@ public sealed partial class ContentAudioSystem
         _andyAnnouncementsMuted = volume <= AndyAnnouncementMuteThreshold;
         _andyAnnouncementVolume = SharedAudioSystem.GainToVolume(volume);
 
-        var query = EntityQueryEnumerator<AudioComponent>();
-        while (query.MoveNext(out var uid, out var component))
-        {
-            UpdateAndyAnnouncementVolume(uid, component);
-        }
+        UpdateAndyAnnouncementVolumes();
     }
 
     private void UpdateAndyAnnouncementVolumes()
     {
+        var snapshot = new List<EntityUid>();
         var query = EntityQueryEnumerator<AudioComponent>();
-        while (query.MoveNext(out var uid, out var component))
+        while (query.MoveNext(out var uid, out _))
         {
+            snapshot.Add(uid);
+        }
+
+        foreach (var uid in snapshot)
+        {
+            if (!TryComp(uid, out AudioComponent? component))
+                continue;
+
             UpdateAndyAnnouncementVolume(uid, component);
         }
     }
 
     private void UpdateAndyAnnouncementVolume(EntityUid uid, AudioComponent component)
     {
-        if (!IsAndyAnnouncement(component.FileName))
+        var isAndy = IsAndyAnnouncement(component.FileName);
+        if (!isAndy)
             return;
 
-        if (!_andyAnnouncementsEnabled || _andyAnnouncementsMuted)
+        if (!_andyAnnouncementsEnabled && _andyAnnouncementDisabledHandled.Contains(uid))
+            return;
+
+        if (!_andyAnnouncementsEnabled)
         {
-            if (component.Playing)
-                _audio.Stop(uid, component);
+            _andyAnnouncementDisabledHandled.Add(uid);
+
+            if (_andyAnnouncementFallbackPlayed.Add(uid))
+            {
+                _audio.PlayGlobal(new ResolvedPathSpecifier(AndyAnnouncementFallbackPath), Filter.Local(), false, component.Params);
+            }
+
+            // Stop the original Andy clip so only the replacement announcement is heard.
+            _audio.Stop(uid, component);
+            return;
+        }
+
+        if (_andyAnnouncementsMuted)
+        {
+            _audio.Stop(uid, component);
             return;
         }
 
@@ -88,14 +152,35 @@ public sealed partial class ContentAudioSystem
 
     private static bool IsAndyAnnouncement(string fileName)
     {
-        if (!fileName.StartsWith(AndyAnnouncementPathPrefix, StringComparison.OrdinalIgnoreCase))
+        if (string.IsNullOrWhiteSpace(fileName))
             return false;
 
-        var filenameStart = fileName.LastIndexOf('/') + 1;
-        if (filenameStart <= 0 || filenameStart >= fileName.Length)
+        var normalized = fileName.Replace('\\', '/').Trim();
+
+        if (normalized.StartsWith("SoundPathSpecifier(", StringComparison.OrdinalIgnoreCase)
+            && normalized.EndsWith(")", StringComparison.Ordinal))
+        {
+            normalized = normalized["SoundPathSpecifier(".Length..^1];
+        }
+
+        if (normalized.StartsWith("ResolvedPathSpecifier(", StringComparison.OrdinalIgnoreCase)
+            && normalized.EndsWith(")", StringComparison.Ordinal))
+        {
+            normalized = normalized["ResolvedPathSpecifier(".Length..^1];
+        }
+
+        normalized = normalized.Trim();
+        if (!normalized.StartsWith('/'))
+            normalized = $"/{normalized}";
+
+        if (normalized.EndsWith(")", StringComparison.Ordinal))
+            normalized = normalized[..^1];
+
+        // Match any resource path that plays from a PocketSizedAndy folder
+        // (e.g. /Audio/_NF/Announcements/PocketSizedAndy/* or /Audio/_NF/Ambience/PocketSizedAndy/*).
+        if (!normalized.Contains(PocketSizedAndyFolderSegment, StringComparison.OrdinalIgnoreCase))
             return false;
 
-        return fileName.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase)
-            && fileName[filenameStart..].StartsWith("andy", StringComparison.OrdinalIgnoreCase);
+        return normalized.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase);
     }
 }
