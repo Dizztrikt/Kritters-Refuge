@@ -44,6 +44,7 @@
   # Starlight specific species
   <Box>
   <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/>
+  <GuideEntityEmbed Entity="MobResomi" Caption="Resomi"/>
   </Box>
   # Coyote Sector specific species
   <Box>
