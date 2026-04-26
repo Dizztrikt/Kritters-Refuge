@@ -17,7 +17,7 @@
 
 
   <Box>
-    <GuideEntityEmbed Entity="MobResomiDummy" Caption=""/>
+    <GuideEntityEmbed Entity="MobResomi" Caption=""/>
   </Box>
 
   Resomi are a small avian-like species that hail from an icy world.
