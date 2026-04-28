@@ -48,6 +48,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     private bool _enabled;
     private float _baseSaleRate;
 
+    //_CS Start
     private enum PostPurchaseAtmosFix
     {
         RebuildAndStandardPressurize,
@@ -58,6 +59,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         ["/Maps/_CS/Shuttles/Scrap/khonsu.yml"] = PostPurchaseAtmosFix.RebuildAndStandardPressurize,
     };
+    //_CS End
 
     // The type of error from the attempted sale of a ship.
     public enum ShipyardSaleError
