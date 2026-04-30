@@ -3,7 +3,7 @@
   bodyPart: Special
   markingCategory: Special
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -27,7 +27,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:

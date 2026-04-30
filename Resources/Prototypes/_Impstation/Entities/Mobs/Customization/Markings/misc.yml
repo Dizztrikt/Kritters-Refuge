@@ -6,7 +6,7 @@
 #  id: FullID
 #  bodyPart: Part
 #  markingCategory: Category
-#  kindAllowance: [BasicHumanlike, BasicFurry]
+#  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
 #  speciesRestriction: [Species, Species]
 #  youre on your own for figuring out the coloring system, my friend
 #  sprites:
@@ -18,8 +18,8 @@
   id: fizz
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ SlimePerson ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -30,8 +30,8 @@
   id: bubble
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ SlimePerson ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -42,8 +42,8 @@
   id: fishbowl
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ SlimePerson ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -56,8 +56,8 @@
   id: FadingStars
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ SlimePerson ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -73,8 +73,8 @@
   id: DionaLivingNymph
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dionalivingnymph
@@ -83,8 +83,8 @@
   id: DionaMossChest
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -95,8 +95,8 @@
   id: DionaMoonBloom
   bodyPart: HeadTop
   markingCategory: HeadTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -108,8 +108,8 @@
   id: DionaBigFirefly
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -121,8 +121,8 @@
   id: DionaFirefly
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -134,8 +134,8 @@
   id: DionaPollenDust
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Diona ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -146,8 +146,8 @@
   id: DwarfBearCheeks
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: false
   sprites:
@@ -159,8 +159,8 @@
   id: DwarfHeadGlow
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: false
   sprites:
@@ -172,8 +172,8 @@
   id: DwarfConstellationHead
   bodyPart: Head
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -189,8 +189,8 @@
   id: DwarfConstellationChest
   bodyPart: Chest
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -206,8 +206,8 @@
   id: DwarfConstellationLArm
   bodyPart: LArm
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -223,8 +223,8 @@
   id: DwarfConstellationLHand
   bodyPart: LHand
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -240,8 +240,8 @@
   id: DwarfConstellationRArm
   bodyPart: RArm
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -257,8 +257,8 @@
   id: DwarfConstellationRHand
   bodyPart: RHand
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -274,8 +274,8 @@
   id: DwarfConstellationLLeg
   bodyPart: LLeg
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -291,8 +291,8 @@
   id: DwarfConstellationLFoot
   bodyPart: LFoot
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -308,8 +308,8 @@
   id: DwarfConstellationRLeg
   bodyPart: RLeg
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -325,8 +325,8 @@
   id: DwarfConstellationRFoot
   bodyPart: RFoot
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -342,8 +342,8 @@
   id: DwarfChestHair
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dwarfchesthair
@@ -352,8 +352,8 @@
   id: DwarfArmHair
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dwarfarmhair
@@ -362,8 +362,8 @@
   id: DwarfLegHair
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dwarfleghair
@@ -372,8 +372,8 @@
   id: DwarfTattooShootingStar
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -388,8 +388,8 @@
   id: DwarfMarkBear
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -404,8 +404,8 @@
   id: DwarfMarkKangarooLHand
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -420,8 +420,8 @@
   id: DwarfMarkKangarooRHand
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -436,8 +436,8 @@
   id: DwarfMarkCobra
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -452,8 +452,8 @@
   id: DwarfMarkSpider
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -468,8 +468,8 @@
   id: SpiderMirror
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Arachnid ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -481,8 +481,8 @@
   id: SpiderGlowEyes
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Arachnid ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -494,8 +494,8 @@
   id: SpiderEyesMulti
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Arachnid ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -512,8 +512,8 @@
   id: MothTrueButterfly
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -528,8 +528,8 @@
   id: MothRhinoBeetle
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -544,8 +544,8 @@
   id: MothGlasswing
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -560,8 +560,8 @@
   id: MothBee
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -576,8 +576,8 @@
   id: MothGlowAntenna
   bodyPart: HeadTop
   markingCategory: HeadTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -589,8 +589,8 @@
   id: MothFireflyOverlay
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -602,8 +602,8 @@
   id: MothFirefly
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -614,8 +614,8 @@
   id: MothBeetleTail
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -630,8 +630,8 @@
   id: MothBeetleHorn1
   bodyPart: HeadTop
   markingCategory: HeadTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -642,8 +642,8 @@
   id: MothBeetleHorn2
   bodyPart: HeadTop
   markingCategory: HeadTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -654,8 +654,8 @@
   id: MothBiggerEyes
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -668,8 +668,8 @@
   id: MothSnoth
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Moth ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -682,8 +682,8 @@
   id: VoxCocktail
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -700,8 +700,8 @@
   id: VoxTailBalled
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -712,8 +712,8 @@
   id: VoxTailSplit
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -724,8 +724,8 @@
   id: VoxTailStripes
   bodyPart: Chest
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -736,8 +736,8 @@
   id: VoxLArmProsthetic
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   coloring:
@@ -753,8 +753,8 @@
   id: VoxRArmProsthetic
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   coloring:
@@ -770,8 +770,8 @@
   id: VoxBeakColor
   bodyPart: Snout
   markingCategory: Snout
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -782,8 +782,8 @@
   id: VoxBeakSplit
   bodyPart: Snout
   markingCategory: Snout
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -796,8 +796,8 @@
   id: VoxBeakTipped
   bodyPart: Snout
   markingCategory: Snout
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -808,8 +808,8 @@
   id: VoxChestPlumage
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -820,8 +820,8 @@
   id: VoxFootSpines
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -832,8 +832,8 @@
   id: VoxFootGradientLFoot
   bodyPart: LFoot
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -844,8 +844,8 @@
   id: VoxFootGradientRFoot
   bodyPart: RFoot
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -856,8 +856,8 @@
   id: VoxLegGradientLLeg
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -868,8 +868,8 @@
   id: VoxLegGradientRLeg
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -880,8 +880,8 @@
   id: VoxHandGradientRHand
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -896,8 +896,8 @@
   id: VoxHandGradientLHand
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -912,8 +912,8 @@
   id: VoxHeadGradient
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -928,8 +928,8 @@
   id: VoxTailBell
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -942,8 +942,8 @@
   id: VoxTailBack
   bodyPart: Tail
   markingCategory: Tail
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -954,8 +954,8 @@
   id: VoxTailLantern
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -967,8 +967,8 @@
   id: VoxTailSingleStripe
   bodyPart: Chest
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -979,8 +979,8 @@
   id: VoxTailSmallPlume
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -991,8 +991,8 @@
   id: VoxTailSpines
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1003,8 +1003,8 @@
   id: VoxArmsStripesLHand
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1015,8 +1015,8 @@
   id: VoxArmsStripesRHand
   bodyPart: RArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1027,8 +1027,8 @@
   id: VoxLegsStripesLLeg
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1039,8 +1039,8 @@
   id: VoxLegsStripesRLeg
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1051,8 +1051,8 @@
   id: VoxChains
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1063,8 +1063,8 @@
   id: VoxSunAndMoon
   bodyPart: Tail
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1075,8 +1075,8 @@
   id: VoxCheeks
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1087,8 +1087,8 @@
   id: VoxBelly
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Vox ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: false
   followSkinColor: false
   sprites:
@@ -1099,8 +1099,8 @@
   id: VitiligoHeadL
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1115,8 +1115,8 @@
   id: VitiligoHeadR
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1131,8 +1131,8 @@
   id: VitiligoHeadJaw
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1147,8 +1147,8 @@
   id: VitiligoChestF
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1163,8 +1163,8 @@
   id: VitiligoChestSpots
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1179,8 +1179,8 @@
   id: VitiligoArmR
   bodyPart: RArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1195,8 +1195,8 @@
   id: VitiligoArmL
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1211,8 +1211,8 @@
   id: VitiligoHandR
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1227,8 +1227,8 @@
   id: VitiligoHandL
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1243,8 +1243,8 @@
   id: VitiligoLegR
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:
@@ -1259,8 +1259,8 @@
   id: VitiligoLegL
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   coloring:
     default:

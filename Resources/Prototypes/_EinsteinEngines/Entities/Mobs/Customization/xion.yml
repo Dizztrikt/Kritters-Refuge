@@ -2,8 +2,8 @@
   id: CyberLimbsMarkingXionHead
   bodyPart: Head
   markingCategory: BaseHead
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_monitor.rsi
     state: head-1
@@ -14,8 +14,8 @@
   id: CyberLimbsMarkingXionHeadAlt
   bodyPart: Head
   markingCategory: BaseHead
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_alt1.rsi
     state: head-1
@@ -26,8 +26,8 @@
   id: CyberLimbsMarkingXionChest
   bodyPart: Chest
   markingCategory: BaseChest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: torso-1
@@ -38,8 +38,8 @@
   id: CyberLimbsMarkingXionLArm
   bodyPart: LArm
   markingCategory: BaseArms # BaseLArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_arm-1
@@ -50,8 +50,8 @@
   id: CyberLimbsMarkingXionLHand
   bodyPart: LHand
   markingCategory: BaseArms # BaseLHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_hand-1
@@ -62,8 +62,8 @@
   id: CyberLimbsMarkingXionLLeg
   bodyPart: LLeg
   markingCategory: BaseLegs # BaseLLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_leg-1
@@ -75,8 +75,8 @@
   id: CyberLimbsMarkingXionLFoot
   bodyPart: LFoot
   markingCategory: BaseLegs # BaseLFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_foot-1
@@ -89,8 +89,8 @@
   id: CyberLimbsMarkingXionRArm
   bodyPart: RArm
   markingCategory: BaseArms # BaseRArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_arm-1
@@ -103,8 +103,8 @@
   id: CyberLimbsMarkingXionRHand
   bodyPart: RHand
   markingCategory: BaseArms # BaseRHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_hand-1
@@ -115,8 +115,8 @@
   id: CyberLimbsMarkingXionRLeg
   bodyPart: RLeg
   markingCategory: BaseLegs # BaseRLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_leg-1
@@ -128,8 +128,8 @@
   id: CyberLimbsMarkingXionRFoot
   bodyPart: RFoot
   markingCategory: BaseLegs # BaseRFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_foot-1

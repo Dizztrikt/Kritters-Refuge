@@ -3,8 +3,8 @@
   id: ArmTwistingLeft
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -14,8 +14,8 @@
   id: ArmTwistingRight
   bodyPart: RArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -25,8 +25,8 @@
   id: ChestBackstabbed
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -36,8 +36,8 @@
   id: ChestTwistingLeft
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -47,8 +47,8 @@
   id: ChestTwistingRight
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -58,8 +58,8 @@
   id: ChestStar
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -69,8 +69,8 @@
   id: HandTwistingLeft
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -80,8 +80,8 @@
   id: HandTwistingRight
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -91,8 +91,8 @@
   id: SmileScars
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -102,8 +102,8 @@
   id: HeadTwisting
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -113,8 +113,8 @@
   id: LegTwistingLeft
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -124,8 +124,8 @@
   id: LegTwistingRight
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -135,8 +135,8 @@
   id: TorsoIncision
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -147,8 +147,8 @@
   id: ArmProstheticLeft
   bodyPart: LArm
   markingCategory: BaseArms # BaseLArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -163,8 +163,8 @@
   id: ArmProstheticRight
   bodyPart: RArm
   markingCategory: BaseArms # BaseRArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -179,8 +179,8 @@
   id: FootProstheticLeft
   bodyPart: LFoot
   markingCategory: BaseLegs # BaseLFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -195,8 +195,8 @@
   id: FootProstheticRight
   bodyPart: RFoot
   markingCategory: BaseLegs # BaseRFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -211,8 +211,8 @@
   id: HandProstheticLeft
   bodyPart: LHand
   markingCategory: BaseArms # BaseLHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -227,8 +227,8 @@
   id: HandProstheticRight
   bodyPart: RHand
   markingCategory: BaseArms # BaseRHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -243,8 +243,8 @@
   id: LegProstheticLeft
   bodyPart: LLeg
   markingCategory: BaseLegs # BaseLLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -259,8 +259,8 @@
   id: LegProstheticRight
   bodyPart: RLeg
   markingCategory: BaseLegs # BaseRLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:

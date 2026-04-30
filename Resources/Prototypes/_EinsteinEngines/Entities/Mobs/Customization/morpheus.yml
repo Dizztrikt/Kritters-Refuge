@@ -2,8 +2,8 @@
   id: CyberLimbsMarkingMorpheusHead
   bodyPart: Head
   markingCategory: BaseHead
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -17,8 +17,8 @@
   id: CyberLimbsMarkingMorpheusHeadAlt
   bodyPart: Head
   markingCategory: BaseHead
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -32,8 +32,8 @@
   id: CyberLimbsMarkingMorpheusChest
   bodyPart: Chest
   markingCategory: BaseChest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -47,8 +47,8 @@
   id: CyberLimbsMarkingMorpheusLArm
   bodyPart: LArm
   markingCategory: BaseArms # BaseLArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -62,8 +62,8 @@
   id: CyberLimbsMarkingMorpheusLHand
   bodyPart: LHand
   markingCategory: BaseArms # BaseLHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -77,8 +77,8 @@
   id: CyberLimbsMarkingMorpheusLLeg
   bodyPart: LLeg
   markingCategory: BaseLegs # BaseLLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -93,8 +93,8 @@
   id: CyberLimbsMarkingMorpheusLFoot
   bodyPart: LFoot
   markingCategory: BaseLegs # BaseLFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -110,8 +110,8 @@
   id: CyberLimbsMarkingMorpheusRArm
   bodyPart: RArm
   markingCategory: BaseArms # BaseRArm
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -126,8 +126,8 @@
   id: CyberLimbsMarkingMorpheusRHand
   bodyPart: RHand
   markingCategory: BaseArms # BaseRHand
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -141,8 +141,8 @@
   id: CyberLimbsMarkingMorpheusRLeg
   bodyPart: RLeg
   markingCategory: BaseLegs # BaseRLeg
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -157,8 +157,8 @@
   id: CyberLimbsMarkingMorpheusRFoot
   bodyPart: RFoot
   markingCategory: BaseLegs # BaseRFoot
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
