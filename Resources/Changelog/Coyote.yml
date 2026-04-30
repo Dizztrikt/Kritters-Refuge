@@ -2637,3 +2637,10 @@ Entries:
   id: 303
   time: '2026-04-30T04:04:37.0000000+00:00'
   url: https://github.com/ARF-SS13/coyote-frontier/pull/1178
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Hardsuit textures
+  id: 304
+  time: '2026-04-30T06:11:37.0000000+00:00'
+  url: https://github.com/ARF-SS13/coyote-frontier/pull/1180
