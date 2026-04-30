@@ -2630,3 +2630,10 @@ Entries:
   id: 302
   time: '2026-04-27T04:02:12.0000000+00:00'
   url: https://github.com/ARF-SS13/coyote-frontier/pull/1177
+- author: Khaomi
+  changes:
+    - type: Tweak
+      message: Markings are now unlocked, all speices can have any kind of markings
+  id: 303
+  time: '2026-04-30T04:04:37.0000000+00:00'
+  url: https://github.com/ARF-SS13/coyote-frontier/pull/1178
