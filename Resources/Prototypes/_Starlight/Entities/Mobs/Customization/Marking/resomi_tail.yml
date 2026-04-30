@@ -4,6 +4,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail
@@ -15,6 +16,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail
@@ -24,6 +26,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_top
@@ -37,6 +40,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_damaged
@@ -46,6 +50,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_damaged
@@ -57,6 +62,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_stubby
@@ -66,6 +72,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_stubby
@@ -78,6 +85,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers
@@ -87,6 +95,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_right_upper
@@ -102,6 +111,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_short
@@ -111,6 +121,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_fledgling
@@ -120,6 +131,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_large
@@ -129,6 +141,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_stubby
@@ -138,6 +151,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_feathers_damaged
@@ -148,6 +162,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_stripes
@@ -157,6 +172,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_spots
@@ -166,6 +182,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     layers:
       tail_prosthetic_wood:
@@ -180,6 +197,7 @@
   bodyPart: Tail
   markingCategory: TailExtras
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     layers:
       tail_prosthetic_hightech:
@@ -199,6 +217,7 @@
         type: !type:SimpleColoring
           color: white
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_prosthetic_unbranded
@@ -213,6 +232,7 @@
         type: !type:SimpleColoring
           color: white
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_band
@@ -230,6 +250,7 @@
         type: !type:SimpleColoring
           color: white
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_band_multicolored_1
@@ -246,6 +267,7 @@
         type: !type:SimpleColoring
           color: white
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_band_large
@@ -263,6 +285,7 @@
         type: !type:SimpleColoring
           color: white
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_tail_markings.rsi
     state: tail_band_split_1

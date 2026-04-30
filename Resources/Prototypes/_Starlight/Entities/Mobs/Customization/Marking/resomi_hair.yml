@@ -3,6 +3,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiBackstrafe
@@ -12,6 +13,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiBurstShort
@@ -21,6 +23,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiDefault
@@ -30,6 +33,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiDroopy
@@ -39,6 +43,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiEars
@@ -48,6 +53,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiFluffymohawk
@@ -57,6 +63,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiHedge
@@ -66,6 +73,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiLongway
@@ -75,6 +83,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiMane
@@ -84,6 +93,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiManeBeardless
@@ -93,6 +103,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiMohawk
@@ -102,6 +113,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiMushroom
@@ -111,6 +123,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiNotree
@@ -120,6 +133,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSpiky
@@ -129,6 +143,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiPointy
@@ -138,6 +153,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiTwies
@@ -147,6 +163,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiUpright
@@ -156,6 +173,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiLong
@@ -165,6 +183,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiColonel
@@ -174,6 +193,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiWedge
@@ -183,6 +203,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSamurai
@@ -192,6 +213,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiCube
@@ -201,6 +223,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiAerodynamic
@@ -210,6 +233,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiBun
@@ -219,6 +243,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiCowlick
@@ -228,6 +253,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiCrest
@@ -237,6 +263,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiCrowned
@@ -246,6 +273,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiMohawk_Alt
@@ -255,6 +283,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiPeel
@@ -264,6 +293,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiPonytail
@@ -273,6 +303,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSleek
@@ -282,6 +313,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSoap
@@ -291,6 +323,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSpiky_Alt
@@ -300,6 +333,7 @@
   bodyPart: Hair
   markingCategory: Hair
   speciesRestriction: [ Resomi ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/Resomi/resomi_hair.rsi
       state: ResomiSweptup

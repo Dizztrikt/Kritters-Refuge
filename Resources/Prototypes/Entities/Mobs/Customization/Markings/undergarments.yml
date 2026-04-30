@@ -6,8 +6,8 @@
   id: UndergarmentBottomBoxers
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -20,8 +20,8 @@
   id: UndergarmentBottomBriefs
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -34,8 +34,8 @@
   id: UndergarmentBottomSatin
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -48,8 +48,8 @@
   id: UndergarmentTopBra
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -62,8 +62,8 @@
   id: UndergarmentTopSportsbra
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -76,8 +76,8 @@
   id: UndergarmentTopBinder
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -90,8 +90,8 @@
   id: UndergarmentTopTanktop
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Arachnid, Diona, Human, Dwarf, Moth, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -106,6 +106,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -119,6 +120,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -132,6 +134,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -145,6 +148,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -158,6 +162,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -171,6 +176,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -184,6 +190,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -197,8 +204,8 @@
   id: UndergarmentBottomBoxersReptilian
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Reptilian]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -211,8 +218,8 @@
   id: UndergarmentBottomBriefsReptilian
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Reptilian]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -225,8 +232,8 @@
   id: UndergarmentBottomSatinReptilian
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Reptilian]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type: null
@@ -241,7 +248,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -256,7 +263,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -271,7 +278,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -286,7 +293,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -301,7 +308,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -316,7 +323,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -331,7 +338,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -346,7 +353,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -361,7 +368,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -376,7 +383,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -391,7 +398,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -406,7 +413,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -421,7 +428,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -436,7 +443,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -451,7 +458,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -466,7 +473,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -481,7 +488,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -496,7 +503,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -511,7 +518,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -526,7 +533,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -541,7 +548,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -556,7 +563,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -571,7 +578,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -586,7 +593,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -601,7 +608,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -616,7 +623,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -631,7 +638,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -646,7 +653,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -661,7 +668,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -676,7 +683,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -691,7 +698,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -706,7 +713,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -721,7 +728,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -736,7 +743,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -751,7 +758,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -766,7 +773,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -781,7 +788,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -796,7 +803,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -811,7 +818,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -826,7 +833,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -841,7 +848,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -856,7 +863,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -871,7 +878,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -886,7 +893,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -901,7 +908,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -916,7 +923,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -931,7 +938,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -946,7 +953,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -961,7 +968,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -976,7 +983,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -991,7 +998,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1006,7 +1013,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1021,7 +1028,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1036,7 +1043,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1051,7 +1058,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1066,7 +1073,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1081,7 +1088,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1096,7 +1103,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1111,7 +1118,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1126,7 +1133,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1141,7 +1148,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1157,7 +1164,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1172,7 +1179,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1187,7 +1194,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1202,7 +1209,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1217,7 +1224,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1232,7 +1239,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1248,7 +1255,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1263,7 +1270,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1278,7 +1285,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1293,7 +1300,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1308,7 +1315,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1323,7 +1330,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1338,7 +1345,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1353,7 +1360,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1368,7 +1375,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1383,7 +1390,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1398,7 +1405,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1413,7 +1420,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1428,7 +1435,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1443,7 +1450,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1458,7 +1465,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1473,7 +1480,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1488,7 +1495,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1503,7 +1510,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1518,7 +1525,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1533,7 +1540,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1548,7 +1555,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1563,7 +1570,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1578,7 +1585,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1593,7 +1600,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1608,7 +1615,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1623,7 +1630,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1638,7 +1645,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1653,7 +1660,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1668,7 +1675,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1684,7 +1691,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1699,7 +1706,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1714,7 +1721,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1729,7 +1736,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1744,7 +1751,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1759,7 +1766,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1774,7 +1781,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1789,7 +1796,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1804,7 +1811,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1819,7 +1826,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1834,7 +1841,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1849,7 +1856,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1864,7 +1871,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1879,7 +1886,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1894,7 +1901,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1909,7 +1916,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1924,7 +1931,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1939,7 +1946,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1954,7 +1961,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1969,7 +1976,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1984,7 +1991,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -1999,7 +2006,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2014,7 +2021,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2029,7 +2036,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2044,7 +2051,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2059,7 +2066,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2074,7 +2081,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2089,7 +2096,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2104,7 +2111,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2119,7 +2126,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2134,7 +2141,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2149,7 +2156,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2164,7 +2171,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2179,7 +2186,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2194,7 +2201,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2210,7 +2217,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2225,7 +2232,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2240,7 +2247,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2255,7 +2262,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2270,7 +2277,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2285,7 +2292,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2301,7 +2308,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2316,7 +2323,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2331,7 +2338,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2346,7 +2353,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2361,7 +2368,7 @@
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2378,7 +2385,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2393,7 +2400,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2408,7 +2415,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2423,7 +2430,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2438,7 +2445,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2453,7 +2460,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2469,7 +2476,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2484,7 +2491,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2499,7 +2506,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2514,7 +2521,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2529,7 +2536,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2544,7 +2551,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2560,7 +2567,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2575,7 +2582,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2590,7 +2597,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2605,7 +2612,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2620,7 +2627,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2636,7 +2643,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2651,7 +2658,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2667,7 +2674,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2682,7 +2689,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2697,7 +2704,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2712,7 +2719,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2727,7 +2734,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2742,7 +2749,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2758,7 +2765,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2773,7 +2780,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2789,7 +2796,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2804,7 +2811,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2819,7 +2826,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2834,7 +2841,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2849,7 +2856,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2864,7 +2871,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2880,7 +2887,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2895,7 +2902,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2911,7 +2918,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2926,7 +2933,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2941,7 +2948,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2956,7 +2963,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2971,7 +2978,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -2986,7 +2993,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3002,7 +3009,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3017,7 +3024,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3033,7 +3040,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3048,7 +3055,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3063,7 +3070,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3078,7 +3085,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3093,7 +3100,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3108,7 +3115,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3124,7 +3131,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3139,7 +3146,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3155,7 +3162,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3170,7 +3177,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3185,7 +3192,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3200,7 +3207,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3215,7 +3222,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3230,7 +3237,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3246,7 +3253,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -3261,7 +3268,7 @@
   bodyPart: UndergarmentTop
   markingCategory: UndergarmentTop
   speciesRestriction: [Human]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:

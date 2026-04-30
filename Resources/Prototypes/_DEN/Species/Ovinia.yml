@@ -48,34 +48,11 @@
 - type: markingPoints
   id: MobOviniaMarkingLimits
   points:
-    Hair:
-      points: 35
-      required: false
-    FacialHair:
-      points: 35
-      required: false
-    Tail:
-      points: 35
-      required: false
-    NeckFluff:
-      points: 35
-      required: false
+    # CS: Allow unlimited markings
     HeadTop:
-      points: 35
+      points: 999 # CS: Allow unlimited markings
       required: true
       defaultMarkings: [ OviniaEars ]
-    Snout:
-      points: 35
-      required: false
-    Chest:
-      points: 35
-      required: false
-    Legs:
-      points: 35
-      required: false
-    Arms:
-      points: 35
-      required: false
 
 - type: humanoidBaseSprite
   id: MobOviniaHead

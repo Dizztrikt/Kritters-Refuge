@@ -4,6 +4,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: fluff_head
@@ -13,6 +14,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: fluff_head_up
@@ -22,6 +24,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: forehead
@@ -31,6 +34,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: head_war
@@ -40,6 +44,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: head_stripes
@@ -49,6 +54,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: head_coat
@@ -59,6 +65,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_ears
@@ -68,6 +75,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: upper_ear
@@ -77,6 +85,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_ears_short
@@ -86,6 +95,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: upper_ear_alternate
@@ -97,6 +107,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: lower_ear
@@ -106,6 +117,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: head_fluff
@@ -115,6 +127,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: head_fluff_short
@@ -125,6 +138,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_1_1
@@ -134,6 +148,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_1_2
@@ -143,6 +158,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_2_1
@@ -152,6 +168,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_2_2
@@ -161,6 +178,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_3_1
@@ -170,6 +188,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_3_2
@@ -179,6 +198,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_4_1
@@ -188,6 +208,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_head_markings.rsi
     state: resomi_earring_4_2
@@ -198,6 +219,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: fluff
@@ -207,6 +229,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: fluff_groin
@@ -216,6 +239,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: groin_stripes
@@ -225,6 +249,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: body_coat
@@ -234,6 +259,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: body_stripes
@@ -243,6 +269,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: body_rings
@@ -252,6 +279,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: body_lines
@@ -261,6 +289,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: belly
@@ -270,6 +299,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: back_patch
@@ -279,6 +309,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_markings.rsi
     state: back_patch_full
@@ -289,6 +320,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: l_hand_feathers_primary
@@ -300,6 +332,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: r_hand_feathers_primary
@@ -311,6 +344,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: r_arm_fade
@@ -320,6 +354,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: l_arm_fade
@@ -329,6 +364,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: l_hand_feathers
@@ -338,6 +374,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: r_hand_feathers
@@ -347,6 +384,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: r_shoulder_fade
@@ -356,6 +394,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: l_shoulder_fade
@@ -365,6 +404,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: r_arm_coat
@@ -374,6 +414,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_arm_markings.rsi
     state: l_arm_coat
@@ -384,6 +425,7 @@
   bodyPart: LFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_foot_feathers
@@ -393,6 +435,7 @@
   bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_foot_feathers
@@ -402,6 +445,7 @@
   bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_foot_fade
@@ -411,6 +455,7 @@
   bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_foot_fade
@@ -420,6 +465,7 @@
   bodyPart: LFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_foot_feathers_primary
@@ -431,6 +477,7 @@
   bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_foot_feathers_primary
@@ -442,6 +489,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_leg_fade
@@ -451,6 +499,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_leg_fade
@@ -460,6 +509,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_leg_stripes
@@ -469,6 +519,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_leg_stripes
@@ -478,6 +529,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: r_leg_coat
@@ -487,6 +539,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [Resomi]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Resomi/resomi_leg_markings.rsi
     state: l_leg_coat

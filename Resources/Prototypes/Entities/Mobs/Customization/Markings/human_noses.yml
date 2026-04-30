@@ -4,8 +4,8 @@
   markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Oni, Sheleg] # Frontier: Oni, Sheleg
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_noses.rsi
     state: schnozz
@@ -16,8 +16,8 @@
   markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Oni, Sheleg] # Frontier: Oni, Sheleg
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_noses.rsi
     state: nubby
@@ -28,8 +28,8 @@
   markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Oni, Sheleg] # Frontier: Oni, Sheleg
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_noses.rsi
     state: droop
@@ -40,8 +40,8 @@
   markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Oni, Sheleg] # Frontier: Oni, Sheleg
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_noses.rsi
     state: blob
@@ -52,8 +52,8 @@
   markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Oni, Sheleg] # Frontier: Oni, Sheleg
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_noses.rsi
     state: uppie

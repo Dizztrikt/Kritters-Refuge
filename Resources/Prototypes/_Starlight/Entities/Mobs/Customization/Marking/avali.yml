@@ -7,6 +7,7 @@
   followSkinColor: true
   forcedColoring: true
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -20,6 +21,7 @@
   followSkinColor: true
   forcedColoring: true
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -31,6 +33,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -50,6 +53,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: head_primary
@@ -61,6 +65,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: torso_primary
@@ -72,6 +77,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: larm_primary
@@ -83,6 +89,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: rarm_primary
@@ -94,6 +101,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: lhand_primary
@@ -105,6 +113,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: rhand_primary
@@ -116,6 +125,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: lleg
@@ -125,6 +135,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_stripes_one.rsi
     state: rleg
@@ -134,6 +145,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -149,6 +161,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -168,6 +181,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: head_primary
@@ -179,6 +193,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: torso_primary
@@ -190,6 +205,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: larm_primary
@@ -201,6 +217,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: rarm_primary
@@ -212,6 +229,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: rhand_primary
@@ -223,6 +241,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: lhand_primary
@@ -234,6 +253,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: lleg_primary
@@ -245,6 +265,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_one.rsi
     state: rleg_primary
@@ -256,6 +277,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -271,6 +293,7 @@
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -290,6 +313,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: head_primary
@@ -301,6 +325,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: torso_primary
@@ -312,6 +337,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: larm_primary
@@ -323,6 +349,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: rarm_primary
@@ -334,6 +361,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: lhand_primary
@@ -345,6 +373,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_trim_two.rsi
     state: rhand_primary
@@ -356,6 +385,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -371,6 +401,7 @@
   bodyPart: HeadTop
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring1_1
@@ -384,6 +415,7 @@
   bodyPart: HeadTop
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring2_1
@@ -397,6 +429,7 @@
   bodyPart: HeadTop
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring3_1
@@ -410,6 +443,7 @@
   bodyPart: HeadTop
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring4_1
@@ -423,6 +457,7 @@
   bodyPart: HeadTop
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring_combined_1
@@ -436,6 +471,7 @@
   bodyPart: HeadSide
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_earring_combined_1
@@ -447,6 +483,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_tailband_combined_1
@@ -460,6 +497,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_tailband1_1
@@ -473,6 +511,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_tailband2_1
@@ -484,6 +523,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_jewelry.rsi
     state: avali_tailband3_1
@@ -499,6 +539,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: l_hand_multiwing1
@@ -516,6 +557,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: l_hand_multiwing1
@@ -537,6 +579,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: r_hand_multiwing1
@@ -554,6 +597,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: r_hand_multiwing1
@@ -575,6 +619,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: r_hand_back
@@ -588,6 +633,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: l_hand_back
@@ -603,6 +649,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: r_hand_back
@@ -618,6 +665,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: l_hand_back
@@ -635,6 +683,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -646,6 +695,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Avali ]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_avalibase

@@ -3262,7 +3262,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_nondescript_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3288,7 +3288,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_nondescript_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3314,7 +3314,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_nondescript_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3340,7 +3340,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_nondescript_4_0_BEHIND: TailBehind
   colorLinks:
@@ -3366,7 +3366,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_nondescript_5_0_BEHIND: TailBehind
   colorLinks:
@@ -3392,7 +3392,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3418,7 +3418,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3444,7 +3444,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3470,7 +3470,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_4_0_BEHIND: TailBehind
   colorLinks:
@@ -3496,7 +3496,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_5_0_BEHIND: TailBehind
   colorLinks:
@@ -3522,7 +3522,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3548,7 +3548,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3574,7 +3574,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3600,7 +3600,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_4_0_BEHIND: TailBehind
   colorLinks:
@@ -3626,7 +3626,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_5_0_BEHIND: TailBehind
   colorLinks:
@@ -3652,7 +3652,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3678,7 +3678,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3704,7 +3704,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3730,7 +3730,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_4_0_BEHIND: TailBehind
   colorLinks:
@@ -3756,7 +3756,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_5_0_BEHIND: TailBehind
   colorLinks:
@@ -3782,7 +3782,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3808,7 +3808,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3834,7 +3834,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3860,7 +3860,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_4_0_BEHIND: TailBehind
   colorLinks:
@@ -3886,7 +3886,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_5_0_BEHIND: TailBehind
   colorLinks:
@@ -3912,7 +3912,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_1_0_BEHIND: TailBehind
   colorLinks:
@@ -3928,7 +3928,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_1_1_BEHIND: TailBehind
   colorLinks:
@@ -3944,7 +3944,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_2_0_BEHIND: TailBehind
   colorLinks:
@@ -3960,7 +3960,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_2_1_BEHIND: TailBehind
   colorLinks:
@@ -3976,7 +3976,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_3_0_BEHIND: TailBehind
   colorLinks:
@@ -3992,7 +3992,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_3_1_BEHIND: TailBehind
   colorLinks:
@@ -4008,7 +4008,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_4_0_BEHIND: TailBehind
   colorLinks:
@@ -4024,7 +4024,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_4_1_BEHIND: TailBehind
   colorLinks:
@@ -4040,7 +4040,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_5_0_BEHIND: TailBehind
   colorLinks:
@@ -4056,7 +4056,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_5_1_BEHIND: TailBehind
   colorLinks:
@@ -4073,7 +4073,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4099,7 +4099,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4125,7 +4125,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4151,7 +4151,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_human_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4177,7 +4177,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4203,7 +4203,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4229,7 +4229,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4255,7 +4255,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4271,7 +4271,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_knotted_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4287,7 +4287,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4313,7 +4313,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4339,7 +4339,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4365,7 +4365,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4381,7 +4381,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_barbknot_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4397,7 +4397,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4423,7 +4423,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4449,7 +4449,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4475,7 +4475,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4491,7 +4491,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_flared_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4517,7 +4517,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4533,7 +4533,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4549,7 +4549,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4565,7 +4565,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tentacle_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4582,7 +4582,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4598,7 +4598,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_1_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4614,7 +4614,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4630,7 +4630,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_2_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4646,7 +4646,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4662,7 +4662,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_3_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4678,7 +4678,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4694,7 +4694,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4710,7 +4710,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4726,7 +4726,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_1_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4742,7 +4742,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4758,7 +4758,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_2_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4774,7 +4774,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4790,7 +4790,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_3_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4806,7 +4806,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4822,7 +4822,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4838,7 +4838,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_1_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4854,7 +4854,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_1_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4870,7 +4870,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_2_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4886,7 +4886,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_2_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4902,7 +4902,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_3_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4918,7 +4918,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_3_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4934,7 +4934,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_4_s_0_BEHIND: TailBehind
   colorLinks:
@@ -4950,7 +4950,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_4_s_1_BEHIND: TailBehind
   colorLinks:
@@ -4966,7 +4966,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tipknotted_1_0_BEHIND: TailBehind
   colorLinks:
@@ -4992,7 +4992,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tipknotted_2_0_BEHIND: TailBehind
   colorLinks:
@@ -5018,7 +5018,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tipknotted_3_0_BEHIND: TailBehind
   colorLinks:
@@ -5065,7 +5065,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_1_0_BEHIND: TailBehind
   colorLinks:
@@ -5081,7 +5081,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_1_1_BEHIND: TailBehind
   colorLinks:
@@ -5097,7 +5097,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_2_0_BEHIND: TailBehind
   colorLinks:
@@ -5113,7 +5113,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_2_1_BEHIND: TailBehind
   colorLinks:
@@ -5129,7 +5129,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_3_0_BEHIND: TailBehind
   colorLinks:
@@ -5145,7 +5145,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_3_1_BEHIND: TailBehind
   colorLinks:
@@ -5161,7 +5161,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_4_0_BEHIND: TailBehind
   colorLinks:
@@ -5177,7 +5177,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_4_1_BEHIND: TailBehind
   colorLinks:
@@ -5193,7 +5193,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_5_0_BEHIND: TailBehind
   colorLinks:
@@ -5209,7 +5209,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemi_5_1_BEHIND: TailBehind
   colorLinks:
@@ -5225,7 +5225,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_1_0_BEHIND: TailBehind
   colorLinks:
@@ -5241,7 +5241,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_1_1_BEHIND: TailBehind
   colorLinks:
@@ -5257,7 +5257,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_2_0_BEHIND: TailBehind
   colorLinks:
@@ -5273,7 +5273,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_2_1_BEHIND: TailBehind
   colorLinks:
@@ -5289,7 +5289,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_3_0_BEHIND: TailBehind
   colorLinks:
@@ -5305,7 +5305,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_3_1_BEHIND: TailBehind
   colorLinks:
@@ -5321,7 +5321,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_4_0_BEHIND: TailBehind
   colorLinks:
@@ -5337,7 +5337,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_4_1_BEHIND: TailBehind
   colorLinks:
@@ -5363,7 +5363,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_hemiknot_5_1_BEHIND: TailBehind
   colorLinks:
@@ -5379,7 +5379,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_1_0_BEHIND: TailBehind
   colorLinks:
@@ -5395,7 +5395,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_1_1_BEHIND: TailBehind
   colorLinks:
@@ -5411,7 +5411,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_2_0_BEHIND: TailBehind
   colorLinks:
@@ -5427,7 +5427,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_2_1_BEHIND: TailBehind
   colorLinks:
@@ -5443,7 +5443,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_3_0_BEHIND: TailBehind
   colorLinks:
@@ -5459,7 +5459,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_3_1_BEHIND: TailBehind
   colorLinks:
@@ -5475,7 +5475,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_4_0_BEHIND: TailBehind
   colorLinks:
@@ -5491,7 +5491,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_4_1_BEHIND: TailBehind
   colorLinks:
@@ -5507,7 +5507,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_5_0_BEHIND: TailBehind
   colorLinks:
@@ -5523,7 +5523,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     penis_tapered_5_1_BEHIND: TailBehind
   colorLinks:
@@ -5539,7 +5539,7 @@
   bodyPart: Genital
   markingCategory: Genital
   speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
-  kindAllowance: [BasicHumanlike, BasicFurry, Resomi, Avali, VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, Resomi, Avali, VoxLike]
   layering:
     BRC-Knotted_BEHIND: TailBehind
   colorLinks:

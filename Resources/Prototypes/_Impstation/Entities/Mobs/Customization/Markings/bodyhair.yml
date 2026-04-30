@@ -2,8 +2,8 @@
   id: BodyhairHumanMale
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf, Human, Oni, Goblin, Felinid ] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sexRestriction: [ Male ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi
@@ -13,8 +13,8 @@
   id: BodyhairHumanFemale
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf, Human, Oni, Goblin, Felinid ] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sexRestriction: [ Female ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi
@@ -24,8 +24,8 @@
   id: BodyhairHumanUnsexed
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [ Dwarf, Human, Oni, Goblin, Felinid ] # Frontier: add Oni, Goblin, Felinid
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sexRestriction: [ Unsexed ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi

@@ -20,10 +20,12 @@
   # CS: Small enough to fit in a bag
   minHeight: 0.6
   defaultHeight: 0.8
+  maxHeight: 1.1
   minWidth: 0.55
   defaultWidth: 0.8
+  maxWidth: 1.15
   # End CS
-  # CS: Need Kind for some reason
+  # CS: Add kind for markings
   kind:
     - BasicHumanlike
     - BasicFurry
@@ -62,12 +64,11 @@
 
 - type: markingPoints
   id: MobResomiMarkingLimits
-  onlyWhitelisted: true
   points:
-    # CS: Unlimited markings because why not
+    # CS: Allow unlimited markings
     Tail:
       required: true
-      points: 999
+      points: 999 # CS: Allow unlimited markings
       defaultMarkings: [ ResomiTailFeathered ]
 
 - type: humanoidBaseSprite

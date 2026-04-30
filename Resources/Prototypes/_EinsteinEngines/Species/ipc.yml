@@ -65,85 +65,23 @@
 - type: markingPoints
   id: MobIPCMarkingLimits
   points:
-    Hair:
-      points: 35
-      required: false
+    # CS: Allow unlimited markings
     Head:
-      points: 35
+      points: 999 # CS: Allow unlimited markings
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
     Chest:
-      points: 35
+      points: 999 # CS: Allow unlimited markings
       required: true
       defaultMarkings: [ MobIPCTorsoDefault ]
     Legs:
-      points: 35
+      points: 999 # CS: Allow unlimited markings
       required: true
       defaultMarkings: [ MobIPCLLegDefault, MobIPCLFootDefault, MobIPCRLegDefault, MobIPCRFootDefault ]
     Arms:
-      points: 35
+      points: 999 # CS: Allow unlimited markings
       required: true
       defaultMarkings: [ MobIPCLArmDefault, MobIPCLHandDefault, MobIPCRArmDefault, MobIPCRHandDefault ]
-    HeadSide:
-      points: 35
-      required: false
-    Tail:
-      points: 35
-      required: false
-    Snout:
-      points: 35
-      required: false
-    # Frontier: apparently these don't exist on Delta
-    UndergarmentTop:
-      points: 35
-      required: false
-    UndergarmentBottom:
-      points: 35
-      required: false
-    # End Frontier
-    HeadTop:
-      points: 35
-      required: false
-    FacialHair:
-      points: 35
-      required: false
-    Overlay:
-      points: 35
-      required: false
-    Special:
-      points: 35
-      required: false
-    # Copypaste these into every species I HATE THIS CODE
-    BaseChest:
-      points: 35
-      required: false
-    BaseHead:
-      points: 35
-      required: false
-    BaseLArm:
-      points: 35
-      required: false
-    BaseLFoot:
-      points: 35
-      required: false
-    BaseLHand:
-      points: 35
-      required: false
-    BaseLLeg:
-      points: 35
-      required: false
-    BaseRArm:
-      points: 35
-      required: false
-    BaseRFoot:
-      points: 35
-      required: false
-    BaseRHand:
-      points: 35
-      required: false
-    BaseRLeg:
-      points: 35
-      required: false
 
 - type: humanoidBaseSprite
   id: MobIPCMarkingFollowSkin
@@ -169,6 +107,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: head_m
@@ -189,7 +128,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: torso_m
@@ -201,7 +140,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: torso_f
@@ -216,7 +155,7 @@
   bodyPart: LLeg
   markingCategory: Legs
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: l_leg
@@ -231,7 +170,7 @@
   bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: l_arm
@@ -246,7 +185,7 @@
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: l_hand
@@ -261,7 +200,7 @@
   bodyPart: LFoot
   markingCategory: Legs
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: l_foot
@@ -276,7 +215,7 @@
   bodyPart: RLeg
   markingCategory: Legs
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: r_leg
@@ -291,7 +230,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: r_arm
@@ -306,7 +245,7 @@
   bodyPart: RHand
   markingCategory: Arms
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: r_hand
@@ -321,7 +260,7 @@
   bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [IPC]
-  kindAllowance: [BasicHumanlike, BasicFurry]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: r_foot

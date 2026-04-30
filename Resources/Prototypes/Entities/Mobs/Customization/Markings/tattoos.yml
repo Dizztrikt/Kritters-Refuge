@@ -3,8 +3,8 @@
   id: TattooHiveChest
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -18,8 +18,8 @@
   id: TattooNightlingChest
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -33,8 +33,8 @@
   id: TattooSilverburghLeftLeg
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -48,8 +48,8 @@
   id: TattooSilverburghRightLeg
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -63,8 +63,8 @@
   id: TattooCampbellLeftArm
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -78,8 +78,8 @@
   id: TattooCampbellRightArm
   bodyPart: RArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -93,8 +93,8 @@
   id: TattooCampbellLeftLeg
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -108,8 +108,8 @@
   id: TattooCampbellRightLeg
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Harpy] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -123,8 +123,8 @@
   id: TattooEyeRight
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy, Rodentia, Feroxi] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -138,8 +138,8 @@
   id: TattooEyeLeft
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Sheleg, Felinid, Vulpkanin, Oni, Harpy, Rodentia, Feroxi] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -153,8 +153,8 @@
   id: TattooEyeMothRight
   bodyPart: Eyes
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Moth]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -168,8 +168,8 @@
   id: TattooEyeMothLeft
   bodyPart: Eyes
   markingCategory: Overlay
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [Moth]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:

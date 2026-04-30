@@ -2,8 +2,8 @@
   id: SlimeNose
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   forcedColoring: true
   followSkinColor: true
   sprites:
@@ -14,8 +14,8 @@
   id: SlimeMouth
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
@@ -25,8 +25,8 @@
   id: SlimeBrain
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
@@ -36,8 +36,8 @@
   id: SlimeEyeglow
   bodyPart: Eyes
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   coloring:
     default:
       type:
@@ -52,8 +52,8 @@
   id: SlimeLungs
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
@@ -63,8 +63,8 @@
   id: SlimeCore
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
@@ -74,8 +74,8 @@
   id: SlimeBonehead
   bodyPart: Head
   markingCategory: Head
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -90,8 +90,8 @@
   id: SlimeBonechest
   bodyPart: Chest
   markingCategory: Chest
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -106,8 +106,8 @@
   id: SlimeBonearmleft
   bodyPart: LArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -122,8 +122,8 @@
   id: SlimeBonearmright
   bodyPart: RArm
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -138,8 +138,8 @@
   id: SlimeBonefootleft
   bodyPart: LFoot
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -154,8 +154,8 @@
   id: SlimeBonefootright
   bodyPart: RFoot
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -170,8 +170,8 @@
   id: SlimeBonehandleft
   bodyPart: LHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -186,8 +186,8 @@
   id: SlimeBonehandright
   bodyPart: RHand
   markingCategory: Arms
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -202,8 +202,8 @@
   id: SlimeBonelegleft
   bodyPart: LLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
@@ -218,8 +218,8 @@
   id: SlimeBonelegright
   bodyPart: RLeg
   markingCategory: Legs
-  kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # CS: Allow all markings
   followSkinColor: false
   coloring:
     default:
