@@ -1,21 +1,5 @@
 
 - type: trait
-  id: HornyInHeat
-  name: trait-horny-in-heat-name
-  description: trait-horny-in-heat-desc
-  category: Examine
-  cost: 0
-  hornyExamineProto: hornyExamineInHeat
-
-- type: trait
-  id: HornyInRut
-  name: trait-horny-in-rut-name
-  description: trait-horny-in-rut-desc
-  category: Examine
-  cost: 0
-  hornyExamineProto: hornyExamineInRut
-
-- type: trait
   id: HornyIcy
   name: trait-horny-icy-name
   description: trait-horny-icy-desc

@@ -189,6 +189,14 @@ public sealed partial class SalvageSystem
         expedition.EndTime = newEndTime;
         Dirty(map.Value, expedition);
 
+        // Frontier: if an expedition-extending anchor is active, update the pause cache so it reflects
+        // the new expedited departure time rather than the original remaining time. Without this, when
+        // the anchor deactivates, the resume logic restores the old large remaining value, causing the
+        // shuttle to behave like open space (Dynamic physics) on the expedition map for the full original
+        // duration instead of departing after the requested 20-second countdown.
+        _pausedExpeditionRemaining[map.Value] = TimeSpan.FromSeconds(departTime);
+        // End Frontier
+
         Announce(map.Value, Loc.GetString("salvage-expedition-announcement-early-finish", ("departTime", departTime)));
     }
     // End Frontier: early expedition end

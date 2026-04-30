@@ -172,6 +172,7 @@ public sealed partial class MarkingPicker : Control
 
         CanPutOnToggle.OnToggled += x => SetCanToggle(x.Pressed);
         CanPutOnByOtherToggle.OnToggled += x => SetOtherCanToggle(x.Pressed);
+        HideTogglePopupToggle.OnToggled += x => SetHideTogglePopup(x.Pressed);
         StartVisibleToggle.OnToggled += x => SetVisible(x.Pressed);
 
         CustomNameTextEdit.OnTextChanged += x => SetCustomText();
@@ -578,6 +579,7 @@ public sealed partial class MarkingPicker : Control
         StartVisibleToggle.Pressed = marking.ShowAtStart;
         CanPutOnToggle.Pressed = marking.CanToggleVisible;
         CanPutOnByOtherToggle.Pressed = marking.OtherCanToggleVisible;
+        HideTogglePopupToggle.Pressed = marking.HideTogglePopup;
         PutOnTextEdit.Text = marking.PutOnVerb ?? Loc.GetString("marking-toggle-self-default-verb-on");
         TakeOffTextEdit.Text = marking.TakeOffVerb ?? Loc.GetString("marking-toggle-self-default-verb-off");
         PutOnOtherTextEdit.Text = marking.PutOnVerb2p ?? Loc.GetString("marking-toggle-other-default-verb-on");
@@ -598,6 +600,8 @@ public sealed partial class MarkingPicker : Control
 
     private void SetCheckboxVisibility()
     {
+        var togglePopupVisible = CanPutOnToggle.Pressed || CanPutOnByOtherToggle.Pressed;
+
         if (CanPutOnToggle.Pressed)
         {
             PutOnTextEdit.Visible = true;
@@ -626,6 +630,9 @@ public sealed partial class MarkingPicker : Control
             PutOnOtherTextEditLabel.Visible = false;
             TakeOffOtherTextEditLabel.Visible = false;
         }
+
+        HideTogglePopupLabel.Visible = togglePopupVisible;
+        HideTogglePopupToggle.Visible = togglePopupVisible;
     }
 
     private void ColorChanged(int colorIndex)
@@ -712,6 +719,21 @@ public sealed partial class MarkingPicker : Control
         OnMarkingDataChanged?.Invoke(_currentMarkings);
     }
 
+    private void SetHideTogglePopup(bool hide)
+    {
+        if (_selectedMarking is null) return;
+        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
+        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
+
+        if (markingIndex < 0) return;
+
+        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
+        marking.HideTogglePopup = hide;
+        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
+
+        OnMarkingDataChanged?.Invoke(_currentMarkings);
+    }
+
     private void SetCustomText()
     {
         if (_selectedMarking is null) return;
@@ -728,12 +750,19 @@ public sealed partial class MarkingPicker : Control
         marking.TakeOffVerb = TakeOffTextEdit.Text;
         marking.TakeOffVerb2p = TakeOffOtherTextEdit.Text;
 
-        SampleText.Text = GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
-        (string.IsNullOrEmpty(marking.PutOnVerb) ? Loc.GetString("marking-toggle-self-default-verb-on") : marking.PutOnVerb),
-        (string.IsNullOrEmpty(marking.PutOnVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-on") : marking.PutOnVerb2p))
-            + "\n" + GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
-        (string.IsNullOrEmpty(marking.TakeOffVerb) ? Loc.GetString("marking-toggle-self-default-verb-off") : marking.TakeOffVerb),
-        (string.IsNullOrEmpty(marking.TakeOffVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-off") : marking.TakeOffVerb2p));
+        if (marking.HideTogglePopup)
+        {
+            SampleText.Text = Loc.GetString("marking-toggle-popup-hidden-sample");
+        }
+        else
+        {
+            SampleText.Text = GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
+            (string.IsNullOrEmpty(marking.PutOnVerb) ? Loc.GetString("marking-toggle-self-default-verb-on") : marking.PutOnVerb),
+            (string.IsNullOrEmpty(marking.PutOnVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-on") : marking.PutOnVerb2p))
+                + "\n" + GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
+            (string.IsNullOrEmpty(marking.TakeOffVerb) ? Loc.GetString("marking-toggle-self-default-verb-off") : marking.TakeOffVerb),
+            (string.IsNullOrEmpty(marking.TakeOffVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-off") : marking.TakeOffVerb2p));
+        }
 
         _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
 

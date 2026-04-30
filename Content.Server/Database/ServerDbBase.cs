@@ -11,6 +11,7 @@ using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Consent; // Floofstation
+using Content.Shared.Chat.Prototypes;
 using Content.Shared.Database;
 using Content.Shared.Ghost.Roles;
 using Content.Shared.Humanoid;
@@ -211,6 +212,24 @@ namespace Content.Server.Database
             var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
             var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName));
+            //_CS Start
+            // Keep this in the base DB converter so profile persistence works regardless of _CS-specific content.
+            var hiddenEmoteCategories = new HashSet<EmoteCategory>();
+
+            if (!string.IsNullOrWhiteSpace(profile.HiddenEmoteCategories))
+            {
+                foreach (var rawCategory in profile.HiddenEmoteCategories.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+                {
+                    if (Enum.TryParse(rawCategory, true, out EmoteCategory category)
+                        && category is not EmoteCategory.Invalid
+                        && category is not EmoteCategory.Sex
+                        && category is not EmoteCategory.Vocal)
+                    {
+                        hiddenEmoteCategories.Add(category);
+                    }
+                }
+            }
+            //_CS End
 
             var sex = Sex.Male;
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
@@ -319,6 +338,7 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
+                hiddenEmoteCategories,
                 loadouts
             );
         }
@@ -374,6 +394,14 @@ namespace Content.Server.Database
                 humanoid.TraitPreferences
                         .Select(t => new Trait {TraitName = t})
             );
+
+            //_CS Start
+            // Persist as a stable comma-separated list for cross-provider compatibility.
+            profile.HiddenEmoteCategories = string.Join(",",
+                humanoid.HiddenEmoteCategories
+                    .Where(category => category is not EmoteCategory.Invalid and not EmoteCategory.Sex and not EmoteCategory.Vocal)
+                    .OrderBy(category => category.ToString()));
+            //_CS End
 
             profile.Loadouts.Clear();
 

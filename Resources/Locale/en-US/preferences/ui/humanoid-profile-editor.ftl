@@ -77,6 +77,12 @@ trait-window-button-with-count = Configure... ({$count} selected)
 trait-window-save = Save
 trait-window-cancel = Cancel
 
+emote-window-title = Configure Emote Categories
+emote-window-category-title = Emotes
+emote-window-description = Checked categories are visible in the emote wheel.
+emote-window-always-enabled = Sex and Vocal categories are always enabled.
+emote-window-button-with-count = Configure... ({$count} visible)
+
 trait-category-disabilities = Disabilities
 trait-category-speech = Speech traits
 trait-category-quirks = Quirks

@@ -112,6 +112,7 @@ namespace Content.Shared.Humanoid.Markings
             CustomName = other.CustomName;
             CanToggleVisible = other.CanToggleVisible;
             OtherCanToggleVisible = other.OtherCanToggleVisible;
+            HideTogglePopup = other.HideTogglePopup;
             PutOnVerb = other.PutOnVerb;
             PutOnVerb2p = other.PutOnVerb2p;
             TakeOffVerb = other.TakeOffVerb;
@@ -130,6 +131,7 @@ namespace Content.Shared.Humanoid.Markings
             CustomName = other.CustomName ?? CustomName;
             CanToggleVisible = other.CanToggleVisible ?? CanToggleVisible;
             OtherCanToggleVisible = other.OtherCanToggleVisible ?? OtherCanToggleVisible;
+            HideTogglePopup = other.HideTogglePopup ?? HideTogglePopup;
             PutOnVerb = other.PutOnVerb ?? PutOnVerb;
             PutOnVerb2p = other.PutOnVerb2p ?? PutOnVerb2p;
             TakeOffVerb = other.TakeOffVerb ?? TakeOffVerb;
@@ -182,6 +184,12 @@ namespace Content.Shared.Humanoid.Markings
         /// </summary>
         [DataField("otherCanToggleVisible")]
         public bool OtherCanToggleVisible = false;
+
+        /// <summary>
+        ///     If toggle popup text should be suppressed when this marking is toggled.
+        /// </summary>
+        [DataField("hideTogglePopup")]
+        public bool HideTogglePopup = false;
 
         /// <summary>
         ///     Verb to use when putting on
@@ -265,6 +273,7 @@ namespace Content.Shared.Humanoid.Markings
                 && CustomName == other.CustomName
                 && CanToggleVisible == other.CanToggleVisible
                 && OtherCanToggleVisible == other.OtherCanToggleVisible
+                && HideTogglePopup == other.HideTogglePopup
                 && PutOnVerb == other.PutOnVerb
                 && PutOnVerb2p == other.PutOnVerb2p
                 && TakeOffVerb == other.TakeOffVerb
@@ -283,6 +292,7 @@ namespace Content.Shared.Humanoid.Markings
                 MarkingColors = _markingColors.Select(x => x.ToHex()).ToList(),
                 Visible = ShowAtStart,
                 OtherCanToggleVisible = OtherCanToggleVisible,
+                HideTogglePopup = HideTogglePopup,
                 PutOnVerb = PutOnVerb,
                 PutOnVerb2p = PutOnVerb2p,
                 TakeOffVerb = TakeOffVerb,

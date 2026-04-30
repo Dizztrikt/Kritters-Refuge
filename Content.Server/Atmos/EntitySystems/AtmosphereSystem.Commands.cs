@@ -173,6 +173,30 @@ public sealed partial class AtmosphereSystem
         }
     }
 
+    public bool RebuildGridAtmosphere(EntityUid uid)
+    {
+        if (!TryComp(uid, out GridAtmosphereComponent? gridAtmosphere)
+            || !TryComp(uid, out MapGridComponent? mapGrid))
+        {
+            return false;
+        }
+
+        //_CS Start
+        // Kept in the shared atmos system (not _CS) so any caller can perform deterministic post-load gas edits.
+        //_CS End
+        if (TryComp(uid, out GasTileOverlayComponent? overlay)
+            && TryComp(uid, out TransformComponent? xform))
+        {
+            Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent =
+                new(uid, gridAtmosphere, overlay, mapGrid, xform);
+            RebuildGridTiles(ent);
+            return true;
+        }
+
+        InvalidateAllTiles((uid, mapGrid, gridAtmosphere));
+        return true;
+    }
+
     private CompletionResult FixGridAtmosCommandCompletions(IConsoleShell shell, string[] args)
     {
         MapId? playerMap = null;

@@ -1,13 +1,19 @@
 using Content.Server.Shuttles.Systems;
 using Content.Server.Shuttles.Components;
+using Content.Server.Atmos.EntitySystems;
+using Content.Server.Atmos.Components;
 using Content.Server.Station.Components;
 using Content.Server.Cargo.Systems;
 using Content.Server.Station.Systems;
+using Content.Shared.Atmos;
+using Content.Shared.Atmos.Components;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.Shipyard;
 using Content.Shared.GameTicking;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
+using Robust.Shared.Maths;
 using Content.Shared._NF.CCVar;
 using Robust.Shared.Configuration;
 using System.Diagnostics.CodeAnalysis;
@@ -31,6 +37,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
+    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
     [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
@@ -40,6 +47,19 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     private ISawmill _sawmill = default!;
     private bool _enabled;
     private float _baseSaleRate;
+
+    //_CS Start
+    private enum PostPurchaseAtmosFix
+    {
+        RebuildAndStandardPressurize,
+    }
+
+    // Add ship map paths here as needed when they require post-purchase atmos correction.
+    private static readonly Dictionary<string, PostPurchaseAtmosFix> PostPurchaseAtmosFixes = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["/Maps/_CS/Shuttles/Scrap/khonsu.yml"] = PostPurchaseAtmosFix.RebuildAndStandardPressurize,
+    };
+    //_CS End
 
     // The type of error from the attempted sale of a ship.
     public enum ShipyardSaleError
@@ -169,7 +189,60 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         _shuttleIndex += grid.Value.Comp.LocalAABB.Width + ShuttleSpawnBuffer;
 
         shuttleGrid = grid.Value.Owner;
+
+        // Implemented in this shipyard path (outside _CS) because the purchase/spawn pipeline runs from the shared _NF flow.
+        if (PostPurchaseAtmosFixes.TryGetValue(shuttlePath.ToString().Replace('\\', '/'), out var atmosFix))
+        {
+            ApplyPostPurchaseAtmosFix(atmosFix, shuttlePath, shuttleGrid.Value);
+        }
+
         return true;
+    }
+
+    private void ApplyPostPurchaseAtmosFix(PostPurchaseAtmosFix fix, ResPath shuttlePath, EntityUid gridUid)
+    {
+        switch (fix)
+        {
+            case PostPurchaseAtmosFix.RebuildAndStandardPressurize:
+                if (!_atmosphere.RebuildGridAtmosphere(gridUid))
+                {
+                    _sawmill.Warning($"Failed to refresh atmosphere data for shuttle {shuttlePath} on grid {ToPrettyString(gridUid)}.");
+                    return;
+                }
+
+                PressurizeStandardAirMix(shuttlePath, gridUid);
+                break;
+        }
+    }
+
+    private void PressurizeStandardAirMix(ResPath shuttlePath, EntityUid gridUid)
+    {
+        if (!TryComp(gridUid, out GridAtmosphereComponent? _))
+        {
+            _sawmill.Warning($"Post-purchase atmos pressurization skipped for shuttle {shuttlePath}; missing atmosphere components on {ToPrettyString(gridUid)}.");
+            return;
+        }
+
+        foreach (var air in _atmosphere.GetAllMixtures(gridUid, true))
+        {
+            if (air.Immutable)
+                continue;
+
+            var addO2 = Atmospherics.OxygenMolesStandard - air.GetMoles(Gas.Oxygen);
+            var addN2 = Atmospherics.NitrogenMolesStandard - air.GetMoles(Gas.Nitrogen);
+
+            if (addO2 > 0f)
+                air.AdjustMoles(Gas.Oxygen, addO2);
+
+            if (addN2 > 0f)
+                air.AdjustMoles(Gas.Nitrogen, addN2);
+
+            if (addO2 > 0f || addN2 > 0f)
+            {
+                air.Temperature = Atmospherics.T20C;
+            }
+        }
+
     }
 
     /// <summary>

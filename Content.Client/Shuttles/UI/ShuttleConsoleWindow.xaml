@@ -3,8 +3,10 @@
                       xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
                       Title="{Loc 'shuttle-console-window-title'}"
                       SetSize="960 782"
-                      MinSize="960 782">
-    <BoxContainer Orientation="Vertical">
+                      MinSize="720 560">
+        <BoxContainer Orientation="Vertical"
+                                  HorizontalExpand="True"
+                                  VerticalExpand="True">
         <!-- Top row mode buttons -->
         <BoxContainer Name="ModeButtons"
                        Orientation="Horizontal"
@@ -34,11 +36,21 @@
         <!-- Contents box -->
         <BoxContainer Name="Contents"
                       HorizontalAlignment="Stretch"
+                                          HorizontalExpand="True"
                       VerticalExpand="True"
                       Margin="5">
-            <ui:NavScreen Name="NavContainer" Visible="False"/>
-            <ui:MapScreen Name="MapContainer" Visible="False"/>
-            <ui:DockingScreen Name="DockContainer" Visible="False"/>
+                        <ui:NavScreen Name="NavContainer"
+                                                  Visible="False"
+                                                  HorizontalExpand="True"
+                                                  VerticalExpand="True"/>
+                        <ui:MapScreen Name="MapContainer"
+                                                  Visible="False"
+                                                  HorizontalExpand="True"
+                                                  VerticalExpand="True"/>
+                        <ui:DockingScreen Name="DockContainer"
+                                                          Visible="False"
+                                                          HorizontalExpand="True"
+                                                          VerticalExpand="True"/>
         </BoxContainer>
     </BoxContainer>
 </controls:FancyWindow>

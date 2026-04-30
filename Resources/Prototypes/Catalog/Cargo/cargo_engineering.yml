@@ -153,6 +153,17 @@
   group: market
 
 - type: cargoProduct
+  id: EngineeringSingularityCollector
+  abstract: true # Frontier
+  icon:
+    sprite: Structures/Power/Generation/Singularity/collector.rsi
+    state: ca_on
+  product: CrateEngineeringSingularityCollector
+  cost: 15000
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
   id: EngineeringSpaceHeater
   abstract: true # CS
   icon:

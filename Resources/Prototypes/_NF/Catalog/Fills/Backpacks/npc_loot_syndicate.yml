@@ -191,6 +191,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: NFWeaponEnergyPistolLaserAdvancedExpedition
+      - id: ClothingOuterHardsuitSyndieElite
+        prob: 0.067
       - id: SpaceCash2500
       # Bonus Loot T3
       - id: SpaceCash1000
@@ -219,6 +221,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: NFWeaponEnergyPistolLaserExpedition
+      - id: ClothingOuterHardsuitSyndieElite
+        prob: 0.067
       - id: SpaceCash2500
       # Bonus Loot T3
       - id: SpaceCash1000
@@ -304,6 +308,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: NFWeaponRifleAssaultSmExpedition
+      - id: ClothingOuterHardsuitSyndieElite
+        prob: 0.067
       - id: NFMagazineRifle30Uranium
       - id: NFMagazineRifle30Uranium
         prob: 0.2

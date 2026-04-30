@@ -11,6 +11,9 @@ custom-exam-title-expiration = Clear after (minutes):
 custom-exam-title = Custom examination settings
 custom-exam-public-title = Public examine
 custom-exam-subtle-title = Subtle examine
+custom-exam-traits-title = Trait toggles
+custom-exam-trait-in-heat = In Heat (ERP Receptive)
+custom-exam-trait-in-rut = In Rut (ERP Seeking)
 custom-exam-reset = Reset
 custom-exam-save = Save changes
 

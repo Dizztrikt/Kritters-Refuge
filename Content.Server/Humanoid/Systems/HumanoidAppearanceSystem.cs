@@ -6,14 +6,13 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Preferences;
 using Content.Shared.Verbs;
 using Robust.Shared.GameObjects.Components.Localization;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server.Humanoid;
 
 public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 {
     [Dependency] private readonly MarkingManager _markingManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly GrammarSystem _grammar = default!;
 
     public override void Initialize()
     {
@@ -42,7 +41,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
     /// <param name="target">Target entity to apply the source entity's appearance to.</param>
     /// <param name="sourceHumanoid">Source entity's humanoid component.</param>
     /// <param name="targetHumanoid">Target entity's humanoid component.</param>
-    public void CloneAppearance(
+    public new void CloneAppearance(
         EntityUid source,
         EntityUid target,
         HumanoidAppearanceComponent? sourceHumanoid = null,
@@ -66,10 +65,9 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         targetHumanoid.Gender = sourceHumanoid.Gender;
         if (TryComp<GrammarComponent>(target, out var grammar))
         {
-            grammar.Gender = sourceHumanoid.Gender;
+            _grammar.SetGender((target, grammar), sourceHumanoid.Gender);
         }
 
-        // TODO: needed?
         targetHumanoid.LastProfileLoaded = sourceHumanoid.LastProfileLoaded; // DeltaV - let paradox anomaly be cloned
 
         Dirty(target, targetHumanoid);

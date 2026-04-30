@@ -12,20 +12,22 @@ namespace Content.Client._Floof.Examine;
 public sealed partial class CustomExamineSettingsWindow : FancyWindow
 {
     public event Action? OnReset;
-    public event Action<(CustomExamineData publicData, CustomExamineData subtleData)>? OnSave;
+    public event Action<(CustomExamineData publicData, CustomExamineData subtleData, bool inHeatEnabled, bool inRutEnabled)>? OnSave;
 
     public CustomExamineSettingsWindow()
     {
         RobustXamlLoader.Load(this);
 
         ResetButton.OnPressed += _ => OnReset?.Invoke();
-        SaveButton.OnPressed += _ => OnSave?.Invoke((Public.GetData(), Subtle.GetData()));
+        SaveButton.OnPressed += _ => OnSave?.Invoke((Public.GetData(), Subtle.GetData(), InHeatToggle.Pressed, InRutToggle.Pressed));
     }
 
-    public void SetData(CustomExamineData publicData, CustomExamineData subtleData, bool force = false)
+    public void SetData(CustomExamineData publicData, CustomExamineData subtleData, bool inHeatEnabled, bool inRutEnabled, bool force = false)
     {
         Public.SetData(publicData, force);
         Subtle.SetData(subtleData, force);
+        InHeatToggle.Pressed = inHeatEnabled;
+        InRutToggle.Pressed = inRutEnabled;
     }
 }
 

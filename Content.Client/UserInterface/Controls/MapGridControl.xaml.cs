@@ -70,11 +70,11 @@ public partial class MapGridControl : LayoutContainer
 
     public Vector2 MaxRadarRangeVector => new Vector2(MaxRadarRange, MaxRadarRange);
 
-    protected Vector2 MidPointVector => new Vector2(MidPoint, MidPoint);
+    protected Vector2 MidPointVector => new Vector2(PixelWidth / 2f, PixelHeight / 2f);
 
-    protected int MidPoint => SizeFull / 2;
+    protected int MidPoint => Math.Min(PixelWidth, PixelHeight) / 2;
     protected int SizeFull => (int) ((UIDisplayRadius + MinimapMargin) * 2 * UIScale);
-    protected int ScaledMinimapRadius => (int) (UIDisplayRadius * UIScale);
+    protected int ScaledMinimapRadius => Math.Max(0, MidPoint - (int)(MinimapMargin * UIScale));
     protected float MinimapScale => WorldRange != 0 ? ScaledMinimapRadius / WorldRange : 0f;
 
     public event Action<float>? WorldRangeChanged;
@@ -85,7 +85,7 @@ public partial class MapGridControl : LayoutContainer
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        SetSize = new Vector2(SizeFull, SizeFull);
+        MinSize = new Vector2(SizeFull, SizeFull);
         RectClipContent = true;
         MouseFilter = MouseFilterMode.Stop;
         ActualRadarRange = WorldRange;

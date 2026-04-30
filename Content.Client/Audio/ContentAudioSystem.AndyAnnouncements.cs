@@ -20,7 +20,6 @@ public sealed partial class ContentAudioSystem
     private bool _andyAnnouncementsMuted;
     private readonly Dictionary<EntityUid, float> _andyAnnouncementBaseVolumes = new();
     private readonly HashSet<EntityUid> _andyAnnouncementFallbackPlayed = new();
-    private readonly HashSet<EntityUid> _andyAnnouncementDisabledHandled = new();
     private bool _andyAnnouncementsInitialized;
 
     private void InitializeAndyAnnouncements()
@@ -65,7 +64,6 @@ public sealed partial class ContentAudioSystem
     {
         _andyAnnouncementBaseVolumes.Remove(uid);
         _andyAnnouncementFallbackPlayed.Remove(uid);
-        _andyAnnouncementDisabledHandled.Remove(uid);
     }
 
     private void AndyAnnouncementEnabledChanged(bool enabled)
@@ -74,7 +72,7 @@ public sealed partial class ContentAudioSystem
 
         if (enabled)
         {
-            _andyAnnouncementDisabledHandled.Clear();
+            _andyAnnouncementBaseVolumes.Clear();
             _andyAnnouncementFallbackPlayed.Clear();
         }
 
@@ -109,37 +107,25 @@ public sealed partial class ContentAudioSystem
 
     private void UpdateAndyAnnouncementVolume(EntityUid uid, AudioComponent component)
     {
-        var isAndy = IsAndyAnnouncement(component.FileName);
-        if (!isAndy)
+        if (!IsAndyAnnouncement(component.FileName))
             return;
-
-        if (!_andyAnnouncementsEnabled && _andyAnnouncementDisabledHandled.Contains(uid))
-            return;
-
-        if (!_andyAnnouncementsEnabled)
-        {
-            _andyAnnouncementDisabledHandled.Add(uid);
-
-            if (_andyAnnouncementFallbackPlayed.Add(uid))
-            {
-                _audio.PlayGlobal(new ResolvedPathSpecifier(AndyAnnouncementFallbackPath), Filter.Local(), false, component.Params);
-            }
-
-            // Stop the original Andy clip so only the replacement announcement is heard.
-            _audio.Stop(uid, component);
-            return;
-        }
-
-        if (_andyAnnouncementsMuted)
-        {
-            _audio.Stop(uid, component);
-            return;
-        }
 
         if (!_andyAnnouncementBaseVolumes.TryGetValue(uid, out var baseVolume))
         {
             baseVolume = component.Params.Volume;
             _andyAnnouncementBaseVolumes[uid] = baseVolume;
+        }
+
+        if (!_andyAnnouncementsEnabled || _andyAnnouncementsMuted)
+        {
+            if (!_andyAnnouncementsEnabled && _andyAnnouncementFallbackPlayed.Add(uid))
+            {
+                _audio.PlayGlobal(new ResolvedPathSpecifier(AndyAnnouncementFallbackPath), Filter.Local(), false, component.Params);
+            }
+
+            // Keep it muted while disabled/muted.
+            _audio.SetVolume(uid, float.NegativeInfinity, component);
+            return;
         }
 
         var expected = MathF.Min(baseVolume + _andyAnnouncementVolume, AndyAnnouncementMaxVolume);
@@ -152,35 +138,8 @@ public sealed partial class ContentAudioSystem
 
     private static bool IsAndyAnnouncement(string fileName)
     {
-        if (string.IsNullOrWhiteSpace(fileName))
-            return false;
-
-        var normalized = fileName.Replace('\\', '/').Trim();
-
-        if (normalized.StartsWith("SoundPathSpecifier(", StringComparison.OrdinalIgnoreCase)
-            && normalized.EndsWith(")", StringComparison.Ordinal))
-        {
-            normalized = normalized["SoundPathSpecifier(".Length..^1];
-        }
-
-        if (normalized.StartsWith("ResolvedPathSpecifier(", StringComparison.OrdinalIgnoreCase)
-            && normalized.EndsWith(")", StringComparison.Ordinal))
-        {
-            normalized = normalized["ResolvedPathSpecifier(".Length..^1];
-        }
-
-        normalized = normalized.Trim();
-        if (!normalized.StartsWith('/'))
-            normalized = $"/{normalized}";
-
-        if (normalized.EndsWith(")", StringComparison.Ordinal))
-            normalized = normalized[..^1];
-
-        // Match any resource path that plays from a PocketSizedAndy folder
-        // (e.g. /Audio/_NF/Announcements/PocketSizedAndy/* or /Audio/_NF/Ambience/PocketSizedAndy/*).
-        if (!normalized.Contains(PocketSizedAndyFolderSegment, StringComparison.OrdinalIgnoreCase))
-            return false;
-
-        return normalized.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase);
+        return !string.IsNullOrWhiteSpace(fileName)
+            && fileName.Contains(PocketSizedAndyFolderSegment, StringComparison.OrdinalIgnoreCase)
+            && fileName.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase);
     }
 }

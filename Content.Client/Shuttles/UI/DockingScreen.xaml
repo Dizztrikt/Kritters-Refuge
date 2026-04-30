@@ -1,5 +1,7 @@
 <controls:BoxContainer Visible="False"
                HorizontalExpand="True"
+               VerticalExpand="True"
+               Orientation="Horizontal"
                xmlns:controls="https://spacestation14.io"
                xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls"
                xmlns:ui="clr-namespace:Content.Client._NF.Shuttles.UI"> <!-- Frontier: move UI over to _NF namespace -->
@@ -11,7 +13,6 @@
                        Margin="5 4 10 5"/> <!-- Frontier: use NF variant -->
     <controls:BoxContainer Name="RightDisplayDock"
                            VerticalAlignment="Top"
-                           HorizontalAlignment="Right"
                            MinWidth="256"
                            MaxWidth="256"
                            Align="Center"

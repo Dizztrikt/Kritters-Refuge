@@ -24,8 +24,6 @@ namespace Content.Client.UserInterface.Systems.Chat.Widgets;
 [Virtual]
 public partial class ChatBox : UIWidget
 {
-    private static readonly SoundPathSpecifier AnnouncementFallback = new("/Audio/Announcements/announce.ogg");
-
     private readonly ChatUIController _controller;
     private readonly IEntityManager _entManager;
     [Dependency] private readonly IConfigurationManager _cfg = default!; // EE - Chat stacking
@@ -119,25 +117,7 @@ public partial class ChatBox : UIWidget
         {
             var audio = _entManager.System<AudioSystem>();
             var path = msg.AudioPath!;
-            if (IsAndyAudioPath(path))
-            {
-                var andyEnabled = _cfg.GetCVar(CCVars.AndyAnnouncementsEnabled);
-                var andyGain = _cfg.GetCVar(CCVars.AndyAnnouncementVolume);
-
-                // Apply toggle/mute before creating any stream so Andy never starts playing.
-                if (!andyEnabled)
-                {
-                    audio.PlayGlobal(AnnouncementFallback, Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));
-                }
-                else if (andyGain > 0.01f)
-                {
-                    audio.PlayGlobal(new SoundPathSpecifier(path), Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));
-                }
-            }
-            else
-            {
-                audio.PlayGlobal(new SoundPathSpecifier(path), Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));
-            }
+            audio.PlayGlobal(new SoundPathSpecifier(path), Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));
         }
 
         msg.Read = true;
@@ -192,12 +172,6 @@ public partial class ChatBox : UIWidget
             _chatStackList.RemoveAt(_chatStackList.Capacity - 1);
 
         _chatStackList.Insert(0, new ChatStackData(wrappedMessage, colorOverride, message, entity, channel)); // Frontier: add message, entity, channel
-    }
-
-    private static bool IsAndyAudioPath(string path)
-    {
-        return path.Contains("/PocketSizedAndy/", StringComparison.OrdinalIgnoreCase)
-               && path.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase);
     }
 
     private void OnHighlightsUpdated(string highlights)
@@ -548,6 +522,7 @@ public partial class ChatBox : UIWidget
         }
     }
 
+    [Obsolete("Controls should only be removed from UI tree instead of being disposed")]
     protected override void Dispose(bool disposing)
     {
         base.Dispose(disposing);

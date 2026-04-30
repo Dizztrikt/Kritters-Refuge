@@ -1,6 +1,8 @@
 <controls:BoxContainer Visible="False"
        HorizontalExpand="True"
-       xmlns:controls="https://spacestation14.io"
+    VerticalExpand="True"
+    Orientation="Horizontal"
+    xmlns:controls="https://spacestation14.io"
        xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls"
        xmlns:ui="clr-namespace:Content.Client.Shuttles.UI">
             <ui:ShuttleMapControl Name="MapRadar"
@@ -11,7 +13,6 @@
                              VerticalAlignment="Stretch"/>
             <controls:BoxContainer Name="RightDisplayMap"
                           VerticalAlignment="Top"
-                          HorizontalAlignment="Right"
                           MinWidth="256"
                           MaxWidth="256"
                           Margin="5 0 5 5"

@@ -21,6 +21,8 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.Components;
+using Content.Server._CS.ShuttleCrewStatus;
+using System.Numerics;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -229,9 +231,40 @@ public sealed partial class ShuttleSystem
         if (!EntityManager.TryGetComponent<IFFComponent>(gridUid, out var iffComponent))
             return;
 
-        iffComponent.ServiceFlags = args.ServiceFlags;
+        var newFlags = args.ServiceFlags;
+
+        // Interdiction state is mutually exclusive.
+        if (newFlags.HasFlag(ServiceFlags.InterdictionsEnabled))
+            newFlags &= ~ServiceFlags.InterdictionsDisabled;
+        else if (newFlags.HasFlag(ServiceFlags.InterdictionsDisabled))
+            newFlags &= ~ServiceFlags.InterdictionsEnabled;
+
+        iffComponent.ServiceFlags = newFlags;
+
+        if (TryComp<ShuttleCrewStatusComponent>(gridUid, out var crewStatus))
+            iffComponent.Color = GetInterdictionDisplayColor(newFlags, crewStatus.HasActiveCrew, crewStatus.OriginalColor ?? Color.White);
+        else
+            iffComponent.Color = GetInterdictionDisplayColor(newFlags, true, Color.White);
+
         _console.RefreshShuttleConsoles(gridUid);
         Dirty(gridUid, iffComponent);
+    }
+
+    private static Color GetInterdictionDisplayColor(ServiceFlags flags, bool hasActiveCrew, Color fallback)
+    {
+        if (flags.HasFlag(ServiceFlags.InterdictionsEnabled))
+        {
+            var value = hasActiveCrew ? 1.0f : 0.5f;
+            return Color.FromHsv(new Vector4(0.90f, 0.75f, value, 1f));
+        }
+
+        if (flags.HasFlag(ServiceFlags.InterdictionsDisabled))
+        {
+            var value = hasActiveCrew ? 0.70f : 0.40f;
+            return Color.FromHsv(new Vector4(0.78f, 0.70f, value, 1f));
+        }
+
+        return hasActiveCrew ? fallback : Color.Gray;
     }
 
     public void NfSetTargetCoordinates(EntityUid uid, ShuttleConsoleComponent component, SetTargetCoordinatesRequest args)

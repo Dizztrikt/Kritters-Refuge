@@ -1,8 +1,10 @@
 using Content.Client.Gameplay;
+using Content.Client.Lobby;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Chat;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Input;
+using Content.Shared.Preferences;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
 using Content.Shared.Whitelist;
@@ -22,6 +24,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
 
     private MenuButton? EmotesButton => UIManager.GetActiveUIWidgetOrNull<MenuBar.Widgets.GameTopMenuBar>()?.EmotesButton;
     private SimpleRadialMenu? _menu;
@@ -66,6 +69,12 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             [EmoteCategory.Felinid] = ("emote-menu-category-felinid",
                 new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/cat.png"))),
         };
+
+    private static readonly HashSet<EmoteCategory> AlwaysEnabledCategories = new()
+    {
+        EmoteCategory.Sex,
+        EmoteCategory.Vocal,
+    };
 
     public void OnStateEntered(GameplayState state)
     {
@@ -175,6 +184,9 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             if (emote.Category == EmoteCategory.Invalid)
                 continue;
 
+            if (IsHiddenCategory(emote.Category))
+                continue;
+
             if (!emote.ShowInWheel)
                 continue;
 
@@ -202,10 +214,19 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             list.Add(actionOption);
         }
 
-        var models = new RadialMenuOption[emotesByCategory.Count];
+        var sorted = new List<KeyValuePair<EmoteCategory, List<RadialMenuOption>>>(emotesByCategory);
+        sorted.Sort((a, b) =>
+            string.Compare(
+                Loc.GetString(EmoteGroupingInfo[a.Key].Tooltip),
+                Loc.GetString(EmoteGroupingInfo[b.Key].Tooltip),
+                StringComparison.Ordinal));
+
+        var models = new RadialMenuOption[sorted.Count];
         var i = 0;
-        foreach (var (key, list) in emotesByCategory)
+        foreach (var pair in sorted)
         {
+            var key = pair.Key;
+            var list = pair.Value;
             var tuple = EmoteGroupingInfo[key];
 
             models[i] = new RadialMenuNestedLayerOption(list)
@@ -217,6 +238,20 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
         }
 
         return models;
+    }
+
+    private bool IsHiddenCategory(EmoteCategory category)
+    {
+        if (AlwaysEnabledCategories.Contains(category))
+            return false;
+
+        //_CS Start
+        // Read from selected profile in the common UI path so category visibility applies across all map/fork content.
+        //_CS End
+        if (_preferencesManager.Preferences?.SelectedCharacter is not HumanoidCharacterProfile profile)
+            return false;
+
+        return profile.HiddenEmoteCategories.Contains(category);
     }
 
     private bool CanHasUseEmote(EmotePrototype emote, EntityUid player)

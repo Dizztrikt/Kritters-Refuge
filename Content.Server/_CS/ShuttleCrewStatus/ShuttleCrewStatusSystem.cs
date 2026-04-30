@@ -7,6 +7,7 @@ using Content.Shared.Shuttles.Systems;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Server._CS.ShuttleCrewStatus;
 
@@ -95,11 +96,8 @@ public sealed class ShuttleCrewStatusSystem : EntitySystem
 
                 if (hasActiveCrew)
                 {
-                    // Restore original color
-                    if (crewStatus.OriginalColor.HasValue)
-                    {
-                        _shuttle.SetIFFColor(uid, crewStatus.OriginalColor.Value, iff);
-                    }
+                    var activeColor = GetCrewDisplayColor(iff.ServiceFlags, hasActiveCrew, crewStatus.OriginalColor ?? iff.Color);
+                    _shuttle.SetIFFColor(uid, activeColor, iff);
                 }
                 else
                 {
@@ -109,11 +107,28 @@ public sealed class ShuttleCrewStatusSystem : EntitySystem
                         crewStatus.OriginalColor = iff.Color;
                     }
 
-                    // Set to gray to indicate no active crew
-                    _shuttle.SetIFFColor(uid, _inactiveCrewColor, iff);
+                    var inactiveColor = GetCrewDisplayColor(iff.ServiceFlags, hasActiveCrew, crewStatus.OriginalColor.Value);
+                    _shuttle.SetIFFColor(uid, inactiveColor, iff);
                 }
             }
         }
+    }
+
+    private Color GetCrewDisplayColor(ServiceFlags flags, bool hasActiveCrew, Color fallback)
+    {
+        if (flags.HasFlag(ServiceFlags.InterdictionsEnabled))
+        {
+            var value = hasActiveCrew ? 1.0f : 0.5f;
+            return Color.FromHsv(new Vector4(0.90f, 0.75f, value, 1f));
+        }
+
+        if (flags.HasFlag(ServiceFlags.InterdictionsDisabled))
+        {
+            var value = hasActiveCrew ? 0.70f : 0.40f;
+            return Color.FromHsv(new Vector4(0.78f, 0.70f, value, 1f));
+        }
+
+        return hasActiveCrew ? fallback : _inactiveCrewColor;
     }
 
     /// <summary>

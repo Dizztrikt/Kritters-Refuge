@@ -229,9 +229,15 @@ public sealed class BluespaceErrorRule : StationEventSystem<BluespaceErrorRuleCo
 
                 while (query.MoveNext(out var salvUid, out var salvMob))
                 {
+                    var transform = Transform(salvUid);
+                    if (transform.GridUid is { } mobGrid && HasComp<ShuttleComponent>(mobGrid))
+                    {
+                        RemComp<NFSalvageMobRestrictionsComponent>(salvUid);
+                        continue;
+                    }
+
                     if (!salvMob.DespawnIfOffLinkedGrid)
                     {
-                        var transform = Transform(salvUid);
                         if (transform.GridUid != salvMob.LinkedGridEntity)
                         {
                             RemComp<NFSalvageMobRestrictionsComponent>(salvUid);

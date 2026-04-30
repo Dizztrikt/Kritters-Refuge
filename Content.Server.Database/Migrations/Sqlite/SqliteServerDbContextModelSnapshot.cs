@@ -895,6 +895,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("REAL")
                         .HasColumnName("height");
 
+                    b.Property<string>("HiddenEmoteCategories")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("hidden_emote_categories");
+
                     b.Property<string>("LegStyle")
                         .IsRequired()
                         .HasColumnType("TEXT")

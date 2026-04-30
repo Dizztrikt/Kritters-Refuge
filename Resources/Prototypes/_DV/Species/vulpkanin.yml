@@ -26,7 +26,6 @@
     NeckFluff: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
     UndergarmentBottom: MobHumanoidAnyMarking
-    Genital: MobHumanoidAnyMarking
     Chest: MobVulpkaninTorso
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
@@ -46,6 +45,7 @@
     RFoot: MobVulpkaninRFoot
     TailBehind: MobHumanoidAnyMarking
     TailOversuit: MobHumanoidAnyMarking
+    Genital: MobHumanoidAnyMarking
     UndershirtUnderclothes: MobHumanoidAnyMarking
     UndershirtOverclothes: MobHumanoidAnyMarking
 

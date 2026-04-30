@@ -235,6 +235,45 @@ namespace Content.Server.Construction
                         }
 
                         break;
+
+                    case MachinePartConstructionGraphStep machinePartStep:
+                        foreach (var entity in new HashSet<EntityUid>(EnumerateNearby(user)))
+                        {
+                            if (!machinePartStep.EntityValid(entity, EntityManager, out _, out var stack))
+                                continue;
+
+                            if (used.Contains(entity))
+                                continue;
+
+                            var inserted = entity;
+
+                            if (stack != null)
+                            {
+                                var splitStack = _stackSystem.Split(entity, machinePartStep.Amount, user.ToCoordinates(0, 0), stack);
+
+                                if (splitStack == null)
+                                    continue;
+
+                                inserted = splitStack.Value;
+                            }
+
+                            if (string.IsNullOrEmpty(machinePartStep.Store))
+                            {
+                                if (!_container.Insert(inserted, container))
+                                    continue;
+                            }
+                            else if (!_container.Insert(inserted, GetContainer(machinePartStep.Store)))
+                                continue;
+
+                            handled = true;
+
+                            if (inserted == entity)
+                                used.Add(entity);
+
+                            break;
+                        }
+
+                        break;
                 }
 
                 if (handled == false)

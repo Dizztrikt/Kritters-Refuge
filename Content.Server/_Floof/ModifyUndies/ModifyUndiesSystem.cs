@@ -127,49 +127,52 @@ public sealed class ModifyUndiesSystem : EntitySystem
                         RequireCanInteract = true,
                         BlockDuplicate = true
                     };
-                    string gString;
-                    if (args.User == args.Target)
+                    if (!marking.HideTogglePopup)
                     {
-                        gString = "marking-toggle-self-start";
-                        _popupSystem.PopupCoordinates(
-                            Loc.GetString(
-                                gString,
-                                ("marking-name", localizedName),
-                                ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb)
-                                ),
-                            Transform(args.Target).Coordinates,
-                            Filter.Entities(args.Target),
-                            true,
-                            PopupType.Medium);
-                    }
-                    // someone doing this to someone else
-                    else
-                    {
-                        // to the user
-                        gString = "marking-toggle-other-start";
-                        _popupSystem.PopupCoordinates(
-                            Loc.GetString(
-                                gString,
-                                ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb),
-                                ("marking-name", localizedName)
-                                ),
-                            Transform(args.Target).Coordinates,
-                            Filter.Entities(args.User),
-                            true,
-                            PopupType.Medium);
-                        // to the target
-                        gString = "marking-toggle-by-other-start";
-                        _popupSystem.PopupCoordinates(
-                            Loc.GetString(
-                                gString,
-                                ("marking-name", localizedName),
-                                ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb),
-                                ("other", Identity.Entity(args.User, EntityManager))
-                                ),
-                            Transform(args.Target).Coordinates,
-                            Filter.Entities(args.Target),
-                            true,
-                            PopupType.MediumCaution);
+                        string gString;
+                        if (args.User == args.Target)
+                        {
+                            gString = "marking-toggle-self-start";
+                            _popupSystem.PopupCoordinates(
+                                Loc.GetString(
+                                    gString,
+                                    ("marking-name", localizedName),
+                                    ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb)
+                                    ),
+                                Transform(args.Target).Coordinates,
+                                Filter.Entities(args.Target),
+                                true,
+                                PopupType.Medium);
+                        }
+                        // someone doing this to someone else
+                        else
+                        {
+                            // to the user
+                            gString = "marking-toggle-other-start";
+                            _popupSystem.PopupCoordinates(
+                                Loc.GetString(
+                                    gString,
+                                    ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb),
+                                    ("marking-name", localizedName)
+                                    ),
+                                Transform(args.Target).Coordinates,
+                                Filter.Entities(args.User),
+                                true,
+                                PopupType.Medium);
+                            // to the target
+                            gString = "marking-toggle-by-other-start";
+                            _popupSystem.PopupCoordinates(
+                                Loc.GetString(
+                                    gString,
+                                    ("marking-name", localizedName),
+                                    ("verb", isVisible ? marking.TakeOffVerb : marking.PutOnVerb),
+                                    ("other", Identity.Entity(args.User, EntityManager))
+                                    ),
+                                Transform(args.Target).Coordinates,
+                                Filter.Entities(args.Target),
+                                true,
+                                PopupType.MediumCaution);
+                        }
                     }
                     // and then play a sound!
                     var rufthleAudio = new SoundPathSpecifier("/Audio/Effects/thudswoosh.ogg");
@@ -209,51 +212,54 @@ public sealed class ModifyUndiesSystem : EntitySystem
         // and one if the doer is the target
         // Effect targets for different players
         // Popups
-        string gString;
         var marking = args.Marking;
 
-        if (args.User == args.Target.Value)
+        if (!marking.HideTogglePopup)
         {
-            gString = "marking-toggle-self";
-            _popupSystem.PopupCoordinates(
-                Loc.GetString(
-                    gString,
-                    ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
-                    ("verb", args.IsVisible ? marking.TakeOffVerb : marking.PutOnVerb)
-                    ),
-                Transform(args.Target.Value).Coordinates,
-                Filter.Entities(args.Target.Value),
-                true,
-                PopupType.Medium);
-        }
-        // someone doing this to someone else
-        else
-        {
-            // to the user
-            gString = "marking-toggle-other";
-            _popupSystem.PopupCoordinates(
-                Loc.GetString(
-                    gString,
-                    ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
-                    ("verb", args.IsVisible ? marking.TakeOffVerb : marking.PutOnVerb)
-                    ),
-                Transform(args.Target.Value).Coordinates,
-                Filter.Entities(args.User),
-                true,
-                PopupType.Medium);
-            // to the target
-            gString = "marking-toggle-by-other";
-            _popupSystem.PopupCoordinates(
-                Loc.GetString(
-                    gString,
-                    ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
-                    ("verb", args.IsVisible ? marking.TakeOffVerb2p : marking.PutOnVerb2p),
-                    ("other", Identity.Entity(args.User, EntityManager))
-                    ),
-                Transform(args.Target.Value).Coordinates,
-                Filter.Entities(args.Target.Value),
-                true,
-                PopupType.Medium);
+            string gString;
+            if (args.User == args.Target.Value)
+            {
+                gString = "marking-toggle-self";
+                _popupSystem.PopupCoordinates(
+                    Loc.GetString(
+                        gString,
+                        ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
+                        ("verb", args.IsVisible ? marking.TakeOffVerb : marking.PutOnVerb)
+                        ),
+                    Transform(args.Target.Value).Coordinates,
+                    Filter.Entities(args.Target.Value),
+                    true,
+                    PopupType.Medium);
+            }
+            // someone doing this to someone else
+            else
+            {
+                // to the user
+                gString = "marking-toggle-other";
+                _popupSystem.PopupCoordinates(
+                    Loc.GetString(
+                        gString,
+                        ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
+                        ("verb", args.IsVisible ? marking.TakeOffVerb : marking.PutOnVerb)
+                        ),
+                    Transform(args.Target.Value).Coordinates,
+                    Filter.Entities(args.User),
+                    true,
+                    PopupType.Medium);
+                // to the target
+                gString = "marking-toggle-by-other";
+                _popupSystem.PopupCoordinates(
+                    Loc.GetString(
+                        gString,
+                        ("marking-name", string.IsNullOrEmpty(marking.CustomName) ? args.MarkingPrototypeName : marking.CustomName),
+                        ("verb", args.IsVisible ? marking.TakeOffVerb2p : marking.PutOnVerb2p),
+                        ("other", Identity.Entity(args.User, EntityManager))
+                        ),
+                    Transform(args.Target.Value).Coordinates,
+                    Filter.Entities(args.Target.Value),
+                    true,
+                    PopupType.Medium);
+            }
         }
         // and then play a sound!
         var rufthleAudio = new SoundPathSpecifier("/Audio/Effects/thudswoosh.ogg");

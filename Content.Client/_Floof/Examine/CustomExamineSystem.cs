@@ -59,7 +59,7 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
         if (_window == null)
             return;
 
-        _window.SetData(ent.Comp.PublicData, ent.Comp.SubtleData);
+        _window.SetData(ent.Comp.PublicData, ent.Comp.SubtleData, ent.Comp.InHeatEnabled, ent.Comp.InRutEnabled);
     }
 
     private void OpenUi(EntityUid target)
@@ -74,7 +74,7 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
             _window.OnReset += () =>
             {
                 if (TryComp<CustomExamineComponent>(target, out var comp2))
-                    _window.SetData(comp2.PublicData, comp2.SubtleData, force: true);
+                    _window.SetData(comp2.PublicData, comp2.SubtleData, comp2.InHeatEnabled, comp2.InRutEnabled, force: true);
             };
             _window.OnSave += (data) =>
             {
@@ -82,6 +82,8 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
                 {
                     PublicData = data.publicData,
                     SubtleData = data.subtleData,
+                    InHeatEnabled = data.inHeatEnabled,
+                    InRutEnabled = data.inRutEnabled,
                     Target = GetNetEntity(target)
                 };
                 RaiseNetworkEvent(ev);
@@ -90,7 +92,7 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
 
         // This will create a local component if it didn't exist before, but after sending the data to server it will become shared.
         var comp = EnsureComp<CustomExamineComponent>(target);
-        _window.SetData(comp.PublicData, comp.SubtleData);
+        _window.SetData(comp.PublicData, comp.SubtleData, comp.InHeatEnabled, comp.InRutEnabled);
 
         if (_window.IsOpen)
             _window.Close();

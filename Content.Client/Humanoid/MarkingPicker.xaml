@@ -80,6 +80,8 @@
             <LineEdit Name="TakeOffTextEdit" HorizontalExpand="True"></LineEdit>
             <Label Text="{Loc marking-can-toggle-other}"></Label>
             <CheckBox Name="CanPutOnByOtherToggle" HorizontalExpand="True"></CheckBox>
+            <Label Name="HideTogglePopupLabel" Text="{Loc marking-hide-toggle-popup}"></Label>
+            <CheckBox Name="HideTogglePopupToggle" HorizontalExpand="True"></CheckBox>
             <Label Name="PutOnOtherTextEditLabel" Text="{Loc marking-put-on-text-label-other}" ></Label>
             <LineEdit Name="PutOnOtherTextEdit" HorizontalExpand="True"></LineEdit>
             <Label Name="TakeOffOtherTextEditLabel" Text="{Loc marking-take-off-text-label-other}"></Label>

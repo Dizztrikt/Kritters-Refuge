@@ -10,9 +10,6 @@ namespace Content.Client.Audio;
 
 public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
 {
-    private const string PocketSizedAndyFolderSegment = "/PocketSizedAndy/";
-    private static readonly ResolvedPathSpecifier AndyAnnouncementFallback = new("/Audio/Announcements/announce.ogg");
-
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
@@ -24,10 +21,6 @@ public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
     private bool _eventAudioEnabled = true;
     private Dictionary<StationEventMusicType, EntityUid?> _eventAudio = new(1);
 
-    // Andy announcements
-    private bool _andyAudioEnabled = true;
-    private List<EntityUid?> _andyAudio = new(1);
-
     public override void Initialize()
     {
         base.Initialize();
@@ -38,8 +31,6 @@ public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
         SubscribeNetworkEvent<StationEventMusicEvent>(PlayStationEventMusic);
         SubscribeNetworkEvent<StopStationEventMusic>(StopStationEventMusic);
         Subs.CVar(_cfg, CCVars.EventMusicEnabled, ToggleStationEventMusic, true);
-
-        Subs.CVar(_cfg, CCVars.AndyAnnouncementsEnabled, ToggleAndyAnnouncements, true);
 
         SubscribeNetworkEvent<GameGlobalSoundEvent>(PlayGameSound);
     }
@@ -69,13 +60,6 @@ public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
         }
 
         _eventAudio.Clear();
-
-        foreach (var stream in _andyAudio)
-        {
-            _audio.Stop(stream);
-        }
-
-        _andyAudio.Clear();
     }
 
     private void PlayAdminSound(AdminSoundEvent soundEvent)
@@ -97,19 +81,6 @@ public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
 
     private void PlayGameSound(GameGlobalSoundEvent soundEvent)
     {
-        if (IsAndyAnnouncement(soundEvent.Specifier))
-        {
-            if (!_andyAudioEnabled)
-            {
-                _audio.PlayGlobal(AndyAnnouncementFallback, Filter.Local(), false, soundEvent.AudioParams);
-                return;
-            }
-
-            var stream = _audio.PlayGlobal(soundEvent.Specifier, Filter.Local(), false, soundEvent.AudioParams);
-            _andyAudio.Add(stream?.Entity);
-            return;
-        }
-
         _audio.PlayGlobal(soundEvent.Specifier, Filter.Local(), false, soundEvent.AudioParams);
     }
 
@@ -143,50 +114,4 @@ public sealed class ClientGlobalSoundSystem : SharedGlobalSoundSystem
         }
         _eventAudio.Clear();
     }
-
-    private void ToggleAndyAnnouncements(bool enabled)
-    {
-        _andyAudioEnabled = enabled;
-
-        if (_andyAudioEnabled)
-            return;
-
-        foreach (var stream in _andyAudio)
-        {
-            _audio.Stop(stream);
-        }
-
-        _andyAudio.Clear();
-    }
-
-    private static bool IsAndyAnnouncement(ResolvedSoundSpecifier specifier)
-    {
-        if (specifier is not ResolvedPathSpecifier pathSpecifier)
-            return false;
-
-        var normalized = pathSpecifier.Path.ToString().Replace('\\', '/').Trim();
-
-        if (normalized.StartsWith("SoundPathSpecifier(", StringComparison.OrdinalIgnoreCase)
-            && normalized.EndsWith(")", StringComparison.Ordinal))
-        {
-            normalized = normalized["SoundPathSpecifier(".Length..^1];
-        }
-
-        if (normalized.StartsWith("ResolvedPathSpecifier(", StringComparison.OrdinalIgnoreCase)
-            && normalized.EndsWith(")", StringComparison.Ordinal))
-        {
-            normalized = normalized["ResolvedPathSpecifier(".Length..^1];
-        }
-
-        normalized = normalized.Trim();
-        if (!normalized.StartsWith('/'))
-            normalized = $"/{normalized}";
-
-        if (normalized.EndsWith(")", StringComparison.Ordinal))
-            normalized = normalized[..^1];
-
-        return normalized.Contains(PocketSizedAndyFolderSegment, StringComparison.OrdinalIgnoreCase)
-               && normalized.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase);
-    }
-
 }

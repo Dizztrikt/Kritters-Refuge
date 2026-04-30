@@ -16,6 +16,11 @@ namespace Content.Shared.Construction.Steps
                 return typeof(MaterialConstructionGraphStep);
             }
 
+            if (node.Has("machinePart"))
+            {
+                return typeof(MachinePartConstructionGraphStep);
+            }
+
             if (node.Has("tool"))
             {
                 return typeof(ToolConstructionGraphStep);

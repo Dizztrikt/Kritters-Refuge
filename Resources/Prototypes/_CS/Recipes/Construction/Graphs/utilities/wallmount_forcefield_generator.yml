@@ -43,56 +43,56 @@
           store: machine_board
           name: construction-graph-tag-field-matrix-core
           doAfter: 1
-        - tag: Capacitor
+        - machinePart: Capacitor
           store: machine_parts
           name: construction-graph-tag-capacitor
           icon:
             sprite: "Objects/Misc/stock_parts.rsi"
             state: "capacitor"
           doAfter: 1
-        - tag: Capacitor
+        - machinePart: Capacitor
           store: machine_parts
           name: construction-graph-tag-capacitor
           icon:
             sprite: "Objects/Misc/stock_parts.rsi"
             state: "capacitor"
           doAfter: 1
-        - tag: Capacitor
+        - machinePart: Capacitor
           store: machine_parts
           name: construction-graph-tag-capacitor
           icon:
             sprite: "Objects/Misc/stock_parts.rsi"
             state: "capacitor"
           doAfter: 1
-        - tag: Capacitor
+        - machinePart: Capacitor
           store: machine_parts
           name: construction-graph-tag-capacitor
           icon:
             sprite: "Objects/Misc/stock_parts.rsi"
             state: "capacitor"
           doAfter: 1
-        - tag: PowerCell
+        - machinePart: PowerCell
           store: machine_parts
           name: construction-graph-tag-power-cell
           icon:
             sprite: "Objects/Power/power_cells.rsi"
             state: "medium"
           doAfter: 1
-        - tag: PowerCell
+        - machinePart: PowerCell
           store: machine_parts
           name: construction-graph-tag-power-cell
           icon:
             sprite: "Objects/Power/power_cells.rsi"
             state: "medium"
           doAfter: 1
-        - tag: PowerCell
+        - machinePart: PowerCell
           store: machine_parts
           name: construction-graph-tag-power-cell
           icon:
             sprite: "Objects/Power/power_cells.rsi"
             state: "medium"
           doAfter: 1
-        - tag: PowerCell
+        - machinePart: PowerCell
           store: machine_parts
           name: construction-graph-tag-power-cell
           icon:

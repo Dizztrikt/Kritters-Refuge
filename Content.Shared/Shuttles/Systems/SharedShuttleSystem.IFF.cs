@@ -119,7 +119,10 @@ public abstract partial class SharedShuttleSystem
         string outputString = "";
         foreach (var flag in Enum.GetValues<ServiceFlags>())
         {
-            if (flag == ServiceFlags.None || !flags.HasFlag(flag))
+            if (flag == ServiceFlags.None ||
+                flag == ServiceFlags.InterdictionsEnabled ||
+                flag == ServiceFlags.InterdictionsDisabled ||
+                !flags.HasFlag(flag))
                 continue;
 
             if (Loc.TryGetString($"shuttle-console-service-flag-{flag}-shortform", out var flagString))

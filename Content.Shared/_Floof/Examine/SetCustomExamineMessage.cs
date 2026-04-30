@@ -13,4 +13,8 @@ public sealed class SetCustomExamineMessage : EntityEventArgs
     public NetEntity Target;
 
     public CustomExamineData PublicData, SubtleData;
+
+    public bool InHeatEnabled;
+
+    public bool InRutEnabled;
 }

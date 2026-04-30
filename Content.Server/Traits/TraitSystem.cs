@@ -12,6 +12,9 @@ namespace Content.Server.Traits;
 
 public sealed class TraitSystem : EntitySystem
 {
+    private const string LegacyInHeatTraitId = "HornyInHeat";
+    private const string LegacyInRutTraitId = "HornyInRut";
+
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SharedHandsSystem _sharedHandsSystem = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
@@ -39,8 +42,9 @@ public sealed class TraitSystem : EntitySystem
         {
             if (!_prototypeManager.TryIndex<TraitPrototype>(traitId, out var traitPrototype))
             {
-                Log.Warning($"No trait found with ID {traitId}!");
-                return;
+                if (traitId != LegacyInHeatTraitId && traitId != LegacyInRutTraitId)
+                    Log.Warning($"No trait found with ID {traitId}!");
+                continue;
             }
 
             if (_whitelistSystem.IsWhitelistFail(traitPrototype.Whitelist, args.Mob)

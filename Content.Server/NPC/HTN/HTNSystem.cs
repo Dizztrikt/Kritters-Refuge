@@ -404,7 +404,28 @@ public sealed class HTNSystem : EntitySystem
                 foreach (var service in currentTask.Services)
                 {
                     var serviceResult = _utility.GetEntities(blackboard, service.Prototype);
-                    blackboard.SetValue(service.Key, serviceResult.GetHighest());
+                    var highest = serviceResult.GetHighest();
+
+                    // For combat target services, retain the previous target when none are currently visible
+                    // and keep moving toward the last known coordinates.
+                    if (service.Key == "Target")
+                    {
+                        if (highest != EntityUid.Invalid)
+                        {
+                            blackboard.SetValue(service.Key, highest);
+                            blackboard.SetValue("TargetCoordinates", Transform(highest).Coordinates);
+                            continue;
+                        }
+
+                        if (blackboard.TryGetValue<EntityUid>(service.Key, out var existingTarget, EntityManager) &&
+                            existingTarget != EntityUid.Invalid &&
+                            !TerminatingOrDeleted(existingTarget))
+                        {
+                            continue;
+                        }
+                    }
+
+                    blackboard.SetValue(service.Key, highest);
                 }
 
                 component.CheckServices = false;

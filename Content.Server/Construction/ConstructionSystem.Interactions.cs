@@ -320,6 +320,14 @@ namespace Content.Server.Construction
 
                         insert = stack;
                     }
+                    else if (insertStep is MachinePartConstructionGraphStep machinePartStep &&
+                             TryComp<StackComponent>(insert, out _))
+                    {
+                        if (_stackSystem.Split(insert, machinePartStep.Amount, Transform(interactUsing.User).Coordinates) is not {} stack)
+                            return HandleResult.False;
+
+                        insert = stack;
+                    }
 
                     // Container-storage handling.
                     if (!string.IsNullOrEmpty(insertStep.Store))

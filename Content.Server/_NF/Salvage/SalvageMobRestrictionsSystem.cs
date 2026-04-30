@@ -5,6 +5,7 @@ using Content.Shared.Mobs;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Popups;
+using Content.Server.Shuttles.Components;
 using Content.Shared.Database;
 using Content.Shared.Popups;
 using Robust.Shared.Player;
@@ -105,6 +106,14 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
 
         var gridUid = Transform(uid).GridUid;
         var popupMessage = Loc.GetString(component.LeaveGridPopup);
+
+        // If this NPC gets onto a shuttle grid, release salvage restrictions permanently.
+        // This allows it to return with the ship and avoids expedition cleanup deleting it.
+        if (gridUid is { } currentGrid && HasComp<ShuttleComponent>(currentGrid))
+        {
+            RemComp<NFSalvageMobRestrictionsComponent>(uid);
+            return;
+        }
 
         if (component.LinkedGridEntity == gridUid && HasComp<SalvageMobRestrictionsGridComponent>(gridUid))
         {

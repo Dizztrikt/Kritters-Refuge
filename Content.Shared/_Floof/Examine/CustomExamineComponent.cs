@@ -31,6 +31,12 @@ public sealed partial class CustomExamineComponent : Component
         RequiresConsent = false,
         LastUpdate = TimeSpan.Zero
     };
+
+    [DataField, AutoNetworkedField]
+    public bool InHeatEnabled;
+
+    [DataField, AutoNetworkedField]
+    public bool InRutEnabled;
 }
 
 [DataDefinition, Serializable, NetSerializable]

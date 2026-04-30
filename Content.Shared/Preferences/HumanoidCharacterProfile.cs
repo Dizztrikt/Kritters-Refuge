@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared._NF.Bank;
 using Content.Shared.CCVar;
+using Content.Shared.Chat.Prototypes;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -62,6 +63,12 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         private HashSet<ProtoId<TraitPrototype>> _traitPreferences = new();
+
+        /// <summary>
+        /// Hidden emote categories for the radial emote wheel.
+        /// </summary>
+        [DataField]
+        private HashSet<EmoteCategory> _hiddenEmoteCategories = new();
 
         /// <summary>
         /// <see cref="_loadouts"/>
@@ -140,6 +147,11 @@ namespace Content.Shared.Preferences
         public IReadOnlySet<ProtoId<TraitPrototype>> TraitPreferences => _traitPreferences;
 
         /// <summary>
+        /// <see cref="_hiddenEmoteCategories"/>
+        /// </summary>
+        public IReadOnlySet<EmoteCategory> HiddenEmoteCategories => _hiddenEmoteCategories;
+
+        /// <summary>
         /// If we're unable to get one of our preferred jobs do we spawn as a fallback job or do we stay in lobby.
         /// </summary>
         [DataField]
@@ -163,6 +175,7 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            HashSet<EmoteCategory> hiddenEmoteCategories,
             Dictionary<string, RoleLoadout> loadouts)
         {
             Name = name;
@@ -181,6 +194,7 @@ namespace Content.Shared.Preferences
             PreferenceUnavailable = preferenceUnavailable;
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
+            _hiddenEmoteCategories = hiddenEmoteCategories;
             _loadouts = loadouts;
         }
 
@@ -190,6 +204,7 @@ namespace Content.Shared.Preferences
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            HashSet<EmoteCategory> hiddenEmoteCategories,
             Dictionary<string, RoleLoadout> loadouts)
             : this(other.Name,
                 other.FlavorText,
@@ -207,6 +222,7 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 antagPreferences,
                 traitPreferences,
+                hiddenEmoteCategories,
                 loadouts)
         {
         }
@@ -229,6 +245,7 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
+                new HashSet<EmoteCategory>(other.HiddenEmoteCategories),
                 new Dictionary<string, RoleLoadout>(other.Loadouts))
         {
         }
@@ -440,6 +457,40 @@ namespace Content.Shared.Preferences
             };
         }
 
+        public HumanoidCharacterProfile WithHiddenEmoteCategories(IEnumerable<EmoteCategory> hiddenEmoteCategories)
+        {
+            var categories = new HashSet<EmoteCategory>(hiddenEmoteCategories)
+            {
+                EmoteCategory.Invalid,
+            };
+
+            categories.Remove(EmoteCategory.Sex);
+            categories.Remove(EmoteCategory.Vocal);
+            categories.Remove(EmoteCategory.Invalid);
+
+            return new(this)
+            {
+                _hiddenEmoteCategories = categories,
+            };
+        }
+
+        public HumanoidCharacterProfile WithHiddenEmoteCategory(EmoteCategory category, bool hidden)
+        {
+            if (category is EmoteCategory.Sex or EmoteCategory.Vocal or EmoteCategory.Invalid)
+                return new(this);
+
+            var categories = new HashSet<EmoteCategory>(_hiddenEmoteCategories);
+            if (hidden)
+                categories.Add(category);
+            else
+                categories.Remove(category);
+
+            return new(this)
+            {
+                _hiddenEmoteCategories = categories,
+            };
+        }
+
         public HumanoidCharacterProfile WithAntagPreference(ProtoId<AntagPrototype> antagId, bool pref)
         {
             var list = new HashSet<ProtoId<AntagPrototype>>(_antagPreferences);
@@ -544,6 +595,7 @@ namespace Content.Shared.Preferences
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
+            if (!_hiddenEmoteCategories.SequenceEqual(other._hiddenEmoteCategories)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
@@ -614,6 +666,10 @@ namespace Content.Shared.Preferences
             {
                 name = GetName(Species, gender);
             }
+
+            _hiddenEmoteCategories.Remove(EmoteCategory.Sex);
+            _hiddenEmoteCategories.Remove(EmoteCategory.Vocal);
+            _hiddenEmoteCategories.Remove(EmoteCategory.Invalid);
 
             var customspeciename = speciesPrototype.CustomName
                 ? FormattedMessage.RemoveMarkup(Customspeciesname ?? "")[..MaxNameLength]

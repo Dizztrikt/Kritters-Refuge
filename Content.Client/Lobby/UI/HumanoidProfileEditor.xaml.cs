@@ -11,6 +11,7 @@ using Content.Client.Sprite;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
+using Content.Shared.Chat.Prototypes;
 using Content.Shared.Clothing;
 using Content.Shared.Consent;
 using Content.Shared.GameTicking;
@@ -105,6 +106,7 @@ namespace Content.Client.Lobby.UI
         private readonly Dictionary<string, BoxContainer> _jobCategories;
 
         private readonly Dictionary<string, TraitCategoryWindow> _openTraitWindows = new();
+        private readonly Dictionary<string, EmoteCategoryWindow> _openEmoteWindows = new();
 
         private Direction _previewRotation = Direction.North;
 
@@ -730,6 +732,62 @@ namespace Content.Client.Lobby.UI
                     TraitsList.AddChild(selector);
                 }
             }
+
+            TraitsList.AddChild(new Label
+            {
+                Text = Loc.GetString("emote-window-category-title"),
+                Margin = new Thickness(0, 10, 0, 0),
+                StyleClasses = { StyleBase.StyleClassLabelHeading },
+            });
+
+            CreateNestedEmoteCategoryButton();
+        }
+
+        private void CreateNestedEmoteCategoryButton()
+        {
+            var hiddenCount = Profile?.HiddenEmoteCategories.Count ?? 0;
+            var visibleCount = Math.Max(0, EmoteCategoryWindow.ConfigurableCategoryCount - hiddenCount);
+
+            var buttonText = hiddenCount > 0
+                ? Loc.GetString("emote-window-button-with-count", ("count", visibleCount))
+                : Loc.GetString("trait-window-button");
+
+            var button = new Button
+            {
+                Text = buttonText,
+                HorizontalAlignment = Control.HAlignment.Left,
+                MinWidth = 200,
+            };
+
+            button.OnPressed += _ => OpenEmoteCategoryWindow();
+            TraitsList.AddChild(button);
+        }
+
+        private void OpenEmoteCategoryWindow()
+        {
+            const string windowKey = "Emotes";
+            if (_openEmoteWindows.TryGetValue(windowKey, out var existingWindow))
+            {
+                existingWindow.MoveToFront();
+                return;
+            }
+
+            var window = new EmoteCategoryWindow(Profile);
+
+            window.OnSave += updatedProfile =>
+            {
+                Profile = updatedProfile;
+                SetDirty();
+                RefreshTraits();
+            };
+
+            window.OnClose += () =>
+            {
+                _openEmoteWindows.Remove(windowKey);
+            };
+
+            _openEmoteWindows[windowKey] = window;
+            window.OpenCentered();
         }
 
         /// <summary>

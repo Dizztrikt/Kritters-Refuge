@@ -56,6 +56,8 @@ namespace Content.Client.Shuttles.UI
             ServiceFlagServices.OnPressed += _ => ToggleServiceFlags(ServiceFlags.Services);
             ServiceFlagTrade.OnPressed += _ => ToggleServiceFlags(ServiceFlags.Trade);
             ServiceFlagSocial.OnPressed += _ => ToggleServiceFlags(ServiceFlags.Social);
+            ServiceFlagInterdictionsEnabled.OnPressed += _ => SetInterdictionState(enabled: true);
+            ServiceFlagInterdictionsDisabled.OnPressed += _ => SetInterdictionState(enabled: false);
 
             TargetX.OnTextChanged += _ => _targetCoordsModified = true;
             TargetY.OnTextChanged += _ => _targetCoordsModified = true;
@@ -194,6 +196,36 @@ namespace Content.Client.Shuttles.UI
             ServiceFlagServices.Pressed = NavRadar.ServiceFlags.HasFlag(ServiceFlags.Services);
             ServiceFlagTrade.Pressed = NavRadar.ServiceFlags.HasFlag(ServiceFlags.Trade);
             ServiceFlagSocial.Pressed = NavRadar.ServiceFlags.HasFlag(ServiceFlags.Social);
+            ServiceFlagInterdictionsEnabled.Pressed = NavRadar.ServiceFlags.HasFlag(ServiceFlags.InterdictionsEnabled);
+            ServiceFlagInterdictionsDisabled.Pressed = NavRadar.ServiceFlags.HasFlag(ServiceFlags.InterdictionsDisabled);
+        }
+
+        private void SetInterdictionState(bool enabled)
+        {
+            var currentlyEnabled = NavRadar.ServiceFlags.HasFlag(ServiceFlags.InterdictionsEnabled);
+            var currentlyDisabled = NavRadar.ServiceFlags.HasFlag(ServiceFlags.InterdictionsDisabled);
+
+            // Clicking the active option again clears interdiction mode entirely.
+            if ((enabled && currentlyEnabled) || (!enabled && currentlyDisabled))
+            {
+                NavRadar.ServiceFlags &= ~ServiceFlags.InterdictionsEnabled;
+                NavRadar.ServiceFlags &= ~ServiceFlags.InterdictionsDisabled;
+
+                _entManager.TryGetNetEntity(_shuttleEntity, out var clearedShuttle);
+                OnServiceFlagsChanged?.Invoke(clearedShuttle, NavRadar.ServiceFlags);
+                ToggleServiceFlags(NavRadar.ServiceFlags, updateButtonsOnly: true);
+                return;
+            }
+
+            NavRadar.ServiceFlags &= ~ServiceFlags.InterdictionsEnabled;
+            NavRadar.ServiceFlags &= ~ServiceFlags.InterdictionsDisabled;
+            NavRadar.ServiceFlags |= enabled
+                ? ServiceFlags.InterdictionsEnabled
+                : ServiceFlags.InterdictionsDisabled;
+
+            _entManager.TryGetNetEntity(_shuttleEntity, out var shuttle);
+            OnServiceFlagsChanged?.Invoke(shuttle, NavRadar.ServiceFlags);
+            ToggleServiceFlags(NavRadar.ServiceFlags, updateButtonsOnly: true);
         }
 
         private void NfAddShuttleDesignation(EntityUid? shuttle)

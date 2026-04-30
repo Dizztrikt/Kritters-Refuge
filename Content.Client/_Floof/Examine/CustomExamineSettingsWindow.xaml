@@ -38,6 +38,12 @@
                 Access="Public"/>
         </BoxContainer>
 
+        <BoxContainer Orientation="Vertical" Margin="5 0 5 5">
+            <Label Text="{Loc 'custom-exam-traits-title'}"/>
+            <CheckBox Name="InHeatToggle" Text="{Loc 'custom-exam-trait-in-heat'}"/>
+            <CheckBox Name="InRutToggle" Text="{Loc 'custom-exam-trait-in-rut'}"/>
+        </BoxContainer>
+
         <BoxContainer Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Name="ResetButton" Text="{Loc 'custom-exam-reset'}" StyleClasses="OpenRight"/>
             <Button Name="SaveButton" Text="{Loc 'custom-exam-save'}" StyleClasses="OpenLeft" />

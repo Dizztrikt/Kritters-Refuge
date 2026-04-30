@@ -75,4 +75,6 @@ public enum ServiceFlags : byte
     Services = 1,
     Trade = 2,
     Social = 4,
+    InterdictionsEnabled = 8,
+    InterdictionsDisabled = 16,
 }

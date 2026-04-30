@@ -674,6 +674,8 @@ marking-Genital-Penis-Tapered-5-1-penis_tapered_5_1_FRONT          = Penis, Tape
 
 marking-Knotted-Wolf-Cock                                          = Penis, Enormous Wolfknot
 marking-Knotted-Wolf-Cock-BRC-Knotted                              = Penis, Enormous Wolfknot
+marking-Knotted-Wolf-Cock-BRC-Knotted_FRONT                        = Penis, Enormous Wolfknot
+marking-Knotted-Wolf-Cock-BRC-Knotted_BEHIND                       = Penis, Enormous Wolfknot
 
 marking-GenitalBreastsRoundA                                                             = Breasts, Pair, Round, A Cup 
 marking-GenitalBreastsRoundA-breasts_pairround_a_0_FRONT                                 = Breasts, Pair, Round, A Cup 

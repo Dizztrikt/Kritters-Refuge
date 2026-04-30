@@ -1,5 +1,7 @@
 <controls:BoxContainer Visible="False"
               HorizontalExpand="True"
+              VerticalExpand="True"
+              Orientation="Horizontal"
               xmlns:controls="https://spacestation14.io"
               xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
               xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls"
@@ -13,7 +15,6 @@
                 <!-- Nav controls -->
                 <controls:BoxContainer Name="RightDisplayNav"
                       VerticalAlignment="Top"
-                      HorizontalAlignment="Right"
                       VerticalExpand="True"
                       MinWidth="256"
                       MaxWidth="256"
@@ -184,7 +185,9 @@
 
                     <!-- Frontier - Service Flags -->
                     <controls:BoxContainer Orientation="Vertical" HorizontalExpand="True" Name="ServiceFlagsBox">
-                        <controls:Label Text="{controls:Loc 'shuttle-console-service-flags'}"/>
+                        <controls:Label Text="{controls:Loc 'shuttle-console-service-flags'}"
+                                        HorizontalAlignment="Center"
+                                        Align="Center"/>
                         <controls:BoxContainer Orientation="Horizontal"
                                                HorizontalExpand="True"
                                                Align="Center"
@@ -211,6 +214,30 @@
                                              ToggleMode="True"
                                              MinWidth="30"
                                              ToolTip="{controls:Loc 'shuttle-console-service-flag-Social-description'}"
+                                             StyleClasses="OpenLeft"
+                                             Margin="0"/>
+                        </controls:BoxContainer>
+                        <controls:Label Text="{controls:Loc 'shuttle-console-service-flag-interdictions-title'}"
+                                        HorizontalAlignment="Center"
+                                        Align="Center"/>
+                        <controls:BoxContainer Orientation="Horizontal"
+                                               HorizontalExpand="True"
+                                               Align="Center"
+                                               Margin="0 0 0 3">
+                            <controls:Button Name="ServiceFlagInterdictionsEnabled"
+                                             Text="{controls:Loc 'shuttle-console-service-flag-InterdictionsEnabled-label'}"
+                                             TextAlign="Center"
+                                             ToggleMode="True"
+                                             MinWidth="30"
+                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-InterdictionsEnabled-description'}"
+                                             StyleClasses="OpenRight"
+                                             Margin="0"/>
+                            <controls:Button Name="ServiceFlagInterdictionsDisabled"
+                                             Text="{controls:Loc 'shuttle-console-service-flag-InterdictionsDisabled-label'}"
+                                             TextAlign="Center"
+                                             ToggleMode="True"
+                                             MinWidth="30"
+                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-InterdictionsDisabled-description'}"
                                              StyleClasses="OpenLeft"
                                              Margin="0"/>
                         </controls:BoxContainer>

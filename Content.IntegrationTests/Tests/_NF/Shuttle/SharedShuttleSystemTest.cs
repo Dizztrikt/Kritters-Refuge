@@ -1,4 +1,5 @@
-﻿using Content.IntegrationTests.Pair;
+﻿using System.Collections.Generic;
+using Content.IntegrationTests.Pair;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.GameObjects;
@@ -45,12 +46,20 @@ public sealed class ServiceFlagsSuffixTests
     [Test]
     public void GetServiceFlagsSuffix_MultipleFlagsUniqueChars_ReturnsFirstCharacters()
     {
-        // Assemble all enum values into one
+        // Flags intentionally excluded from the suffix display
+        var excludedFlags = new HashSet<ServiceFlags>
+        {
+            ServiceFlags.None,
+            ServiceFlags.InterdictionsEnabled,
+            ServiceFlags.InterdictionsDisabled,
+        };
+
+        // Assemble all displayed enum values into one
         var valueCount = 0;
         var allFlags = ServiceFlags.None;
         foreach (var flag in Enum.GetValues<ServiceFlags>())
         {
-            if (flag == ServiceFlags.None)
+            if (excludedFlags.Contains(flag))
                 continue;
             allFlags |= flag;
             valueCount++;
@@ -59,7 +68,7 @@ public sealed class ServiceFlagsSuffixTests
         // Extract the characters between brackets
         var characters = _shuttle.GetServiceFlagsSuffix(allFlags).Trim('[', ']');
 
-        // Check that we have three separate character combinations.
+        // Check that we have unique character combinations for each displayed flag.
         Assert.Multiple(() =>
         {
             Assert.That(characters, Is.Unique);
@@ -67,13 +76,13 @@ public sealed class ServiceFlagsSuffixTests
 
             foreach (var flag in Enum.GetValues<ServiceFlags>())
             {
-                if (flag == ServiceFlags.None)
+                if (excludedFlags.Contains(flag))
                     continue;
 
                 var oneFlagResult = _shuttle.GetServiceFlagsSuffix(flag);
-                // Extract the characters between brackets and split by '|'
+                // Extract the characters between brackets
                 var oneFlagCharacters = oneFlagResult.Trim('[', ']');
-                // Check that we have three separate character combination.
+                // Check that we have a single character for each displayed flag.
                 Assert.That(oneFlagCharacters.Length, Is.EqualTo(1));
                 Assert.That(characters.Contains(oneFlagCharacters[0]), Is.True);
             }

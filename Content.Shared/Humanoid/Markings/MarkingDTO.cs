@@ -37,6 +37,11 @@ namespace Content.Shared.Humanoid.Markings
         public bool? OtherCanToggleVisible { get; set; }
 
         /// <summary>
+        ///     Whether toggle popup text should be suppressed in game.
+        /// </summary>
+        public bool? HideTogglePopup { get; set; }
+
+        /// <summary>
         ///     Verb to use when putting on
         /// </summary>
         public string? PutOnVerb { get; set; }

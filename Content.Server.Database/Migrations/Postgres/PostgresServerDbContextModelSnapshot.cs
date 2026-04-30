@@ -948,6 +948,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("real")
                         .HasColumnName("height");
 
+                    b.Property<string>("HiddenEmoteCategories")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("hidden_emote_categories");
+
                     b.Property<string>("LegStyle")
                         .IsRequired()
                         .HasColumnType("text")
