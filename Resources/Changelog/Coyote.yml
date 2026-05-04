@@ -2691,3 +2691,12 @@ Entries:
   id: 309
   time: '2026-05-01T05:18:14.0000000+00:00'
   url: https://github.com/ARF-SS13/coyote-frontier/pull/1183
+- author: LateFinny
+  changes:
+    - type: Fix
+      message: Fixes Shelegs being able to be injected with hyposprays.
+    - type: Fix
+      message: Fixed a minor oversight in hypospray code.
+  id: 310
+  time: '2026-05-04T04:19:51.0000000+00:00'
+  url: https://github.com/ARF-SS13/coyote-frontier/pull/1187
