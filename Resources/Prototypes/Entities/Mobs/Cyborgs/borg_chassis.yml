@@ -67,8 +67,25 @@
     selectedBorgType: engineering
 
 - type: entity
-  id: DogBorgChassisEngineer
+  id: DogBorgChassisSelectable
   parent: BorgChassisSelectable
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.34,-0.22,0.34,0.22"
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  id: DogBorgChassisEngineer
+  parent: DogBorgChassisSelectable
   name: engineer dogborg
   components:
   - type: BorgSwitchableType
@@ -89,7 +106,7 @@
 
 - type: entity
   id: DogBorgChassisGeneric
-  parent: BorgChassisSelectable
+  parent: DogBorgChassisSelectable
   name: generic dogborg
   components:
   - type: BorgSwitchableType
@@ -110,7 +127,7 @@
 
 - type: entity
   id: DogBorgChassisMining
-  parent: BorgChassisSelectable
+  parent: DogBorgChassisSelectable
   name: salvage dogborg
   components:
   - type: BorgSwitchableType
@@ -131,7 +148,7 @@
 
 - type: entity
   id: DogBorgChassisJanitor
-  parent: BorgChassisSelectable
+  parent: DogBorgChassisSelectable
   name: janitor dogborg
   components:
   - type: BorgSwitchableType
@@ -152,7 +169,7 @@
 
 - type: entity
   id: DogBorgChassisMedical
-  parent: BorgChassisSelectable
+  parent: DogBorgChassisSelectable
   name: medical dogborg
   components:
   - type: BorgSwitchableType
@@ -173,7 +190,7 @@
 
 - type: entity
   id: DogBorgChassisService
-  parent: BorgChassisSelectable
+  parent: DogBorgChassisSelectable
   name: service dogborg
   components:
   - type: BorgSwitchableType

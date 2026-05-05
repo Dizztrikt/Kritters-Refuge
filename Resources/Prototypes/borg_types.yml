@@ -266,12 +266,19 @@
   - Science
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgShort
-  spriteBodyState: standardd
+  spriteBodyState: standardd-sit
   spriteBodyMovementState: standardd_moving
+  spriteBodyRestState: standardd-rest
+  spriteBodyLyingState: standardd-bellyup
+  spriteBodyDeadState: standardd-dead
   spriteHasMindState: standardd_e
+  spriteHasMindMovementState: standardd_e_moving
   spriteNoMindState: standardd_e_r
+  spriteNoMindMovementState: standardd_e_r_moving
   spriteToggleLightState: standardd_l
+  spriteToggleLightMovementState: standardd_l_moving
 
   # Pet
   petSuccessString: petting-success-generic-cyborg
@@ -303,12 +310,19 @@
   - Science
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgShort
-  spriteBodyState: engineeringd
+  spriteBodyState: engineeringd-sit
   spriteBodyMovementState: engineeringd_moving
+  spriteBodyRestState: engineeringd-rest
+  spriteBodyLyingState: engineeringd-bellyup
+  spriteBodyDeadState: engineeringd-dead
   spriteHasMindState: engineeringd_e
+  spriteHasMindMovementState: engineeringd_e_moving
   spriteNoMindState: engineeringd_e_r
+  spriteNoMindMovementState: engineeringd_e_r_moving
   spriteToggleLightState: engineeringd_l
+  spriteToggleLightMovementState: engineeringd_l_moving
 
   # Pet
   petSuccessString: petting-success-engineer-cyborg
@@ -341,12 +355,19 @@
   - Science
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgTall
-  spriteBodyState: miningd
+  spriteBodyState: miningd-sit
   spriteBodyMovementState: miningd_moving
+  spriteBodyRestState: miningd-rest
+  spriteBodyLyingState: miningd-bellyup
+  spriteBodyDeadState: miningd-dead
   spriteHasMindState: miningd_e
+  spriteHasMindMovementState: miningd_e_moving
   spriteNoMindState: miningd_e_r
+  spriteNoMindMovementState: miningd_e_r_moving
   spriteToggleLightState: miningd_l
+  spriteToggleLightMovementState: miningd_l_moving
 
   # Pet
   petSuccessString: petting-success-salvage-cyborg
@@ -378,12 +399,19 @@
   - Service
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgShort
-  spriteBodyState: janitord
+  spriteBodyState: janitord-sit
   spriteBodyMovementState: janitord_moving
+  spriteBodyRestState: janitord-rest
+  spriteBodyLyingState: janitord-bellyup
+  spriteBodyDeadState: janitord-dead
   spriteHasMindState: janitord_e
+  spriteHasMindMovementState: janitord_e_moving
   spriteNoMindState: janitord_e_r
+  spriteNoMindMovementState: janitord_e_r_moving
   spriteToggleLightState: janitord_l
+  spriteToggleLightMovementState: janitord_l_moving
 
   # Pet
   petSuccessString: petting-success-janitor-cyborg
@@ -426,12 +454,19 @@
     - Biological
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgDutch
-  spriteBodyState: medicald
+  spriteBodyState: medicald-sit
   spriteBodyMovementState: medicald_moving
+  spriteBodyRestState: medicald-rest
+  spriteBodyLyingState: medicald-bellyup
+  spriteBodyDeadState: medicald-dead
   spriteHasMindState: medicald_e
+  spriteHasMindMovementState: medicald_moving_e
   spriteNoMindState: medicald_e_r
+  spriteNoMindMovementState: medicald_e_r_moving
   spriteToggleLightState: medicald_l
+  spriteToggleLightMovementState: medicald_l_moving
 
   # Pet
   petSuccessString: petting-success-medical-cyborg
@@ -473,12 +508,19 @@
   - Service
 
   # Visual
+  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgTall
-  spriteBodyState: serviced
+  spriteBodyState: serviced-sit
   spriteBodyMovementState: serviced_moving
+  spriteBodyRestState: serviced-rest
+  spriteBodyLyingState: serviced-bellyup
+  spriteBodyDeadState: serviced-dead
   spriteHasMindState: serviced_e
+  spriteHasMindMovementState: serviced_e_moving
   spriteNoMindState: serviced_e_r
+  spriteNoMindMovementState: serviced_e_r_moving
   spriteToggleLightState: serviced_l
+  spriteToggleLightMovementState: serviced_l_moving
 
   # Pet
   petSuccessString: petting-success-service-cyborg
