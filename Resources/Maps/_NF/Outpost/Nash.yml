@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 04/18/2026 09:19:21
-  entityCount: 11531
+  time: 05/07/2026 22:18:17
+  entityCount: 11533
 maps:
 - 1
 grids:
@@ -537,7 +537,8 @@ entities:
           -2,-4:
             0: 51519
           -2,-3:
-            0: 33791
+            4: 1
+            0: 33790
           -2,-2:
             0: 65518
           -2,-5:
@@ -546,7 +547,8 @@ entities:
           -1,-4:
             0: 48011
           -1,-3:
-            0: 55487
+            0: 55455
+            5: 32
           -1,-2:
             0: 56799
           -1,-5:
@@ -705,7 +707,7 @@ entities:
             0: 65520
           2,7:
             1: 49169
-            4: 204
+            6: 204
           2,6:
             1: 544
           3,5:
@@ -990,7 +992,7 @@ entities:
             1: 15
           2,8:
             1: 272
-            5: 3264
+            7: 3264
           2,10:
             0: 4095
           2,11:
@@ -1699,6 +1701,36 @@ entities:
           moles:
           - 27.225372
           - 102.419266
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
           - 0
           - 0
           - 0
@@ -8623,7 +8655,7 @@ entities:
       pos: -4.5,2.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -121813.1
+      secondsUntilStateChange: -121951.91
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -17765,6 +17797,13 @@ entities:
     - type: Transform
       pos: 7.468192,6.6187816
       parent: 2
+  - uid: 4680
+    components:
+    - type: Transform
+      parent: 8133
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: BusScheduleRoute1
   entities:
   - uid: 1829
@@ -31474,6 +31513,13 @@ entities:
     - type: Transform
       pos: -14.794792,-5.59606
       parent: 2
+- proto: CleanerDispenser
+  entities:
+  - uid: 11532
+    components:
+    - type: Transform
+      pos: -7.5,-8.5
+      parent: 2
 - proto: ClosetEmergencyFilledRandom
   entities:
   - uid: 4521
@@ -32501,13 +32547,6 @@ entities:
     - type: Transform
       pos: 62.5,-3.5
       parent: 2
-- proto: CrateTrashCartJani
-  entities:
-  - uid: 4680
-    components:
-    - type: Transform
-      pos: -7.5,-11.5
-      parent: 2
 - proto: CrewMonitoringServer
   entities:
   - uid: 4681
@@ -32524,7 +32563,7 @@ entities:
       pos: 41.5,-8.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -32105.572
+      secondsUntilStateChange: -32244.379
       state: Opening
   - uid: 4683
     components:
@@ -32616,7 +32655,7 @@ entities:
       pos: 41.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -652.1345
+      secondsUntilStateChange: -790.9408
       state: Opening
   - uid: 4697
     components:
@@ -37536,7 +37575,7 @@ entities:
       pos: 48.5,1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -25218.686
+      secondsUntilStateChange: -25357.492
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -56584,6 +56623,35 @@ entities:
     - type: Transform
       pos: -2.5,-10.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14923
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 4680
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: LockerMailCarrier
   entities:
   - uid: 8134
@@ -64439,6 +64507,12 @@ entities:
     components:
     - type: Transform
       pos: 5.5,9.5
+      parent: 2
+  - uid: 11533
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -7.5,-10.5
       parent: 2
 - proto: SmallLight
   entities:
