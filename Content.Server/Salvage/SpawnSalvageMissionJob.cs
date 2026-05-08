@@ -39,13 +39,17 @@ using Content.Server.Station.Components; // _CS
 using Content.Server.Station.Systems; // _CS
 using Content.Server.Shuttles.Systems;
 using Content.Server._NF.Salvage.Expeditions.Structure; // _CS
+using Content.Shared.NPC.Prototypes;
 
 namespace Content.Server.Salvage;
 
 public sealed class SpawnSalvageMissionJob : Job<bool>
 {
-    private const int SharedExpeditionSizeMultiplier = 4;
+    private const int SharedExpeditionCountMultiplier = 4;
+    private const int SharedExpeditionSpreadMultiplier = 2;
     private const int SharedObjectiveMultiplier = 2;
+    private const int SharedExpeditionFallbackMinOffset = 40;
+    private const int SharedExpeditionFallbackMaxOffset = 60;
 
     private static readonly ProtoId<LocalizedDatasetPrototype> NamesDataset = "NamesBorer";
 
@@ -277,7 +281,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         Vector2 shuttleProjection = new Vector2(shuttleBox.Width * -sin / 2, shuttleBox.Height * cos / 2); // Note: sine is negative because of CCW rotation (starting north, then west)
         Vector2 coords = dungeonBox.Center - dungeonProjection - dungeonOffset - shuttleProjection - shuttleBox.Center; // Coordinates to spawn the ship at to center it with the dungeon's bounding boxes
         coords = coords.Rounded(); // Ensure grid is aligned to map coords
-        expedition.ReservedLandingZones.Add(shuttleBox.Translated(coords).Enlarged(4f));
+        expedition.ReservedLandingZones.Add(SalvageExpeditionReservation.GetLandingZone(shuttleBox, coords, 4f));
 
         // List<Vector2i> reservedTiles = new();
 
@@ -419,15 +423,106 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         if (!_missionParams.OpenContract)
             return baseConfig;
 
+        var minOffset = baseConfig.MinOffset > 0
+            ? Math.Max(1, baseConfig.MinOffset * SharedExpeditionSpreadMultiplier)
+            : SharedExpeditionFallbackMinOffset;
+        var maxOffset = baseConfig.MaxOffset > 0
+            ? Math.Max(minOffset, baseConfig.MaxOffset * SharedExpeditionSpreadMultiplier)
+            : SharedExpeditionFallbackMaxOffset;
+
         return new DungeonConfig
         {
             Layers = baseConfig.Layers,
-            ReserveTiles = baseConfig.ReserveTiles,
-            MinCount = Math.Max(1, baseConfig.MinCount * SharedExpeditionSizeMultiplier),
-            MaxCount = Math.Max(1, baseConfig.MaxCount * SharedExpeditionSizeMultiplier),
-            MinOffset = Math.Max(1, baseConfig.MinOffset * SharedExpeditionSizeMultiplier),
-            MaxOffset = Math.Max(1, baseConfig.MaxOffset * SharedExpeditionSizeMultiplier),
+            // Open contracts run the same dungeon config multiple times.
+            // Reserve generated tiles so repeated runs cannot stamp walls/floors over each other.
+            ReserveTiles = true,
+            MinCount = Math.Max(1, baseConfig.MinCount * SharedExpeditionCountMultiplier),
+            MaxCount = Math.Max(1, baseConfig.MaxCount * SharedExpeditionCountMultiplier),
+            MinOffset = minOffset,
+            MaxOffset = maxOffset,
         };
+    }
+
+    private void ConfigureObjectiveNpcSpawner(EntityUid objective, ProtoId<SalvageFactionPrototype> factionId)
+    {
+        if (!_prototypeManager.TryIndex(factionId, out var faction))
+            return;
+
+        if (!faction.Configs.TryGetValue("DefenseStructure", out var structureId))
+            return;
+
+        var spawner = _entManager.EnsureComponent<SalvageObjectiveNpcSpawnerComponent>(objective);
+
+        switch (structureId)
+        {
+            case "AberrantFleshDigestiveSack":
+                spawner.NearbyFactions = new() { "AberrantFleshExpeditionNF" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "SpawnMobAberrantFleshExpeditions",
+                    "SpawnMobAberrantFleshNewbornExpeditions",
+                    "MobHorrorExpeditions",
+                };
+                break;
+            case "RogueAiNode":
+                spawner.NearbyFactions = new() { "SiliconsExpeditionNF" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "MobRogueSiliconScrap",
+                    "SpawnMobRogueDronesT1",
+                    "MobRogueSiliconHerder",
+                    "MobRogueSiliconHunter",
+                    "MobRogueSiliconCatcher",
+                    "MobRogueSiliconTesla",
+                    "MobRogueSiliconScrapFlayer",
+                    "MobRogueSiliconBoss",
+                    "MobRogueSiliconGuardian",
+                };
+                break;
+            case "NFZombiePile":
+                spawner.NearbyFactions = new() { "Zombie" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "NFSpawnMobZombie",
+                    "NFSpawnMobZombieSpecial",
+                    "NFSpawnMobZombieRandom",
+                };
+                break;
+            case "CybersunDataMiner":
+                spawner.NearbyFactions = new() { "NFSyndicate" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "SpawnMobSyndicateNavalDeckhand",
+                    "SpawnMobSyndicateNavalEngineer",
+                    "SpawnMobSyndicateNavalMedic",
+                    "SpawnMobSyndicateNavalOperator",
+                    "SpawnMobSyndicateNavalCaptain",
+                };
+                break;
+            case "XenoWardingTower":
+                spawner.NearbyFactions = new() { "Xeno" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "NFMobXeno",
+                    "NFMobXenoDrone",
+                    "NFMobXenoPraetorian",
+                    "NFMobXenoRavager",
+                    "NFMobXenoRunner",
+                    "NFMobXenoSpitter",
+                };
+                break;
+            case "MercenaryCounterfeitCache":
+                spawner.NearbyFactions = new() { "MercenariesExpeditionNF" };
+                spawner.SpawnPrototypes = new()
+                {
+                    "MobMercenarySoldierKnife",
+                    "MobMercenarySoldierPistol",
+                    "MobMercenarySoldierNovalite",
+                    "MobMercenaryBreacherMachete",
+                    "MobMercenaryBreacherShotgun",
+                };
+                break;
+        }
     }
 
     private static Dungeon MergeDungeons(IReadOnlyList<Dungeon> dungeons)
@@ -556,6 +651,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
                 }
 
                 var uid = _entManager.SpawnEntity(shaggy, _map.GridTileToLocal(mapUid, grid, tile));
+                ConfigureObjectiveNpcSpawner(uid, mission.Faction);
                 _entManager.AddComponent<SalvageStructureComponent>(uid);
                 structureComp.Structures.Add(uid);
                 break;

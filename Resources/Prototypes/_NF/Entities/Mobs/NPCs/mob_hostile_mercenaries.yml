@@ -3,6 +3,7 @@
   name: mercenary
   abstract: true
   parent:
+  - NFBaseMobRestrictions
   - NFMobNoEquipmentOnGib
   - MobMovementSpeedModifierMelee
   - MobStaminaFodder
@@ -25,6 +26,8 @@
       0: Alive
       80: Critical
       100: Dead
+  - type: MobState
+    allowRevives: false
   - type: SlowOnDamage
     speedModifierThresholds:
       48: 0.7
