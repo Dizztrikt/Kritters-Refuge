@@ -2741,3 +2741,10 @@ Entries:
   id: 313
   time: '2026-05-07T07:12:09.0000000+00:00'
   url: https://github.com/ARF-SS13/coyote-frontier/pull/1192
+- author: QTNeen
+  changes:
+    - type: Fix
+      message: fixe patch 1
+  id: 314
+  time: '2026-05-08T07:10:44.0000000+00:00'
+  url: https://github.com/ARF-SS13/coyote-frontier/pull/1194
