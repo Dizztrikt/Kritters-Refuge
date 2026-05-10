@@ -21,16 +21,16 @@ public sealed class WeatherSystem : SharedWeatherSystem
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!; // _CS
 
-    private float _weatherVolume = 0f;
+    private float _weatherVolume = 0f; // _CS
 
     public override void Initialize()
     {
         base.Initialize();
-        Subs.CVar(_cfg, CCVars.WeatherEffectsVolume, SetWeatherGain, true);
+        Subs.CVar(_cfg, CCVars.WeatherEffectsVolume, SetWeatherGain, true); // _CS
         SubscribeLocalEvent<WeatherComponent, ComponentHandleState>(OnWeatherHandleState);
         SubscribeLocalEvent<WeatherComponent, ComponentShutdown>(OnWeatherShutdown);
     }
@@ -127,12 +127,13 @@ public sealed class WeatherSystem : SharedWeatherSystem
 
         var alpha = GetPercent(weather, uid);
         alpha *= SharedAudioSystem.VolumeToGain(weatherProto.Sound.Params.Volume);
-        alpha *= GetWeatherVolumeScale(weatherProto.ID);
-        alpha *= _weatherVolume;
+        alpha *= GetWeatherVolumeScale(weatherProto.ID); // _CS
+        alpha *= _weatherVolume; // _CS
         _audio.SetGain(weather.Stream, alpha, comp);
         comp.Occlusion = occlusion;
     }
 
+    // _CS Start: weather effects volume control
     private void SetWeatherGain(float value)
     {
         _weatherVolume = SharedAudioSystem.GainToVolume(value);
@@ -152,6 +153,7 @@ public sealed class WeatherSystem : SharedWeatherSystem
         // Single-level weather effects are reduced by 50%.
         return 0.5f;
     }
+    // _CS End: weather effects volume control
 
     protected override bool SetState(EntityUid uid, WeatherState state, WeatherComponent comp, WeatherData weather, WeatherPrototype weatherProto)
     {

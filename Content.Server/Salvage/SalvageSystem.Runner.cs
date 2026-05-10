@@ -120,6 +120,7 @@ public sealed partial class SalvageSystem
     /// Announces a message only to players currently aboard a specific shuttle grid.
     /// Used for per-ship briefings when joining an already-running shared expedition.
     /// </summary>
+    // _CS Start: per-grid radio announcement for shared expeditions
     private void AnnounceToGrid(EntityUid gridUid, string text) // Frontier
     {
         var filter = Filter.Empty();
@@ -142,6 +143,7 @@ public sealed partial class SalvageSystem
             true,
             null);
     }
+    // _CS End: per-grid radio announcement for shared expeditions
     // End Frontier
 
     private void OnFTLRequest(ref FTLRequestEvent ev)
@@ -984,6 +986,7 @@ public sealed partial class SalvageSystem
         Fallback,
     }
 
+    // _CS Start: wipe-detection abort
     /// <summary>
     /// Checks if everyone on the map worth caring about is dead, and aborts the expedition if so.
     /// Honestly, as long as one person is not in crit and not SSD, we consider the expedition salvageable.
@@ -1095,6 +1098,7 @@ public sealed partial class SalvageSystem
         component.EndTime = forcedDeparture;
         Dirty(mapUid, component);
     }
+    // _CS End: wipe-detection abort
 
     private void UpdateSsdGoobers(EntityUid mapUid, SalvageExpeditionComponent component)
     {
@@ -1122,6 +1126,7 @@ public sealed partial class SalvageSystem
         }
     }
 
+    // _CS Start: shared arrival shuttle tracking
     private void TrackSharedArrivalShuttles(EntityUid shuttleUid, EntityUid mapUid, SalvageExpeditionComponent expedition)
     {
         if (!expedition.MissionParams.OpenContract)
@@ -1194,6 +1199,7 @@ public sealed partial class SalvageSystem
             expedition.SharedArrivalShuttleLocalPositions.Remove(trackedMob);
         }
     }
+    // _CS End: shared arrival shuttle tracking
 
     private static int GetDisplayedRemainingMinutes(TimeSpan remaining)
     {
