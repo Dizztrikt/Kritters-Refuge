@@ -20,7 +20,8 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-using Content.Shared.SSDIndicator; // Coyote: needed to check if something has the component.
+using Content.Shared.SSDIndicator; // Coyote
+using Content.Shared.Mind.Components; // Coyote
 
 namespace Content.Server.Body.Systems;
 
@@ -78,8 +79,10 @@ public sealed class RespiratorSystem : EntitySystem
             if (_mobState.IsDead(uid))
                 continue;
 
-            // Coyote
-            if (TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD)
+            // Coyote: Prevents SSD clients that have a mind associated to them from breathing to prevent offline asphyx deaths.
+            if (TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD
+             && TryComp<MindContainerComponent>(uid, out var mindContComp)
+              && mindContComp.HasMind)
                 continue;
             // Coyote End
 
