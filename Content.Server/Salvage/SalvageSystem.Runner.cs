@@ -183,7 +183,10 @@ public sealed partial class SalvageSystem
         // Map-wide countdown and SSD scan only on first arrival.
         if (isFirstArrival)
         {
-            var arrivalRemaining = component.EndTime - _timing.CurTime;
+            var arrivalRemaining = component.MissionParams.OpenContract
+                ? GetDefaultShipExpeditionDuration(component)
+                : component.EndTime - _timing.CurTime;
+
             var arrivalMinutes = GetDisplayedRemainingMinutes(arrivalRemaining);
             Announce(args.MapUid, Loc.GetString("salvage-expedition-announcement-countdown-minutes", ("duration", arrivalMinutes)));
             UpdateSsdGoobers(args.MapUid, component);

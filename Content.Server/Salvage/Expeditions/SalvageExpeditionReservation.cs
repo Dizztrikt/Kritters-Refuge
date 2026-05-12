@@ -10,7 +10,9 @@ public static class SalvageExpeditionReservation
 
     public static Box2 GetLandingZone(Box2 shuttleBox, Vector2 origin, float padding = 16f)
     {
-        return shuttleBox.Translated(origin).Enlarged(padding);
+        // Keep the raw shuttle footprint; clearance is applied by distance checks.
+        // This produces a more natural rounded clearance area than storing a pre-enlarged rectangle.
+        return shuttleBox.Translated(origin);
     }
 
     public static Box2 GetShuttleFootprint(Box2 shuttleBox, Vector2 origin)
@@ -64,6 +66,6 @@ public static class SalvageExpeditionReservation
         var reserveByBounds = expedition.ReservedTiles.Count == 0 && IntersectsDungeonBounds(expedition, tileBox);
 
         return reserveByBounds ||
-               IntersectsReservedLandingZone(expedition, tileBox);
+             IntersectsReservedLandingZone(expedition, tileBox, MinimumLandingClearanceTiles);
     }
 }

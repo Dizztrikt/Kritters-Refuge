@@ -659,9 +659,14 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 continue;
             }
 
+            // _CS Start: genital layer compatibility for species without an explicit Genital base-layer mapping
+            var allowsLayerMarkings = humanoid.BaseLayers.TryGetValue(layerSlot, out var setting)
+                ? setting.AllowsMarkings
+                : layerSlot == HumanoidVisualLayers.Genital;
+
             visible &= !IsHidden(humanoid, layerSlot);
-            visible &= humanoid.BaseLayers.TryGetValue(layerSlot, out var setting)
-                       && setting.AllowsMarkings;
+            visible &= allowsLayerMarkings;
+            // _CS End: genital layer compatibility for species without an explicit Genital base-layer mapping
 
             var layerId = $"{markingPrototype.ID}-{rsi.RsiState}";
             var glowLayerId = $"{layerId}-glow";
@@ -709,7 +714,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             sprite.LayerSetOffset(layerId, markingOffset);
             // Coyote End
 
-            if (!visible || setting == null) // this is kinda implied
+            if (!visible)
             {
                 if (sprite.LayerMapTryGet(glowLayerId, out var hiddenGlowIndex))
                 {
