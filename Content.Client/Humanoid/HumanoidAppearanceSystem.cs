@@ -629,11 +629,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 }
             }
 
-            // Keep genital render routing deterministic regardless of prototype layering.
-            // Toggle off: render beneath clothing on the Genital layer.
-            // Toggle on: render above clothing on TailOversuit.
-            if (markingPrototype.MarkingCategory == MarkingCategories.Genital
-                || markingPrototype.BodyPart == HumanoidVisualLayers.Genital)
+            // _CS Start: preserve explicit behind/front genital layering
+            if ((markingPrototype.MarkingCategory == MarkingCategories.Genital
+                    || markingPrototype.BodyPart == HumanoidVisualLayers.Genital)
+                && layerSlot == HumanoidVisualLayers.Genital)
             {
                 layerSlot = renderOverClothing
                     ? HumanoidVisualLayers.TailOversuit
@@ -643,6 +642,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             {
                 layerSlot = HumanoidVisualLayers.TailOversuit;
             }
+            // _CS End: preserve explicit behind/front genital layering
             // update the layerDict
             // if it doesnt have this, add it at 0, otherwise increment it
             if (layerDict.TryGetValue(layerSlot.ToString(), out var layerIndex))
