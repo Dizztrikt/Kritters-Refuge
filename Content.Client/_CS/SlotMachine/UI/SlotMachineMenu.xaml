@@ -1,0 +1,31 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+            xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+            SetSize="360 260"
+            MinSize="360 260">
+    <BoxContainer Margin="10 8 10 8" Orientation="Vertical" SeparationOverride="8">
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'slot-machine-balance-label'}" StyleClasses="LabelKeyText" />
+            <Label Name="BalanceLabel" Text="$0" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'slot-machine-jackpot-label'}" StyleClasses="LabelKeyText" />
+            <Label Name="JackpotLabel" Text="$0" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'slot-machine-selected-label'}" StyleClasses="LabelKeyText" />
+            <Label Name="SelectedLabel" Text="$500" />
+        </BoxContainer>
+
+        <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+            <Button Name="Bet500Button" Text="500" HorizontalExpand="True" />
+            <Button Name="Bet1000Button" Text="1000" HorizontalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+            <Button Name="Bet5000Button" Text="5000" HorizontalExpand="True" />
+            <Button Name="Bet10000Button" Text="10000" HorizontalExpand="True" />
+        </BoxContainer>
+
+        <Button Name="PlayButton" Text="{Loc 'slot-machine-play-button'}" />
+        <Label Name="OutcomeLabel" Text="{Loc 'slot-machine-outcome-ready'}" />
+    </BoxContainer>
+</controls:FancyWindow>

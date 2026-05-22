@@ -14,7 +14,7 @@
 
 - type: entity
   id: NFWeaponRifleMusket
-  parent: [ BaseC1Contraband, NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSteelbolt ]
+  parent: [ BaseC1Contraband, NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
   name: musket
   description: This should've been in a museum long before you were born.
   components:

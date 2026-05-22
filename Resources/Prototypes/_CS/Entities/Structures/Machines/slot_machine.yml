@@ -1,0 +1,22 @@
+- type: entity
+  parent: BaseComputer
+  id: SlotMachine
+  name: Slütmachine
+  description: Gamble your credits for a chance to win BIG!!
+  components:
+  - type: SlotMachine
+    jackpotBalance: 250000
+  - type: ActivatableUI
+    key: enum.SlotMachineUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SlotMachineUiKey.Key:
+        type: SlotMachineBoundUserInterface
+  - type: Sprite
+    sprite: _CS/Slutmachine.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: Video-Lotto-OFF
+    - map: ["computerLayerScreen"]
+      state: LottoIDLE
+      shader: unshaded
