@@ -42,21 +42,4 @@ station-bank-ATM-cashSlot = Cash Slot
 
 bank-currency-display-credits = Credits
 bank-currency-display-credits-fake = Counterfeit Credits
-
-## Slot machine
-slot-machine-menu-title = Lotto Machine
-slot-machine-balance-label = Balance: {" "}
-slot-machine-jackpot-label = Jackpot Pool: {" "}
-slot-machine-selected-label = Selected Bet: {" "}
-slot-machine-play-button = Play
-slot-machine-outcome-ready = Select a bet and hit Play.
-slot-machine-outcome-busy = Spinning...
-slot-machine-outcome-no-bank = No bank account detected.
-slot-machine-outcome-invalid-bet = Invalid bet amount.
-slot-machine-outcome-insufficient-funds = Insufficient funds.
-slot-machine-outcome-busy-machine = The machine is already spinning.
-slot-machine-outcome-loss = You lost { $amount }.
-slot-machine-outcome-double = You won { $amount }.
-slot-machine-outcome-jackpot = JACKPOT! You won { $amount }.
-slot-machine-jackpot-announcement = { $player } has won a JACKPOT of { $amount } at { $gridname }.
 # _CS End
