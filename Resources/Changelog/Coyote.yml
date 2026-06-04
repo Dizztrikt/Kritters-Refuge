@@ -2838,3 +2838,14 @@ Entries:
   id: 324
   time: '2026-05-27T22:35:17.0000000+00:00'
   url: https://github.com/ARF-SS13/coyote-frontier/pull/1209
+- author: Khaomi
+  changes:
+    - type: Add
+      message: Added Ship Out Of Character (SOOC)
+    - type: Add
+      message: Added Ship name to Ship Out Of Character
+    - type: Add
+      message: Added prefix for Ship OOC
+  id: 325
+  time: '2026-06-04T05:52:15.0000000+00:00'
+  url: https://github.com/ARF-SS13/coyote-frontier/pull/1210
