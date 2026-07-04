@@ -1,8 +1,12 @@
 using Content.Server.Speech;
 using Content.Server.Chat.Systems;
 
+using System.Numerics;
+
 using Content.Shared._CR.Serde;
 namespace Content.Server._CR.Serde;
+
+
 
 public sealed class SerdeActorSystem : EntitySystem
 {
@@ -20,12 +24,36 @@ public sealed class SerdeActorSystem : EntitySystem
         SubscribeLocalEvent<SerdeActorComponent, ComponentInit>(OnActorInit);
         SubscribeLocalEvent<SerdeActorComponent, SerdeInEvent>(OnSerdeIn);
         SubscribeLocalEvent<SerdeActorComponent, ListenEvent>(OnListen);
-        //TODO: somthings broken with the activeListener component
+        SubscribeLocalEvent<SerdeActorComponent, MoveEvent>(OnMove);
+    }
+
+    private void OnMove(Entity<SerdeActorComponent> ent, ref MoveEvent moved)
+    {
+        float updateDistanceSquared = 0.5f * 0.5f;
+
+        var pos = moved.NewPosition.Position;
+        var lastPos = ent.Comp.LastPos;
+
+        var newGrid = moved.NewPosition.EntityId;
+        var diffrentGrid = newGrid.Id != ent.Comp.LastGrid;
+        if (diffrentGrid || Vector2.DistanceSquared(lastPos, pos) > updateDistanceSquared) {
+            RaiseLocalEvent(ent, new SerdeOutEvent(0, "position", "", newGrid.Id, pos.X, pos.Y));
+            ent.Comp.LastPos = pos;
+            ent.Comp.LastGrid = newGrid.Id;
+        }
     }
 
     private void OnActorInit(Entity<SerdeActorComponent> ent, ref ComponentInit _)
     {
         RaiseLocalEvent(ent, new SerdeOutEvent(0, "gainedCapability", "Actor", 0, 0, 0));
+        if(EntityManager.TryGetComponent<TransformComponent>(ent, out var transform))
+        {
+            var position = transform.LocalPosition;
+            var uid = transform.ParentUid;
+            RaiseLocalEvent(ent, new SerdeOutEvent(0, "position", "", uid.Id, position.X, position.Y));
+            ent.Comp.LastPos = position;
+            ent.Comp.LastGrid = uid.Id;
+        }
     }
 
     private void OnListen(Entity<SerdeActorComponent> ent, ref ListenEvent args)
@@ -39,7 +67,7 @@ public sealed class SerdeActorSystem : EntitySystem
         var message = args.Message.Trim();
         var source = args.Source;
 
-        RaiseLocalEvent(ent, new SerdeOutEvent(0, "heard", message, (int)source, 0, 0));
+        RaiseLocalEvent(ent, new SerdeOutEvent(0, "heard", message, (int) source, 0, 0));
     }
 
     private void OnSerdeIn(Entity<SerdeActorComponent> ent, ref SerdeInEvent sev)
