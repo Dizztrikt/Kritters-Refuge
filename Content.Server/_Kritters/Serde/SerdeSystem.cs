@@ -17,8 +17,8 @@ using System.Threading.Channels;
 
 using Robust.Shared.GameObjects;
 
-using Content.Shared._CR.Serde;
-namespace Content.Server._CR.Serde;
+using Content.Shared._Kritters.Serde;
+namespace Content.Server._Kritters.Serde;
 
 // A system that exchanges game events amonst itself
 public sealed class SerdeSystem : EntitySystem

@@ -1,5 +1,5 @@
-using Content.Shared._CR.Serde;
-using Content.Server._CR.Serde;
+using Content.Shared._Kritters.Serde;
+using Content.Server._Kritters.Serde;
 
 using Robust.Shared.Toolshed;
 
