@@ -101,7 +101,7 @@ public sealed class SerdeSystem : EntitySystem
                     // Format `entId:int:command:int:float:float:rest is text`
                     var messageParts = message.Split(":",7);
 
-                    if (messageParts.Length != 7) {
+                    if (messageParts.Length != 8) {
                         throw new ArgumentOutOfRangeException(nameof(messageParts), "Too few arguments");
                     }
 
@@ -110,10 +110,11 @@ public sealed class SerdeSystem : EntitySystem
                     var inEvent = new SerdeInEvent(
                         int.Parse(messageParts[1]), // ExecutionID
                         messageParts[2], // Command
-                        messageParts[6], // Text
+                        messageParts[7], // Text
                         int.Parse(messageParts[3]), // A
-                        float.Parse(messageParts[4]), // X
-                        float.Parse(messageParts[5]) // Y
+                        int.Parse(messageParts[4]), // B
+                        float.Parse(messageParts[5]), // X
+                        float.Parse(messageParts[6]) // Y
                     );
 
                     _inQueue.Enqueue((
@@ -148,7 +149,7 @@ public sealed class SerdeSystem : EntitySystem
             {
                 var (entUid, outEvent) = theEvent;
                 string Command = outEvent.Command.Replace(":", "_");
-                var msg = $"{entUid}:{outEvent.ExecutionID}:{Command}:{outEvent.A}:{outEvent.X}:{outEvent.Y}:{outEvent.Text}";
+                var msg = $"{entUid}:{outEvent.ExecutionID}:{Command}:{outEvent.A}:{outEvent.B}:{outEvent.X}:{outEvent.Y}:{outEvent.Text}";
                 byte[] messageBytes = Encoding.UTF8.GetBytes(msg);
                 await _amqpChannel.BasicPublishAsync(
                     exchange: outRouter, // Or outRouter, depending on direction
@@ -234,7 +235,7 @@ public sealed class SerdeSystem : EntitySystem
         if (ent.Comp.DisableOnTakeover)
         {
             ent.Comp.AcceptingCommands = false;
-            RaiseLocalEvent(ent, new SerdeOutEvent(0, "paused", "takeover", 0, 0, 0));
+            RaiseLocalEvent(ent, new SerdeOutEvent(0, "paused", "takeover", 0, 0, 0, 0));
         }
     }
 
@@ -242,7 +243,7 @@ public sealed class SerdeSystem : EntitySystem
         if (ent.Comp.EnableOnRelease)
         {
             ent.Comp.AcceptingCommands = true;
-            RaiseLocalEvent(ent, new SerdeOutEvent(0, "resumed", "takeover", 0, 0, 0));
+            RaiseLocalEvent(ent, new SerdeOutEvent(0, "resumed", "takeover", 0, 0, 0, 0));
         }
     }
 
@@ -256,7 +257,7 @@ public sealed class SerdeSystem : EntitySystem
     {
         if (ent.Comp.DebugLogging)
         {
-            _sawmillSerde.Info($"Serde in: {serdeEvent.Command} '{serdeEvent.Text}' {serdeEvent.A} {serdeEvent.X} {serdeEvent.Y}");
+            _sawmillSerde.Info($"Serde in: {serdeEvent.Command} '{serdeEvent.Text}' {serdeEvent.A} {serdeEvent.B} {serdeEvent.X} {serdeEvent.Y}");
         }
     }
 
@@ -265,7 +266,7 @@ public sealed class SerdeSystem : EntitySystem
         if (ent.Comp.DebugLogging)
         {
             // I am not c# skilled enough to compress this line
-            _sawmillSerde.Info($"Serde out:  {serdeEvent.Command} '{serdeEvent.Text}' {serdeEvent.A} {serdeEvent.X} {serdeEvent.Y}");
+            _sawmillSerde.Info($"Serde out:  {serdeEvent.Command} '{serdeEvent.Text}' {serdeEvent.A} {serdeEvent.B} {serdeEvent.X} {serdeEvent.Y}");
         }
 
         if (AMQPReady)
@@ -281,10 +282,10 @@ public sealed class SerdeSystem : EntitySystem
         //SerdeInEvent inEvent,
         int id,
         string command, string text,
-        int a, float x, float y
+        int a, int b, float x, float y
     )
     {
-        RaiseLocalEvent(ent, new SerdeInEvent(id, command, text, a, x, y));
+        RaiseLocalEvent(ent, new SerdeInEvent(id, command, text, a, b, x, y));
     }
 
     public void CommandRaiseOut(
@@ -292,10 +293,10 @@ public sealed class SerdeSystem : EntitySystem
         //SerdeInEvent inEvent,
         int id,
         string command, string text,
-        int a, float x, float y
+        int a, int b, float x, float y
     )
     {
-        RaiseLocalEvent(ent, new SerdeOutEvent(id, command, text, a, x, y));
+        RaiseLocalEvent(ent, new SerdeOutEvent(id, command, text, a, b, x, y));
     }
 }
 
@@ -306,15 +307,17 @@ public sealed class SerdeInEvent : EntityEventArgs
     public string Command { get; }
     public string Text { get; }
     public int A { get; }
+    public int B { get; }
     public float X { get; }
     public float Y { get; }
 
-    public SerdeInEvent(int id, string command, string text, int a, float x, float y)
+    public SerdeInEvent(int id, string command, string text, int a, int b, float x, float y)
     {
         ExecutionID = id;
         Command = command;
         Text = text;
         A = a;
+        B = b;
         X = x;
         Y = y;
     }
@@ -327,16 +330,18 @@ public sealed class SerdeOutEvent : EntityEventArgs
     public string Command { get; }
     public string Text { get; }
     public int A { get; }
+    public int B { get; }
     public float X { get; }
     public float Y { get; }
 
 
-    public SerdeOutEvent(int id, string command, string text, int a, float x, float y)
+    public SerdeOutEvent(int id, string command, string text, int a, int b, float x, float y)
     {
         ExecutionID = id;
         Command = command;
         Text = text;
         A = a;
+        B = b;
         X = x;
         Y = y;
     }

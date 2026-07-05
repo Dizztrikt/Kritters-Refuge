@@ -22,7 +22,7 @@ public sealed class SerdeCommand : ToolshedCommand
         serdeComponent.AcceptingCommands = false;
 
         var serdeSystem = EntityManager.System<SerdeSystem>();
-        serdeSystem.CommandRaiseOut(entity, 0, "paused", "admin", 0, 0, 0);
+        serdeSystem.CommandRaiseOut(entity, 0, "paused", "admin", 0, 0, 0, 0);
     }
 
     [CommandImplementation("resume")]
@@ -34,7 +34,7 @@ public sealed class SerdeCommand : ToolshedCommand
         serdeComponent.AcceptingCommands = true;
 
         var serdeSystem = EntityManager.System<SerdeSystem>();
-        serdeSystem.CommandRaiseOut(entity, 0, "resumed", "admin", 0, 0, 0);
+        serdeSystem.CommandRaiseOut(entity, 0, "resumed", "admin", 0, 0, 0, 0);
     }
 
     [CommandImplementation("emitIn")]
@@ -43,12 +43,13 @@ public sealed class SerdeCommand : ToolshedCommand
         [CommandArgument] string command,
         [CommandArgument] string text,
         [CommandArgument] int a,
+        [CommandArgument] int b,
         [CommandArgument] float x,
         [CommandArgument] float y
     )
     {
         var serdeSystem = EntityManager.System<SerdeSystem>();
-        serdeSystem.CommandRaiseIn(entity, 0, command, text, a, x, y);
+        serdeSystem.CommandRaiseIn(entity, 0, command, text, a, b, x, y);
     }
 
     [CommandImplementation("emitOut")]
@@ -57,11 +58,12 @@ public sealed class SerdeCommand : ToolshedCommand
         [CommandArgument] string command,
         [CommandArgument] string text,
         [CommandArgument] int a,
+        [CommandArgument] int b,
         [CommandArgument] float x,
         [CommandArgument] float y
     )
     {
         var serdeSystem = EntityManager.System<SerdeSystem>();
-        serdeSystem.CommandRaiseOut(entity, 0, command, text, a, x, y);
+        serdeSystem.CommandRaiseOut(entity, 0, command, text, a, b, x, y);
     }
 }
