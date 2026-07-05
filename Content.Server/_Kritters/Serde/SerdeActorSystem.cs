@@ -3,8 +3,8 @@ using Content.Server.Chat.Systems;
 
 using System.Numerics;
 
-using Content.Shared._CR.Serde;
-namespace Content.Server._CR.Serde;
+using Content.Shared._Kritters.Serde;
+namespace Content.Server._Kritters.Serde;
 
 
 

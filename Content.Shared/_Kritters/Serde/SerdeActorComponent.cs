@@ -1,4 +1,4 @@
-namespace Content.Shared._CR.Serde;
+namespace Content.Shared._Kritters.Serde;
 
 using Robust.Shared.GameObjects;
 using Robust.Shared.GameStates; // Required for AutoGenerateComponentState

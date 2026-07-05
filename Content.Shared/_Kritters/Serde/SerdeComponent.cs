@@ -3,7 +3,7 @@ using Robust.Shared.GameStates; // Required for AutoGenerateComponentState
 using Robust.Shared.Serialization;
 
 
-namespace Content.Shared._CR.Serde;
+namespace Content.Shared._Kritters.Serde;
 
 // <summary>
 // Main component of serde, communicates with the message broker
