@@ -34,15 +34,23 @@ public sealed class SerdeSystem : EntitySystem
         Channel.CreateUnbounded<(EntityUid, SerdeOutEvent)>();
 
     private float _throttleBuildup = 0f;
-    private float _pollingRate = 0.5f;
-    private int _myServerID = 12; //TODO: not hardcode
+    private readonly float _pollingRate = 0.5f;
+    private readonly int _myServerID = 12; //TODO: not hardcode
 
     private IChannel? _amqpChannel = null;
     private IConnection? _amqpConnection = null;
 
-    private bool AMQPReady = false;
+    private bool _amqpReady = false;
 
-    private async void OpenServer(){
+    private async void OpenServer()
+    {
+        const string inRouter = "amq.topic";
+        const string outRouter = "amq.topic";
+        var inQueue = $"ss14.{_myServerID}.in";
+        var outQueue = $"ss14.{_myServerID}.out";
+        var objectInRoutingKey = $"ss14.{_myServerID}.object.in";
+        var objectOutRoutingKey = $"ss14.{_myServerID}.object.out";
+        var statusRoutingKey = $"ss14.{_myServerID}.status";
 
         var factory = new ConnectionFactory { };
 
@@ -60,12 +68,6 @@ public sealed class SerdeSystem : EntitySystem
 
             _amqpChannel = await _amqpConnection.CreateChannelAsync();
 
-
-            string inQueue = $"ss14.{_myServerID}.in";
-            string outQueue = $"ss14.{_myServerID}.out";
-            const string inRouter = "amq.topic";
-            const string outRouter = "amq.topic";
-
             await _amqpChannel.QueueDeclareAsync(
                 queue: inQueue,
                 durable: false,
@@ -82,9 +84,9 @@ public sealed class SerdeSystem : EntitySystem
                 arguments: new Dictionary<string, object?> { }
             );
 
-            await _amqpChannel.QueueBindAsync(inQueue, inRouter, $"ss14.{_myServerID}.object.in", null);
-            await _amqpChannel.QueueBindAsync(inQueue, inRouter, $"ss14.{_myServerID}.admin.in", null);
-            await _amqpChannel.QueueBindAsync(inQueue, inRouter, $"ss14.all.admin.in", null);
+            await _amqpChannel.QueueBindAsync(inQueue, inRouter, objectInRoutingKey, null);
+            //await _amqpChannel.QueueBindAsync(inQueue, inRouter, $"ss14.{_myServerID}.admin.in", null);
+            //await _amqpChannel.QueueBindAsync(inQueue, inRouter, $"ss14.all.admin.in", null);
 
             // Modern v7+ Consumer Setup
             var consumer = new AsyncEventingBasicConsumer(_amqpChannel);
@@ -95,32 +97,39 @@ public sealed class SerdeSystem : EntitySystem
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-
                     //_sawmillAMQP.Error($"Received {message} from {ea.RoutingKey}");
 
-                    // Format `entId:int:command:int:float:float:rest is text`
-                    var messageParts = message.Split(":",7);
+                    if (ea.RoutingKey == objectInRoutingKey)
+                    {
+                        // Format `entId:int:command:int:float:float:rest is text`
+                        var messageParts = message.Split(":", 7);
 
-                    if (messageParts.Length != 8) {
-                        throw new ArgumentOutOfRangeException(nameof(messageParts), "Too few arguments");
+                        if (messageParts.Length != 8)
+                        {
+                            throw new ArgumentOutOfRangeException(nameof(messageParts), "Too few arguments");
+                        }
+
+                        var entity = new EntityUid(int.Parse(messageParts[0]));
+
+                        var inEvent = new SerdeInEvent(
+                            int.Parse(messageParts[1]), // ExecutionID
+                            messageParts[2], // Command
+                            messageParts[7], // Text
+                            int.Parse(messageParts[3]), // A
+                            int.Parse(messageParts[4]), // B
+                            float.Parse(messageParts[5]), // X
+                            float.Parse(messageParts[6]) // Y
+                        );
+
+                        _inQueue.Enqueue((
+                            entity,
+                            inEvent
+                        ));
                     }
-
-                    EntityUid entity = new EntityUid(int.Parse(messageParts[0]));
-
-                    var inEvent = new SerdeInEvent(
-                        int.Parse(messageParts[1]), // ExecutionID
-                        messageParts[2], // Command
-                        messageParts[7], // Text
-                        int.Parse(messageParts[3]), // A
-                        int.Parse(messageParts[4]), // B
-                        float.Parse(messageParts[5]), // X
-                        float.Parse(messageParts[6]) // Y
-                    );
-
-                    _inQueue.Enqueue((
-                        entity,
-                        inEvent
-                    ));
+                    else
+                    {
+                        _sawmillAMQP.Error($"Received {message} from {ea.RoutingKey} but cannot handle it");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -135,22 +144,22 @@ public sealed class SerdeSystem : EntitySystem
 
             await _amqpChannel.BasicConsumeAsync(queue: inQueue, autoAck: true, consumer: consumer);
 
-            byte[] upMessageBytes = Encoding.UTF8.GetBytes("up");
+            var upMessageBytes = Encoding.UTF8.GetBytes("up");
             await _amqpChannel.BasicPublishAsync(
                 exchange: outRouter, // Or outRouter, depending on direction
-                routingKey: $"ss14.{_myServerID}.status",
+                routingKey: statusRoutingKey,
                 body: upMessageBytes
             );
 
             _sawmillAMQP.Info("sent server ready signal");
-            AMQPReady = true;
+            _amqpReady = true;
 
             await foreach (var theEvent in _outQueue.Reader.ReadAllAsync())
             {
                 var (entUid, outEvent) = theEvent;
-                string Command = outEvent.Command.Replace(":", "_");
-                var msg = $"{entUid}:{outEvent.ExecutionID}:{Command}:{outEvent.A}:{outEvent.B}:{outEvent.X}:{outEvent.Y}:{outEvent.Text}";
-                byte[] messageBytes = Encoding.UTF8.GetBytes(msg);
+                var command = outEvent.Command.Replace(":", "_");
+                var msg = $"{entUid}:{outEvent.ExecutionID}:{command}:{outEvent.A}:{outEvent.B}:{outEvent.X}:{outEvent.Y}:{outEvent.Text}";
+                var messageBytes = Encoding.UTF8.GetBytes(msg);
                 await _amqpChannel.BasicPublishAsync(
                     exchange: outRouter, // Or outRouter, depending on direction
                     routingKey: $"ss14.{_myServerID}.object.out",
@@ -172,8 +181,8 @@ public sealed class SerdeSystem : EntitySystem
 
 
         // "my_system.debug" is the category name for the logs
-        _sawmillSerde = _logManager.GetSawmill("cr_serde.main");
-        _sawmillAMQP = _logManager.GetSawmill("cr_serde.amqp");
+        _sawmillSerde = _logManager.GetSawmill("serde.main");
+        _sawmillAMQP = _logManager.GetSawmill("serde.amqp");
 
         // try to start rabbitMQ
         if (_cfg.GetCVar(CCVars.AMQPEnabled))
@@ -213,7 +222,8 @@ public sealed class SerdeSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        if (AMQPReady){
+        if (_amqpReady)
+        {
             _throttleBuildup += frameTime;
             if (_throttleBuildup > _pollingRate) {
                 _throttleBuildup -= _pollingRate;
@@ -269,7 +279,7 @@ public sealed class SerdeSystem : EntitySystem
             _sawmillSerde.Info($"Serde out:  {serdeEvent.Command} '{serdeEvent.Text}' {serdeEvent.A} {serdeEvent.B} {serdeEvent.X} {serdeEvent.Y}");
         }
 
-        if (AMQPReady)
+        if (_amqpReady)
         {
             _sawmillAMQP.Debug("sent to queue");
             // TODO dropped packet detection
@@ -300,49 +310,24 @@ public sealed class SerdeSystem : EntitySystem
     }
 }
 
-public sealed class SerdeInEvent : EntityEventArgs
+public sealed class SerdeInEvent(int id, string command, string text, int a, int b, float x, float y) : EntityEventArgs
 {
-    // command
-    public int ExecutionID { get; }
-    public string Command { get; }
-    public string Text { get; }
-    public int A { get; }
-    public int B { get; }
-    public float X { get; }
-    public float Y { get; }
-
-    public SerdeInEvent(int id, string command, string text, int a, int b, float x, float y)
-    {
-        ExecutionID = id;
-        Command = command;
-        Text = text;
-        A = a;
-        B = b;
-        X = x;
-        Y = y;
-    }
+    public int ExecutionID { get; init; } = id;
+    public string Command { get; init; } = command;
+    public string Text { get; init; } = text;
+    public int A { get; init; } = a;
+    public int B { get; init; } = b;
+    public float X { get; init; } = x;
+    public float Y { get; init; } = y;
 }
 
-public sealed class SerdeOutEvent : EntityEventArgs
+public sealed class SerdeOutEvent(int id, string command, string text, int a, int b, float x, float y) : EntityEventArgs
 {
-
-    public int ExecutionID { get; }
-    public string Command { get; }
-    public string Text { get; }
-    public int A { get; }
-    public int B { get; }
-    public float X { get; }
-    public float Y { get; }
-
-
-    public SerdeOutEvent(int id, string command, string text, int a, int b, float x, float y)
-    {
-        ExecutionID = id;
-        Command = command;
-        Text = text;
-        A = a;
-        B = b;
-        X = x;
-        Y = y;
-    }
+    public int ExecutionID { get; init; } = id;
+    public string Command { get; init; } = command;
+    public string Text { get; init; } = text;
+    public int A { get; init; } = a;
+    public int B { get; init; } = b;
+    public float X { get; init; } = x;
+    public float Y { get; init; } = y;
 }
