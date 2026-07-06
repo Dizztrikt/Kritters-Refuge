@@ -67,6 +67,7 @@ public sealed class SerdeActorSystem : EntitySystem
         var message = args.Message.Trim();
         var source = args.Source;
 
+        // TODO: strip the source '>' marker out
         RaiseLocalEvent(ent, new SerdeOutEvent(0, "heard", message, (int) source, 0, 0f, 0f));
     }
 
