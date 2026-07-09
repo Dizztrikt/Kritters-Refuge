@@ -6,18 +6,9 @@ using Robust.Shared.Serialization;
 
 using System.Numerics;
 
-// <summary>
-// Component to debug the event serde system
-// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class SerdeActorComponent : Component
+public sealed partial class SerdeMovementComponent : Component
 {
-    [DataField]
-    public bool CanSpeak = true;
-
-    [DataField]
-    public bool CanListen = true;
-
     [DataField]
     public Vector2 LastPos = new Vector2(0f, 0f);
 
