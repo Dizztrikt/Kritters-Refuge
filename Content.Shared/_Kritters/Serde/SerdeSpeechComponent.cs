@@ -10,8 +10,8 @@ using System.Numerics;
 public sealed partial class SerdeSpeechComponent : Component
 {
     [DataField]
-    public bool CanSpeak = true;
+    public bool CanListen = true;
 
     [DataField]
-    public bool CanListen = true;
+    public bool CanSpeak = true;
 }

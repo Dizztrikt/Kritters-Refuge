@@ -45,6 +45,8 @@ public sealed class SerdeSpeechSystem : EntitySystem
 
     private void OnSerdeIn(Entity<SerdeSpeechComponent> ent, ref SerdeInEvent sev)
     {
+
+        bool adminLogging = true;
         // if it's okay to be accepting commands
         EntityManager.EnsureComponent<SerdeComponent>(ent, out var serdeComponent);
         if (!serdeComponent.AcceptingCommands) return;
@@ -52,7 +54,73 @@ public sealed class SerdeSpeechSystem : EntitySystem
         if (sev.Command == "say")
         {
             if (!ent.Comp.CanSpeak) return;
-            _chat.TrySendInGameICMessage(ent.Owner, sev.Text, InGameICChatType.Speak, ChatTransmitRange.Normal, false);
+
+            _chat.TrySendInGameICMessage(
+                ent.Owner, // entity
+                sev.Text, // text
+                InGameICChatType.Speak, // type
+                false, // hide chat
+                !adminLogging, // hide logging
+                null, // shell
+                null, // session
+                null, // name overrride
+                false // check radio prefix
+            );
+            return;
+        }
+
+        // like say but hides
+        if (sev.Command == "chatter")
+        {
+            if (!ent.Comp.CanSpeak) return;
+
+            _chat.TrySendInGameICMessage(
+                ent.Owner, // entity
+                sev.Text, // text
+                InGameICChatType.Speak, // type
+                true, // hide chat
+                true, // hide logging
+                null, // shell
+                null, // session
+                null, // name overrride
+                false // check radio prefix
+            );
+            return;
+        }
+
+        if (sev.Command == "whisper")
+        {
+            if (!ent.Comp.CanSpeak) return;
+
+            _chat.TrySendInGameICMessage(
+                ent.Owner, // entity
+                sev.Text, // text
+                InGameICChatType.Whisper, // type
+                false, // hide chat
+                !adminLogging, // hide logging
+                null, // shell
+                null, // session
+                null, // name overrride
+                false // check radio prefix
+            );
+            return;
+        }
+
+        if (sev.Command == "radio")
+        {
+            if (!ent.Comp.CanSpeak) return;
+
+            _chat.TrySendInGameICMessage(
+                ent.Owner, // entity
+                sev.Text, // text
+                InGameICChatType.Whisper, // type
+                false, // hide chat
+                !adminLogging, // hide logging
+                null, // shell
+                null, // session
+                null, // name overrride
+                true // check radio prefix
+            );
             return;
         }
 
