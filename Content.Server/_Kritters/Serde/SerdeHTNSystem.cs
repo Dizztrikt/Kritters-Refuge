@@ -118,7 +118,7 @@ public sealed class SerdeHTNSystem : EntitySystem
 
             var dictionary = new Dictionary<string, object>();
 
-            foreach (var kvp in htn.Blackboard.GetEnumerator())
+            foreach (var kvp in htn.Blackboard)
             {
                 dictionary[kvp.Key] = kvp.Value;
             }
