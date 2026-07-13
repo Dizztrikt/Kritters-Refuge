@@ -2,6 +2,7 @@ using Content.Shared._Kritters.Serde;
 using Content.Server._Kritters.Serde;
 
 using Robust.Shared.Toolshed;
+using Content.Server.Speech.Components;
 
 using Content.Shared.Administration;
 using Content.Server.Administration.Logs;
@@ -66,4 +67,17 @@ public sealed class SerdeCommand : ToolshedCommand
         var serdeSystem = EntityManager.System<SerdeSystem>();
         serdeSystem.CommandRaiseOut(entity, 0, command, text, a, b, x, y);
     }
+
+    [CommandImplementation("makeNpc")]
+    public void MakeNpc(
+        [PipedArgument] EntityUid entity
+    )
+    {
+        EntityManager.EnsureComponent<SerdeComponent>(entity, out var serdeComponent);
+        EntityManager.EnsureComponent<SerdeMovementComponent>(entity, out var serdeMovementComponent);
+        EntityManager.EnsureComponent<SerdeSpeechComponent>(entity, out var serdeSpeechComponent);
+        EntityManager.EnsureComponent<SerdeNpcComponent>(entity, out var serdeNpcComponent);
+        EntityManager.EnsureComponent<ActiveListenerComponent>(entity, out var activeListenerComponent);
+    }
+
 }
