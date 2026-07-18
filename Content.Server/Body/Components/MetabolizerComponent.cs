@@ -16,7 +16,7 @@ namespace Content.Server.Body.Components
         /// <summary>
         ///     The next time that reagents will be metabolized.
         /// </summary>
-        [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+        [DataField(customTypeSerializer: typeof(Content.Shared.Serialization.ContentTimeOffsetSerializer))]
         public TimeSpan NextUpdate;
 
         /// <summary>
@@ -54,6 +54,13 @@ namespace Content.Server.Body.Components
         /// </summary>
         [DataField]
         public bool RemoveEmpty = false;
+
+        /// <summary>
+        ///     Should this metabolizer remove chemicals that have no supported metabolism group?
+        ///     Kritters uses this for non-organic physiology that cannot retain unknown chemistry.
+        /// </summary>
+        [DataField]
+        public bool RemoveUnmatched = false;
 
         /// <summary>
         ///     How many reagents can this metabolizer process at once?

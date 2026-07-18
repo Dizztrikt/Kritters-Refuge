@@ -6,9 +6,9 @@ using Content.Shared.StatusIcon.Components;
 
 namespace Content.Client.Overlays;
 
-public sealed class ShowHungerIconsSystem : EquipmentHudSystem<ShowHungerIconsComponent>
+public sealed partial class ShowHungerIconsSystem : EquipmentHudSystem<ShowHungerIconsComponent>
 {
-    [Dependency] private readonly SharedNeedsSystem _needs = default!;
+    [Dependency] private SharedNeedsSystem _needs = default!;
 
     public override void Initialize()
     {
@@ -22,15 +22,11 @@ public sealed class ShowHungerIconsSystem : EquipmentHudSystem<ShowHungerIconsCo
         if (!IsActive)
             return;
 
-        if (_needs.TryGetHungerStatusIconPrototype(
-                uid,
-                out var iconPrototype,
-                component))
-            ev.StatusIcons.Add(iconPrototype);
-        if (_needs.TryGetThirstStatusIconPrototype(
-                uid,
-                out var thirstIconPrototype,
-                component))
-            ev.StatusIcons.Add(thirstIconPrototype);
+        // Kritters: Species-specific needs use their configured icons without bespoke overlays.
+        foreach (var needType in component.Needs.Keys)
+        {
+            if (_needs.TryGetStatusIconPrototype(uid, needType, component, out var iconPrototype))
+                ev.StatusIcons.Add(iconPrototype);
+        }
     }
 }

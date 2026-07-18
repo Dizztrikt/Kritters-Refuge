@@ -1,17 +1,19 @@
 using Content.Server._Kritters.BloodTypes;
+using Content.Server._Kritters.Systems;
 using Content.Server.Body.Systems;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.Body.Components;
 
 [RegisterComponent]
-[Access(typeof(ThermalRegulatorSystem), typeof(KrittersServerBloodTypeSystem))] // Kritters
+// Kritters: blood state and Novakin Fuel availability dynamically alter native thermal regulation.
+[Access(typeof(ThermalRegulatorSystem), typeof(KrittersServerBloodTypeSystem), typeof(NovakinPhysiologySystem))]
 public sealed partial class ThermalRegulatorComponent : Component
 {
     /// <summary>
     /// The next time that the body will regulate its heat.
     /// </summary>
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [DataField(customTypeSerializer: typeof(Content.Shared.Serialization.ContentTimeOffsetSerializer))]
     public TimeSpan NextUpdate;
 
     /// <summary>

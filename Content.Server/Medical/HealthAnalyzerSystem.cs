@@ -2,6 +2,7 @@ using Content.Server.Medical.Components;
 using Content.Server.PowerCell;
 using Content.Server.Temperature.Components;
 using Content.Shared._Kritters.BloodTypes;
+using Content.Shared._Kritters.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
@@ -25,19 +26,19 @@ using Content.Server.Body.Systems; // Frontier
 
 namespace Content.Server.Medical;
 
-public sealed class HealthAnalyzerSystem : EntitySystem
+public sealed partial class HealthAnalyzerSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly PowerCellSystem _cell = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly ItemToggleSystem _toggle = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly TransformSystem _transformSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
-    [Dependency] private readonly KrittersBloodTypeSystem _krittersBloodTypes = default!; // Kritters
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private PowerCellSystem _cell = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private ItemToggleSystem _toggle = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private TransformSystem _transformSystem = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private BloodstreamSystem _bloodstreamSystem = default!;
+    [Dependency] private KrittersBloodTypeSystem _krittersBloodTypes = default!; // Kritters
 
     public override void Initialize()
     {
@@ -238,6 +239,7 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             bodyTemperature = temp.CurrentTemperature;
 
         var bloodAmount = float.NaN;
+        var nitrogenReserve = float.NaN;
         var bleeding = false;
         var unrevivable = false;
         var unclonable = false; // Frontier
@@ -257,6 +259,12 @@ public sealed class HealthAnalyzerSystem : EntitySystem
                 out bloodTypeColor); // Kritters
         }
 
+        // Kritters: expose the bloodless Novakin nitrogen reserve through the existing scanner payload.
+        if (TryComp<NovakinPhysiologyComponent>(entity, out var physiology))
+            nitrogenReserve = physiology.MaxReserve > 0f
+                ? Math.Clamp(physiology.CurrentReserve / physiology.MaxReserve, 0f, 1f)
+                : 0f;
+
         if (TryComp<UnrevivableComponent>(entity, out var unrevivableComp) && unrevivableComp.Analyzable)
             unrevivable = true;
 
@@ -271,6 +279,7 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             GetNetEntity(entity),
             bodyTemperature,
             bloodAmount,
+            nitrogenReserve,
             null,
             bleeding,
             unrevivable,

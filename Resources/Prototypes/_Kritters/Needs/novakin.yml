@@ -1,0 +1,32 @@
+- type: need
+  id: NeedNovakinFuel
+  needName: Core Fuel
+  needKind: Fuel
+  color: Orange
+  maxValue: 150
+  minValue: 0
+  # Kritters: Fuel lasts three hours, but heat can increase consumption by up to 50 percent.
+  minutesFromMaxToMin: 180
+  startingMinutesWorthOfDecay: 0
+  secondsPerUpdate: 1
+  alertCategory: Hunger
+  extraSatisfiedMinutesFromFull: 0
+  extraSatisfiedSpeedMult: 1.05
+  extraSatisfiedMultRPI: 1.25
+  extraSatisfiedAlert: null
+  extraSatisfiedIcon: null
+  satisfiedMinutesFromFull: 108
+  satisfiedSpeedMult: 1
+  satisfiedMultRPI: 1
+  satisfiedAlert: null
+  satisfiedIcon: null
+  lowMinutesFromFull: 144
+  lowSpeedMult: 0.85
+  lowMultRPI: 0.75
+  lowAlert: Peckish
+  lowIcon: HungerIconPeckish
+  criticalMinutesFromFull: 180
+  criticalSpeedMult: 0.75
+  criticalMultRPI: 0.5
+  criticalAlert: Starving
+  criticalIcon: HungerIconStarving

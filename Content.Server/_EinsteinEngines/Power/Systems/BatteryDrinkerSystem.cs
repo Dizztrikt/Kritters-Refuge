@@ -18,16 +18,16 @@ using Content.Server._EinsteinEngines.Silicon;
 
 namespace Content.Server._EinsteinEngines.Power;
 
-public sealed class BatteryDrinkerSystem : EntitySystem
+public sealed partial class BatteryDrinkerSystem : EntitySystem
 {
-    [Dependency] private readonly ItemSlotsSystem _slots = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly BatterySystem _battery = default!;
-    [Dependency] private readonly SiliconChargeSystem _silicon = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly PowerCellSystem _powerCell = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private ItemSlotsSystem _slots = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private BatterySystem _battery = default!;
+    [Dependency] private SiliconChargeSystem _silicon = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private PowerCellSystem _powerCell = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
 
     public override void Initialize()
     {
@@ -95,27 +95,21 @@ public sealed class BatteryDrinkerSystem : EntitySystem
 
         var source = args.Target.Value;
         var drinker = uid;
-        var sourceBattery = Comp<BatteryComponent>(source);
-
-        _silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryComponent);
-
-        if (!TryComp(uid, out PowerCellSlotComponent? batterySlot))
+        if (!TryComp(source, out BatteryComponent? sourceBattery)
+            || !_silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryComponent)
+            || !TryComp(uid, out PowerCellSlotComponent? batterySlot)
+            || !_container.TryGetContainer(uid, batterySlot.CellSlotId, out var container)
+            || container.ContainedEntities.Count == 0)
             return;
 
-        var container = _container.GetContainer(uid, batterySlot.CellSlotId);
         var drinkerBattery = container.ContainedEntities.First();
 
         TryComp<BatteryDrinkerSourceComponent>(source, out var sourceComp);
 
-        DebugTools.AssertNotNull(drinkerBattery);
-
-        if (drinkerBattery == null)
-            return;
-
         var amountToDrink = drinkerComp.DrinkMultiplier * 1000;
 
         amountToDrink = MathF.Min(amountToDrink, sourceBattery.CurrentCharge);
-        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent!.MaxCharge - drinkerBatteryComponent.CurrentCharge);
+        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent.MaxCharge - drinkerBatteryComponent.CurrentCharge);
 
         if (sourceComp != null && sourceComp.MaxAmount > 0)
             amountToDrink = MathF.Min(amountToDrink, (float) sourceComp.MaxAmount);

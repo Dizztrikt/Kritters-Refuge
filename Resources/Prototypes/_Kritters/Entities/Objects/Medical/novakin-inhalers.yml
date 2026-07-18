@@ -1,0 +1,55 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseNovakinInhaler
+  name: Novakin Inhaler
+  description: A refillable pressure vessel that replenishes a Novakin's gaseous body.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/emergency_red.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Objects/Tanks/emergency_red.rsi
+  - type: Tag
+    tags:
+    - GasTank
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      volume: 0.66
+      temperature: 293.15
+    tankLowPressure: 0
+  - type: NovakinInhaler
+    reservePerMole: 400
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  parent: BaseNovakinInhaler
+  id: NovakinInhaler
+  suffix: Filled
+  components:
+  - type: GasTank
+    air:
+      volume: 0.66
+      moles: [0, 0.270782035]
+      temperature: 293.15
+
+- type: entity
+  parent: BaseNovakinInhaler
+  id: NovakinInhalerLarge
+  name: Large Novakin Inhaler
+  suffix: Filled
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/emergency_double_red.rsi
+  - type: Item
+    sprite: Objects/Tanks/emergency_double_red.rsi
+  - type: GasTank
+    air:
+      volume: 2.5
+      moles: [0, 1.025689525]
+      temperature: 293.15
+  - type: NovakinInhaler
+    maxMoles: 1.025689525

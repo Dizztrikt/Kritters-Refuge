@@ -3,6 +3,8 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using System.Linq;
 using Content.Shared.Body.Systems;
+using Content.Shared._Kritters.Systems;
+using Content.Shared._Kritters.Components;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
@@ -36,24 +38,24 @@ namespace Content.Shared.Medical.Cryogenics;
 
 public abstract partial class SharedCryoPodSystem: EntitySystem
 {
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] private readonly ClimbSystem _climb = default!;
-    [Dependency] private readonly EmagSystem _emag = default!;
-    [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly ReactiveSystem _reactive = default!;
-    [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
-    [Dependency] private readonly SharedBloodstreamSystem _bloodstream = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly SharedPointLightSystem _light = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly SharedToolSystem _tool = default!;
-    [Dependency] protected readonly SharedUserInterfaceSystem UI = default!;
-    [Dependency] private readonly StandingStateSystem _standingState = default!;
+    [Dependency] private ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] protected IGameTiming Timing = default!;
+    [Dependency] private ClimbSystem _climb = default!;
+    [Dependency] private EmagSystem _emag = default!;
+    [Dependency] private ItemSlotsSystem _itemSlots = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private ReactiveSystem _reactive = default!;
+    [Dependency] protected SharedAppearanceSystem Appearance = default!;
+    [Dependency] private SharedBloodstreamSystem _bloodstream = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private SharedPointLightSystem _light = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
+    [Dependency] private SharedToolSystem _tool = default!;
+    [Dependency] protected SharedUserInterfaceSystem UI = default!;
+    [Dependency] private StandingStateSystem _standingState = default!;
 
     private EntityQuery<BloodstreamComponent> _bloodstreamQuery;
     private EntityQuery<ItemSlotsComponent> _itemSlotsQuery;
@@ -120,6 +122,7 @@ public abstract partial class SharedCryoPodSystem: EntitySystem
     {
         var patient = entity.Comp.BodyContainer.ContainedEntity;
 
+        // Kritters: bloodless Novakins receive filtered cryogenic medicine through their Core instead.
         if (patient == null
             || !_solutionContainerQuery.TryComp(entity, out var podSolutionManager)
             || !_solutionContainer.TryGetSolution(
@@ -127,7 +130,8 @@ public abstract partial class SharedCryoPodSystem: EntitySystem
                     CryoPodComponent.InjectionBufferSolutionName,
                     out var injectingSolution,
                     out _)
-            || !_bloodstreamQuery.TryComp(patient, out var bloodstream))
+            || (!_bloodstreamQuery.HasComp(patient) && !HasComp<NovakinPhysiologyComponent>(patient))
+            )
         {
             return;
         }
@@ -145,8 +149,16 @@ public abstract partial class SharedCryoPodSystem: EntitySystem
 
         if (solutionToInject.Volume > 0)
         {
-            _bloodstream.TryAddToChemicals((patient.Value, bloodstream), solutionToInject);
-            _reactive.DoEntityReaction(patient.Value, solutionToInject, ReactionMethod.Injection);
+            if (_bloodstreamQuery.TryComp(patient, out var bloodstream))
+            {
+                _bloodstream.TryAddToChemicals((patient.Value, bloodstream), solutionToInject);
+                _reactive.DoEntityReaction(patient.Value, solutionToInject, ReactionMethod.Injection);
+            }
+            else
+            {
+                // Kritters: preserve the normal cryopod dose while delegating its destination to Novakin physiology.
+                EntityManager.EventBus.RaiseLocalEvent(patient.Value, new NovakinCryoPodInjectionEvent(solutionToInject));
+            }
         }
     }
 

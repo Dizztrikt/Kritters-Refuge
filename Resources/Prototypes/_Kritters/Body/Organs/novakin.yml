@@ -1,0 +1,45 @@
+- type: entity
+  id: OrganNovakinNexus
+  parent: OrganHumanBrain
+  name: Novakin Nexus
+  description: The stable nexus that holds a Novakin's consciousness together.
+  components:
+  - type: Sprite
+    sprite: _Kritters/Mobs/Species/Novakin/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganNovakinCore
+  parent: OrganHumanHeart
+  name: Novakin Core
+  description: A containment core that circulates and stabilizes a Novakin's gaseous form.
+  components:
+  - type: Sprite
+    sprite: _Kritters/Mobs/Species/Novakin/organs.rsi
+    state: core
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 75
+  - type: Stomach
+    # Kritters: the Core burns ingested fuel immediately instead of holding it for organic digestion.
+    digestionDelay: 0
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [Human]
+    removeEmpty: true
+    removeUnmatched: true
+    groups:
+    - id: Fuel
+    - id: Food
+    - id: Drink
+      # Kritters: 3u/s lets a rapid 180u binge burn through the Core in roughly one minute.
+      rateModifier: 6
+    - id: Alcohol
+      skipEffects: true
+    - id: Medicine
+    - id: Cryogenic
+    - id: Poison
+    - id: Narcotic
+    - id: Aphrodisiacs
+    - id: AphrodisiacDrinks

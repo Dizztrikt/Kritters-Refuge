@@ -14,10 +14,10 @@ namespace Content.Shared.Chemistry.EntitySystems;
 ///     Examples of spikable entity interactions include pills being dropped into glasses,
 ///     eggs being cracked into bowls, and so on.
 /// </summary>
-public sealed class SolutionSpikerSystem : EntitySystem
+public sealed partial class SolutionSpikerSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedSolutionContainerSystem _solution = default!;
 
     public override void Initialize()
     {
@@ -62,7 +62,7 @@ public sealed class SolutionSpikerSystem : EntitySystem
         _popup.PopupClient(Loc.GetString(spikableSource.Popup, ("spiked-entity", target), ("spike-entity", source)), user, user);
         sourceSolution.RemoveAllSolution();
         if (spikableSource.Delete)
-            QueueDel(source);
+            PredictedQueueDel(source);
 
         return true;
     }

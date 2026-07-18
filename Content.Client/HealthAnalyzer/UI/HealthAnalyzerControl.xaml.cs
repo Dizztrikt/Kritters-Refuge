@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Numerics;
 using Content.Shared.Atmos;
+using Content.Shared._Kritters;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
@@ -100,6 +101,18 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         BloodLabel.Text = !float.IsNaN(state.BloodLevel)
             ? $"{state.BloodLevel * 100:F1} %"
             : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
+
+        // Kritters: bloodless Novakins replace blood diagnostics with their structural nitrogen reserve.
+        var isNovakin = !float.IsNaN(state.NitrogenReserve);
+        BloodLevelTitleLabel.Visible = !isNovakin;
+        BloodLabel.Visible = !isNovakin;
+        BloodTypeTitleLabel.Visible = !isNovakin;
+        BloodTypeLabel.Visible = !isNovakin;
+        NitrogenReserveTitleLabel.Visible = isNovakin;
+        NitrogenReserveLabel.Visible = isNovakin;
+        NitrogenReserveLabel.Text = isNovakin
+            ? $"{state.NitrogenReserve * 100:F1} %"
+            : string.Empty;
 
         // Kritters: Blood type label comes from the scanned entity's blood reagent/type data.
         BloodTypeLabel.Text = !string.IsNullOrWhiteSpace(state.BloodTypeName)
