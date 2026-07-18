@@ -16,7 +16,7 @@ public sealed class SerdeHTNSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     private static readonly ProtoId<HTNCompoundPrototype> IdleTask = "IdleCompound";
-    private static readonly ProtoId<HTNCompoundPrototype> BasicTask = "SerdeBasicActorCompound";
+    //private static readonly ProtoId<HTNCompoundPrototype> BasicTask = "SerdeBasicActorCompound";
     //private static readonly JsonCerializationOptions _options = default!;
 
 
