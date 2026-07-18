@@ -1,0 +1,83 @@
+using Content.Shared._Kritters.Serde;
+using Content.Server._Kritters.Serde;
+
+using Robust.Shared.Toolshed;
+using Content.Server.Speech.Components;
+
+using Content.Shared.Administration;
+using Content.Server.Administration.Logs;
+
+namespace Content.Server.Administration.Toolshed;
+
+
+[ToolshedCommand, AdminCommand(AdminFlags.Debug)]
+public sealed class SerdeCommand : ToolshedCommand
+{
+
+    [CommandImplementation("pause")]
+    public void Pause(
+        [PipedArgument] EntityUid entity
+    )
+    {
+        EntityManager.EnsureComponent<SerdeComponent>(entity, out var serdeComponent);
+        serdeComponent.AcceptingCommands = false;
+
+        var serdeSystem = EntityManager.System<SerdeSystem>();
+        serdeSystem.CommandRaiseOut(entity, 0, "paused", "admin", 0, 0, 0, 0);
+    }
+
+    [CommandImplementation("resume")]
+    public void Resume(
+        [PipedArgument] EntityUid entity
+    )
+    {
+        EntityManager.EnsureComponent<SerdeComponent>(entity, out var serdeComponent);
+        serdeComponent.AcceptingCommands = true;
+
+        var serdeSystem = EntityManager.System<SerdeSystem>();
+        serdeSystem.CommandRaiseOut(entity, 0, "resumed", "admin", 0, 0, 0, 0);
+    }
+
+    [CommandImplementation("emitIn")]
+    public void EmitIn(
+        [PipedArgument] EntityUid entity,
+        [CommandArgument] string command,
+        [CommandArgument] string text,
+        [CommandArgument] int a,
+        [CommandArgument] int b,
+        [CommandArgument] float x,
+        [CommandArgument] float y
+    )
+    {
+        var serdeSystem = EntityManager.System<SerdeSystem>();
+        serdeSystem.CommandRaiseIn(entity, 0, command, text, a, b, x, y);
+    }
+
+    [CommandImplementation("emitOut")]
+    public void EmitOut(
+        [PipedArgument] EntityUid entity,
+        [CommandArgument] string command,
+        [CommandArgument] string text,
+        [CommandArgument] int a,
+        [CommandArgument] int b,
+        [CommandArgument] float x,
+        [CommandArgument] float y
+    )
+    {
+        var serdeSystem = EntityManager.System<SerdeSystem>();
+        serdeSystem.CommandRaiseOut(entity, 0, command, text, a, b, x, y);
+    }
+
+    [CommandImplementation("makeNpc")]
+    public void MakeNpc(
+        [PipedArgument] EntityUid entity
+    )
+    {
+        EntityManager.EnsureComponent<SerdeComponent>(entity, out var serdeComponent);
+        EntityManager.EnsureComponent<SerdeMovementComponent>(entity, out var serdeMovementComponent);
+        EntityManager.EnsureComponent<SerdeSpeechComponent>(entity, out var serdeSpeechComponent);
+        EntityManager.EnsureComponent<SerdeNpcComponent>(entity, out var serdeNpcComponent);
+        EntityManager.EnsureComponent<ActiveListenerComponent>(entity, out var activeListenerComponent);
+    }
+
+}
