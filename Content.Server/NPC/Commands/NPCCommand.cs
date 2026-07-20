@@ -11,6 +11,7 @@ using Robust.Shared.Toolshed.Syntax;
 
 namespace Content.Server.NPC.Commands;
 
+// Kritters: replaced `npcadd` with a toolshead command `npc:setBehavor`
 [ToolshedCommand, AdminCommand(AdminFlags.Fun)]
 public sealed class NPCCommand : ToolshedCommand
 {
