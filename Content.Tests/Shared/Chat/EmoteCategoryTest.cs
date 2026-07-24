@@ -16,6 +16,7 @@ public sealed class EmoteCategoryTest
     [TestCase(EmoteCategory.Male)]
     [TestCase(EmoteCategory.Female)]
     [TestCase(EmoteCategory.Avali)]
+    [TestCase(EmoteCategory.Lizard)]
     [TestCase(EmoteCategory.Vox)]
     [TestCase(EmoteCategory.Moth)]
     [TestCase(EmoteCategory.Felinid)]
@@ -29,7 +30,6 @@ public sealed class EmoteCategoryTest
     [TestCase(EmoteCategory.Invalid)]
     [TestCase(EmoteCategory.General)]
     [TestCase(EmoteCategory.Hands)]
-    [TestCase(EmoteCategory.Lizard)]
     [TestCase(EmoteCategory.Sex)]
     public void NonVocalCategoriesDoNotUseVocalSounds(EmoteCategory category)
     {

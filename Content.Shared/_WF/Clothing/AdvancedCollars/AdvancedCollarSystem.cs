@@ -57,7 +57,7 @@ public sealed partial class AdvancedCollarSystem : EntitySystem
 
     private void OnCollarMapInit(Entity<AdvancedCollarComponent> collar, ref MapInitEvent args)
     {
-        ReconcileModuleEffects(collar);
+        ReconcileModuleEffects(collar, collar.Comp.ModuleContainer);
     }
 
     private void OnCollarShutdown(Entity<AdvancedCollarComponent> collar, ref ComponentShutdown args)
@@ -89,7 +89,7 @@ public sealed partial class AdvancedCollarSystem : EntitySystem
             return;
 
         SetInstalledIn((args.Entity, module), collar);
-        ReconcileModuleEffects(collar);
+        ReconcileModuleEffects(collar, args.Container);
     }
 
     private void OnModuleRemoved(Entity<AdvancedCollarComponent> collar, ref EntRemovedFromContainerMessage args)
@@ -101,7 +101,7 @@ public sealed partial class AdvancedCollarSystem : EntitySystem
             return;
 
         SetInstalledIn((args.Entity, module), null);
-        ReconcileModuleEffects(collar);
+        ReconcileModuleEffects(collar, args.Container);
     }
 
     private void OnExamined(Entity<AdvancedCollarComponent> collar, ref ExaminedEvent args)
@@ -264,13 +264,13 @@ public sealed partial class AdvancedCollarSystem : EntitySystem
         Dirty(module);
     }
 
-    private void ReconcileModuleEffects(Entity<AdvancedCollarComponent> collar)
+    private void ReconcileModuleEffects(Entity<AdvancedCollarComponent> collar, BaseContainer moduleContainer)
     {
         if (TerminatingOrDeleted(collar))
             return;
 
         var requested = new Dictionary<Type, (string Name, EntityUid Module)>();
-        foreach (var moduleUid in collar.Comp.ModuleContainer.ContainedEntities)
+        foreach (var moduleUid in moduleContainer.ContainedEntities)
         {
             if (!TryComp<AdvancedCollarModuleComponent>(moduleUid, out var module))
                 continue;

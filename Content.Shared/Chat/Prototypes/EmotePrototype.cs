@@ -120,6 +120,7 @@ public static class EmoteCategoryExtensions
         or EmoteCategory.Male
         or EmoteCategory.Female
         or EmoteCategory.Avali
+        or EmoteCategory.Lizard
         or EmoteCategory.Vox
         or EmoteCategory.Moth
         or EmoteCategory.Borg
