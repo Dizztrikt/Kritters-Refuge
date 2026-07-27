@@ -63,6 +63,7 @@
   - type: AtmosExposed
   - type: PointLight
     enabled: true
+    castShadows: false
     radius: 1.2
     energy: 1
     color: "#ffb36b"

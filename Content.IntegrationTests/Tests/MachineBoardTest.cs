@@ -141,6 +141,45 @@ public sealed class MachineBoardTest
         await pair.CleanReturnAsync();
     }
 
+    /// <summary>
+    /// Ensures every concrete machine board requires valid construction inputs.
+    /// </summary>
+    [Test]
+    public async Task TestMachineBoardsHaveValidRequirements()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+        var protoMan = server.ResolveDependency<IPrototypeManager>();
+        var compFact = server.ResolveDependency<IComponentFactory>();
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.Multiple(() =>
+            {
+                foreach (var prototype in protoMan.EnumeratePrototypes<EntityPrototype>()
+                             .Where(p => !p.Abstract)
+                             .Where(p => !pair.IsTestPrototype(p)))
+                {
+                    if (!prototype.TryGetComponent<MachineBoardComponent>(out var board, compFact))
+                        continue;
+
+                    var amounts = board.Requirements.Values
+                        .Concat(board.StackRequirements.Values)
+                        .Concat(board.ComponentRequirements.Values.Select(info => info.Amount))
+                        .Concat(board.TagRequirements.Values.Select(info => info.Amount))
+                        .ToArray();
+
+                    Assert.That(amounts, Is.Not.Empty,
+                        $"Machine board {prototype.ID} has no required machine parts, stacks, components, or tagged entities.");
+                    Assert.That(amounts, Is.All.GreaterThan(0),
+                        $"Machine board {prototype.ID} has a requirement with a non-positive amount.");
+                }
+            });
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
     // Frontier: machine part tests
     /// <summary>
     /// Invalid stack types for MachineBoard components, should be listed as requirements.

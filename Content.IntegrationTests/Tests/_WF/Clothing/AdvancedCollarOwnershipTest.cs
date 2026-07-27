@@ -31,6 +31,49 @@ public sealed class AdvancedCollarOwnershipTest
 ";
 
     [Test]
+    public async Task InstalledModuleReplicatesToClient()
+    {
+        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true });
+        var server = pair.Server;
+        var client = pair.Client;
+        var map = await pair.CreateTestMap();
+        EntityUid collar = default;
+        EntityUid module = default;
+
+        await server.WaitAssertion(() =>
+        {
+            var entities = server.EntMan;
+            var containers = server.System<SharedContainerSystem>();
+            collar = entities.SpawnEntity("AdvancedCollarOwnershipTestCollar", map.GridCoords);
+            module = entities.SpawnEntity("AdvancedCollarOwnershipTestModule", map.GridCoords);
+            var collarComponent = entities.GetComponent<AdvancedCollarComponent>(collar);
+
+            Assert.That(containers.Insert(module, collarComponent.ModuleContainer), Is.True);
+        });
+
+        await pair.RunTicksSync(5);
+
+        await client.WaitAssertion(() =>
+        {
+            var serverEntities = server.EntMan;
+            var clientEntities = client.EntMan;
+            var clientCollar = clientEntities.GetEntity(serverEntities.GetNetEntity(collar));
+            var clientModule = clientEntities.GetEntity(serverEntities.GetNetEntity(module));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(clientEntities.HasComponent<AdvancedCollarComponent>(clientCollar), Is.True);
+                Assert.That(clientEntities.HasComponent<AdvancedCollarModuleComponent>(clientModule), Is.True);
+                Assert.That(clientEntities.GetComponent<AdvancedCollarModuleComponent>(clientModule).InstalledIn,
+                    Is.EqualTo(clientCollar));
+                Assert.That(clientEntities.HasComponent<AnchorableComponent>(clientCollar), Is.True);
+            });
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
     public async Task PreExistingComponentSurvivesModuleRemoval()
     {
         await using var pair = await PoolManager.GetServerClient();

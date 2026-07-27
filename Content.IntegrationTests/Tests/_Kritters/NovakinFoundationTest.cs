@@ -1559,7 +1559,12 @@ public sealed class NovakinFoundationTest
 
             physiologySystem.Update(0.5f);
 
-            Assert.That(entities.GetComponent<PointLightComponent>(novakin).Color, Is.EqualTo(chosenColor));
+            var light = entities.GetComponent<PointLightComponent>(novakin);
+            Assert.Multiple(() =>
+            {
+                Assert.That(light.Color, Is.EqualTo(chosenColor));
+                Assert.That(light.CastShadows, Is.False);
+            });
         });
 
         await pair.CleanReturnAsync();
