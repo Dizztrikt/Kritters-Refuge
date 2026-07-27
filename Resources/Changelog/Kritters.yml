@@ -47,3 +47,22 @@ Entries:
   id: 328
   time: '2026-07-20T02:02:40.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/45
+- author: Virnazush
+  changes:
+    - type: Fix
+      message: Lizards can now make their sounds again
+    - type: Fix
+      message: >-
+        Mass Scanner, regardless of its handheld or stationary construction,
+        will now be able to show IFF.
+    - type: Fix
+      message: Minor graphical and lightning issues, at least I think so.
+    - type: Fix
+      message: Removed Lone Digger from the Jukebox because of Copyright
+    - type: Fix
+      message: Batteries not showing charge indication.
+    - type: Add
+      message: Readded funny wizard/cult recharging items.
+  id: 329
+  time: '2026-07-27T16:18:49.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/46
