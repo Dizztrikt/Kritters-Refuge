@@ -66,3 +66,10 @@ Entries:
   id: 329
   time: '2026-07-27T16:18:49.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/46
+- author: Kashieru1987
+  changes:
+    - type: Remove
+      message: removed all hour requirements for loadout items, clothing, and whatnot!
+  id: 330
+  time: '2026-07-28T22:06:28.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/48
