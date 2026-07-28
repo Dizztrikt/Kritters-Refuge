@@ -1,6 +1,6 @@
 - type: loadout
   id: ContractorTennisball
-  effects:
+  # effects:
   # - !type:GroupLoadoutEffect # Kritters
   #   proto: ContractorT1
   # price: 300
