@@ -85,18 +85,18 @@
 #T1
 - type: loadout
   id: ContractorBoxFolderClipboard
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     belt: BoxFolderClipboard
 
 - type: loadout
   id: ContractorClothingBeltPilot
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ClothingBeltPilot
@@ -104,36 +104,36 @@
 - type: loadout
   id: ContractorClothingBeltPilotFilled
   name: pilot webbing (filled)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 1500
   equipment:
     belt: ClothingBeltPilotFilled
 
 - type: loadout
   id: ContractorClothingBeltBandolier
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ClothingBeltBandolier
 
 - type: loadout
   id: ContractorClothingBeltHolster
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ClothingBeltHolster
 
 - type: loadout
   id: ContractorClothingBeltChaplainSash
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ClothingBeltChaplainSash
@@ -141,54 +141,54 @@
 - type: loadout
   id: ContractorClothingBeltChaplainSashFilled
   name: chaplain sash (filled)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 1500
   equipment:
     belt: ClothingBeltChaplainSashFilled
 
 - type: loadout
   id: ContractorBooksBag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: BooksBag
 
 - type: loadout
   id: ContractorChemBag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ChemBag
 
 - type: loadout
   id: ContractorOreBag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: OreBag
 
 - type: loadout
   id: ContractorPlantBag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: PlantBag
 
 - type: loadout
   id: ContractorConstructionBag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     belt: ConstructionBag
@@ -196,9 +196,9 @@
 #T2
 - type: loadout
   id: ContractorClothingBeltMartialBlack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   equipment:
     belt: ClothingBeltMartialBlack
@@ -206,9 +206,9 @@
 - type: loadout
   id: ContractorClothingBeltPunkRandomized
   name: punk belt (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   equipment:
     belt: ClothingBeltPunkRandomized
@@ -216,9 +216,9 @@
 - type: loadout
   id: ContractorClothingBeltPunkRandomizedFilled
   name: punk belt (random, filled)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1500
   equipment:
     belt: ClothingBeltPunkRandomizedFilled
@@ -226,9 +226,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorClothingBeltChampion
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 5000
   equipment:
     belt: ClothingBeltChampion
@@ -236,9 +236,9 @@
 - type: loadout
   id: ContractorClothingBeltSheathFilledHilt
   name: sabre sheath (with hilt)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2500
   equipment:
     belt: ClothingBeltSheathFilledHilt

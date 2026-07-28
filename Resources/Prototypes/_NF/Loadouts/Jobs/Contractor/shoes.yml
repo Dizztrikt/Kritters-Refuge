@@ -108,9 +108,9 @@
 #T1
 - type: loadout
   id: ContractorClothingShoesColorWhite
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -122,9 +122,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsMag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -134,9 +134,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -146,9 +146,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterAtmos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -158,9 +158,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterHydro
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -170,9 +170,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -182,9 +182,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterCargo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -194,9 +194,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterChef
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -206,9 +206,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterChem
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -218,9 +218,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterEngi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -230,9 +230,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterGenetics
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -242,9 +242,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterMiner
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -254,9 +254,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterParamedic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -266,9 +266,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterRobo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -278,9 +278,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterSci
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -290,9 +290,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterViro
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -302,9 +302,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsJack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -314,9 +314,9 @@
 
 - type: loadout
   id: ContractorClothingShoesLeather
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -326,9 +326,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsLaceup
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFNotDocOrStc
@@ -340,9 +340,9 @@
 
 - type: loadout
   id: ContractorClothingShoesSlippers
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -352,9 +352,9 @@
 
 - type: loadout
   id: ContractorClothingShoeSlippersDuck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -364,9 +364,9 @@
 
 - type: loadout
   id: ContractorClothingShoesFlippers
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -377,9 +377,9 @@
 - type: loadout
   id: ContractorClothingShoesBootsPunkRandomized
   name: punk boots (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -390,9 +390,9 @@
 #T2
 - type: loadout
   id: ContractorClothingShoesDameDane
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -402,9 +402,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWork
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -414,9 +414,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsCowboyBlack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -426,9 +426,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsCowboyBrown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -438,9 +438,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsCowboyWhite
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -450,9 +450,9 @@
 
 - type: loadout
   id: ContractorClothingShoesSnakeskinBoots
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -462,9 +462,9 @@
 
 - type: loadout
   id: ContractorClothingShoesHighheelBoots
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -474,9 +474,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsCowboyFancy
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -486,9 +486,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterChiefEngineer
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -498,9 +498,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterCMO
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -510,9 +510,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -522,9 +522,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterRD
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -534,9 +534,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterClown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -546,9 +546,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsWinterMime
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -558,9 +558,9 @@
 
 - type: loadout
   id: ContractorClothingShoesClown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -570,9 +570,9 @@
 
 - type: loadout
   id: ContractorClothingShoesJester
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -582,9 +582,9 @@
 
 - type: loadout
   id: ContractorClothingShoesBootsPerformer
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -594,9 +594,9 @@
 
 - type: loadout
   id: ContractorClothingShoesSkates
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -607,9 +607,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorClothingShoesClownLarge
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -619,9 +619,9 @@
     
 - type: loadout
   id: ContractorClothingShoesBling
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF

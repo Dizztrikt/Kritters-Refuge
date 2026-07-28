@@ -181,9 +181,9 @@
 #T1
 - type: loadout
   id: ContractorClothingHeadHatHoodBioScientist
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -193,9 +193,9 @@
 
 - type: loadout
   id: ContractorClothingHeadRastaHat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -205,9 +205,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatSombrero
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -217,9 +217,9 @@
 
 - type: loadout
   id: ContractorClothingHeadFishCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -229,9 +229,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatTrucker
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -241,9 +241,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCasa
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -253,9 +253,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBowlerHat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -265,9 +265,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatGreyFlatcap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -277,9 +277,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBrownFlatcap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -289,9 +289,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatParamedicsoft
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -301,9 +301,9 @@
 
 - type: loadout
   id: ContractorClothingHeadNurseHat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -313,9 +313,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretMedic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -325,9 +325,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatSurgcapGreen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -337,9 +337,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatSurgcapBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -349,9 +349,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatSurgcapPurple
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -361,9 +361,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatFedoraGrey
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -373,9 +373,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatFedoraBrown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -387,9 +387,9 @@
 #T2
 - type: loadout
   id: ContractorClothingHeadHatCaptain
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -399,9 +399,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCapcap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -411,9 +411,9 @@
 
 - type: loadout
   id: ContractorClothingHeadTinfoil
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -423,9 +423,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretRND
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -435,9 +435,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretEngineering
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -447,9 +447,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretSeniorPhysician
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -459,9 +459,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretCmo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -471,9 +471,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -483,9 +483,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatQMsoft
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -495,9 +495,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCardinal
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -507,9 +507,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatHoodNunHood
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -519,9 +519,9 @@
 
 - type: loadout
   id: ContractorClothingHeadSafari
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -531,9 +531,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatJester
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -543,9 +543,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatJesterAlt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -555,9 +555,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -567,9 +567,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeretFrench
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -579,9 +579,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatMimesoft
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -591,9 +591,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatPilgrim
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -603,9 +603,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatStrawHat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -615,9 +615,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyBlack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -627,9 +627,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyBrown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -639,9 +639,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyGrey
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -651,9 +651,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyBountyHunter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -663,9 +663,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBH
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -675,9 +675,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyRed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -687,9 +687,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCowboyWhite
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -699,9 +699,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatWideBrimmed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -711,9 +711,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatWitchhunter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -723,9 +723,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBishopMitre
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -735,9 +735,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatKippah
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -747,9 +747,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatPlaguedoctor
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -760,9 +760,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorPlunger
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -772,9 +772,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatCone
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -784,9 +784,9 @@
 
 - type: loadout
   id: ContractorClothingHeadBandGold
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -796,9 +796,9 @@
 
 - type: loadout
   id: ContractorClothingHeadHatTophat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable

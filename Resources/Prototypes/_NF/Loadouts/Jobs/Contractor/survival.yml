@@ -44,9 +44,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalExtended
   name: extended-oxygen survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFOxygenBreather
@@ -58,9 +58,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalExtendedNitrogen
   name: extended-nitrogen survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFNitrogenBreather
@@ -72,9 +72,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalExtendedSheleg
   name: extended-oxygen survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFSheleg
@@ -87,9 +87,9 @@
 - type: loadout
   id: ContractorNovakinBoxSurvivalExtended
   name: extended Novakin survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFNovakin
@@ -101,9 +101,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonk
   name: Donk Co. survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -112,9 +112,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkSpicy
   name: Donk Co. arctic survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -123,9 +123,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkTeriyaki
   name: Donk Co. flavor survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -134,9 +134,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkDank
   name: Donk Co. stress survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -145,9 +145,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkPizza
   name: Donk Co. wagon expedition survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -156,9 +156,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkHonk
   name: Donk Co. tropical survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -167,9 +167,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkBerry
   name: Donk Co. emergency flavor survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -178,9 +178,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkMoth
   name: Donk Co. empty sock drawer survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
@@ -189,9 +189,9 @@
 - type: loadout
   id: ContractorNFBoxSurvivalDonkDink
   name: Donk Co. good times survival box
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 50000
   storage:
     back:
