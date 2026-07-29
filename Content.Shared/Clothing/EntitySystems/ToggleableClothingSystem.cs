@@ -332,6 +332,7 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
     /// </summary>
     private void OnToggleClothing(EntityUid uid, ToggleableClothingComponent component, ToggleClothingEvent args)
     {
+
         if (args.Handled)
             return;
 
@@ -341,10 +342,8 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
 
     public void ToggleClothing(EntityUid user, EntityUid target, ToggleableClothingComponent component) // Frontier: private to public
     {
-        var parent = Transform(target).ParentUid;
 
-        // Kritters: Allow hats under toggleable helms
-        var wasAttachedUnequipped = false; //We want to track if the toggleable item was unequipped, assume false for now
+        var parent = Transform(target).ParentUid;
 
         // New marking mode
         if (component.MarkingPrototype != null)
@@ -357,8 +356,9 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
         if (component.Container == null || component.ClothingUid == null)
             return;
 
-
         // Begin Kritters: Allow hats under toggleable helms
+        var wasAttachedUnequipped = false; //We want to track if the toggleable item was unequipped, assume false for now
+
         if (component.Container.ContainedEntity == null)
             wasAttachedUnequipped = _inventorySystem.TryUnequip(user, parent, component.Slot, force: true);
         else
@@ -455,6 +455,8 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
 
     private void OnInit(EntityUid uid, ToggleableClothingComponent component, ComponentInit args)
     {
+        component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Kritters: Allow hats under toggleable helms
+
         // Only create container for legacy clothing mode, not for marking mode
         if (component.ClothingPrototype != null)
         {
@@ -478,7 +480,6 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
 
             // Create the container with the (possibly updated) container ID
             component.Container = _containerSystem.EnsureContainer<ContainerSlot>(uid, containerId);
-            component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Kritters: Allow hats under toggleable helms
         }
     }
 

@@ -135,6 +135,7 @@
     slot: head
   - type: ContainerContainer
     containers:
+      under-clothing: !type:ContainerSlot {} # Kritters
     # Mono: Apparently changed these 3 lines to fit the armor plates.
       toggleable-clothing: !type:Container {}
       storagebase: !type:Container
