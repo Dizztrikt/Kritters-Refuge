@@ -236,10 +236,12 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
             || toggleCom.Container == null)
             return;
 
+        var parent = Transform(uid).ParentUid; // Kritters: Allow hats under toggleable helms
         if (!_inventorySystem.TryUnequip(Transform(uid).ParentUid, toggleCom.Slot, force: true))
             return;
 
         _containerSystem.Insert(uid, toggleCom.Container);
+        TryEquipUnderClothing(parent, component);
         args.Handled = true;
     }
 
@@ -252,11 +254,18 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
         if (_timing.ApplyingState)
             return;
 
+        var wasAttachedUnequipped = false; // Kritters: Allow hats under toggleable helms
+
         // If the attached clothing is not currently in the container, this just assumes that it is currently equipped.
         // This should maybe double check that the entity currently in the slot is actually the attached clothing, but
         // if its not, then something else has gone wrong already...
         if (component.Container != null && component.Container.ContainedEntity == null && component.ClothingUid != null)
-            _inventorySystem.TryUnequip(args.Equipee, component.Slot, force: true, triggerHandContact: true);
+            wasAttachedUnequipped = _inventorySystem.TryUnequip(args.Equipee, component.Slot, force: true, triggerHandContact: true); // Kritters: Allow hats under toggleable helms
+
+        // Kritters: If the toggleable help was unequipped, try to equip what's in the under clothing container
+        if (wasAttachedUnequipped && !TryEquipUnderClothing(args.Equipee, component))
+            TryDropUnderClothing(component);
+
     }
 
     private void OnRemoveToggleable(EntityUid uid, ToggleableClothingComponent component, ComponentRemove args)
@@ -323,6 +332,7 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
     /// </summary>
     private void OnToggleClothing(EntityUid uid, ToggleableClothingComponent component, ToggleClothingEvent args)
     {
+
         if (args.Handled)
             return;
 
@@ -332,6 +342,7 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
 
     public void ToggleClothing(EntityUid user, EntityUid target, ToggleableClothingComponent component) // Frontier: private to public
     {
+
         var parent = Transform(target).ParentUid;
 
         // New marking mode
@@ -345,15 +356,26 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
         if (component.Container == null || component.ClothingUid == null)
             return;
 
+        // Begin Kritters: Allow hats under toggleable helms
+        var wasAttachedUnequipped = false; //We want to track if the toggleable item was unequipped, assume false for now
+
         if (component.Container.ContainedEntity == null)
-            _inventorySystem.TryUnequip(user, parent, component.Slot, force: true);
-        else if (_inventorySystem.TryGetSlotEntity(parent, component.Slot, out var existing))
-        {
-            _popupSystem.PopupClient(Loc.GetString("toggleable-clothing-remove-first", ("entity", existing)),
-                user, user);
-        }
+            wasAttachedUnequipped = _inventorySystem.TryUnequip(user, parent, component.Slot, force: true);
         else
+        {
+            if (_inventorySystem.TryGetSlotEntity(parent, component.Slot, out var existing)
+                && !TryStoreUnderClothing(existing.Value, component))
+            {
+                _popupSystem.PopupClient(Loc.GetString("toggleable-clothing-remove-first", ("entity", existing)), user, user);
+                return;
+            }
             _inventorySystem.TryEquip(user, parent, component.ClothingUid.Value, component.Slot, triggerHandContact: true);
+        }
+
+        // If the toggleable clothing was unequipped, try to equip what's in the under clothing container
+        if (wasAttachedUnequipped && !TryEquipUnderClothing(user, parent, component))
+            TryDropUnderClothing(component);
+        // End Kritters
     }
 
     /// <summary>
@@ -433,6 +455,8 @@ public sealed partial class ToggleableClothingSystem : EntitySystem
 
     private void OnInit(EntityUid uid, ToggleableClothingComponent component, ComponentInit args)
     {
+        component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Kritters: Allow hats under toggleable helms
+
         // Only create container for legacy clothing mode, not for marking mode
         if (component.ClothingPrototype != null)
         {

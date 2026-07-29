@@ -34,6 +34,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      under-clothing: !type:ContainerSlot {} # Kritters
   - type: Construction
     graph: ClothingNeckCloakRosyGraph
     node: ClothingNeckCloakRosy
