@@ -89,3 +89,10 @@ Entries:
   id: 332
   time: '2026-07-29T23:44:54.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/50
+- author: Kashieru1987
+  changes:
+    - type: Tweak
+      message: ChemMasterUI now updates when dumped into!
+  id: 333
+  time: '2026-08-02T23:14:30.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/51
