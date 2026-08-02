@@ -128,6 +128,42 @@ public sealed class SpaceCleanupTest
     }
 
     [Test]
+    public async Task PreservesCargoPalletContentsDuringGridCleanup()
+    {
+        await using var pair = await GetTestPairAsync();
+        var server = pair.Server;
+        var entities = server.ResolveDependency<IEntityManager>();
+        var janitor = entities.System<AggressiveSpaceJanitorSystem>();
+        var map = await pair.CreateTestMap();
+        EntityUid cargoPallet = default;
+        EntityUid cargoItem = default;
+
+        await server.WaitAssertion(() =>
+        {
+            cargoPallet = entities.SpawnEntity("CargoPalletSell", map.GridCoords);
+            cargoItem = entities.SpawnEntity("Crowbar", map.GridCoords);
+        });
+
+        await server.WaitRunTicks(1);
+        await server.WaitAssertion(() =>
+        {
+            janitor.RunGridCleanup(map.Grid.Owner);
+            Assert.That(entities.HasComponent<AggressiveSpaceJanitorTrackedComponent>(cargoItem), Is.False);
+            Assert.That(janitor.GetForceEligibleCount(map.Grid.Owner), Is.EqualTo(0));
+            Assert.That(janitor.ForceGridCleanup(map.Grid.Owner), Is.EqualTo(0));
+            Assert.That(janitor.ForceGridPrototypeCleanup(map.Grid.Owner, "Crowbar"), Is.EqualTo(0));
+        });
+
+        await server.WaitRunTicks(1);
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entities.EntityExists(cargoPallet), Is.True);
+            Assert.That(entities.EntityExists(cargoItem), Is.True);
+        });
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
     public async Task ForceSpaceCleanupCountsAndRemovesOnlyLooseItems()
     {
         await using var pair = await GetTestPairAsync();

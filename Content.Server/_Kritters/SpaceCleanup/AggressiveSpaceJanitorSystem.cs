@@ -2,6 +2,7 @@ using System.Numerics;
 using Content.Server._DV.Mail.Components;
 using Content.Server._Kritters.SpaceCleanup.Components;
 using Content.Server._NF.GC.Components;
+using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
 using Content.Server.Chat.Managers;
 using Content.Server.Construction.Components;
@@ -28,6 +29,7 @@ namespace Content.Server._Kritters.SpaceCleanup;
 public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private SharedContainerSystem _containers = default!;
@@ -46,6 +48,7 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
     private double _highValueThreshold = 500;
     private float _playerRadius = 10f;
     private int _deletionLimit = 64;
+    private readonly HashSet<EntityUid> _cargoPalletContents = new();
 
     public override void Initialize()
     {
@@ -155,7 +158,7 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
     }
 
     /// <summary>
-    /// Immediately queues every loose non-mob entity on a grid. This intentionally bypasses all item safeguards.
+    /// Immediately queues every loose non-mob entity on a grid. This intentionally bypasses ordinary item safeguards.
     /// </summary>
     public int ForceGridCleanup(EntityUid grid)
     {
@@ -163,7 +166,7 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
     }
 
     /// <summary>
-    /// Immediately queues every loose non-mob entity drifting in open space. This intentionally bypasses all item safeguards.
+    /// Immediately queues every loose non-mob entity drifting in open space. This intentionally bypasses ordinary item safeguards.
     /// </summary>
     public int ForceSpaceCleanup()
     {
@@ -255,6 +258,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
         IReadOnlyList<string> prototypeFilters,
         IReadOnlyList<Type> componentFilters)
     {
+        RefreshCargoPalletContents();
+
         var entries = new List<SpaceJanitorInspectionEntry>();
         var counts = new Dictionary<(string Prototype, EntityUid? Grid, MapId Map), int>();
         var now = _timing.CurTime;
@@ -301,6 +306,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 
     private int ForcePrototypeCleanup(EntityUid? grid, IReadOnlySet<string> prototypeIds)
     {
+        RefreshCargoPalletContents();
+
         var deleted = new List<EntityUid>();
         var query = EntityQueryEnumerator<TransformComponent>();
         while (query.MoveNext(out var uid, out var xform))
@@ -329,6 +336,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
     /// </summary>
     public int GetForceEligibleCount(EntityUid? grid = null)
     {
+        RefreshCargoPalletContents();
+
         var count = 0;
         var query = EntityQueryEnumerator<TransformComponent>();
         while (query.MoveNext(out var uid, out var xform))
@@ -342,6 +351,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 
     private int ForceCleanup(EntityUid? grid)
     {
+        RefreshCargoPalletContents();
+
         var deleted = new List<EntityUid>();
         var query = EntityQueryEnumerator<TransformComponent>();
         while (query.MoveNext(out var uid, out var xform))
@@ -364,6 +375,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
     {
         if (!_enabled)
             return 0;
+
+        RefreshCargoPalletContents();
 
         var now = _timing.CurTime;
         var deleted = new List<EntityUid>();
@@ -437,6 +450,12 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
         if (xform.MapID == MapId.Nullspace || xform.MapUid == null || xform.Anchored)
         {
             ineligibilityReason = xform.Anchored ? "anchored" : "not on a map";
+            return false;
+        }
+
+        if (_cargoPalletContents.Contains(uid))
+        {
+            ineligibilityReason = "cargo selling pallet";
             return false;
         }
 
@@ -514,7 +533,7 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 
     private bool IsForceEligible(EntityUid uid, TransformComponent xform, EntityUid? grid)
     {
-        if (HasComp<SingularityComponent>(uid))
+        if (HasComp<SingularityComponent>(uid) || _cargoPalletContents.Contains(uid))
             return false;
 
         if (xform.Anchored || _containers.IsEntityOrParentInContainer(uid, xform: xform))
@@ -551,7 +570,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 
     private bool IsPrototypeCullEligible(EntityUid uid, TransformComponent xform, IReadOnlySet<string> prototypeIds)
     {
-        if (xform.Anchored
+        if (_cargoPalletContents.Contains(uid)
+            || xform.Anchored
             || _containers.IsEntityOrParentInContainer(uid, xform: xform)
             || HasComp<MapComponent>(uid)
             || HasComp<MapGridComponent>(uid)
@@ -625,5 +645,20 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
         }
 
         return false;
+    }
+
+    private void RefreshCargoPalletContents()
+    {
+        _cargoPalletContents.Clear();
+
+        var query = AllEntityQuery<CargoPalletComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var pallet, out var xform))
+        {
+            if (!xform.Anchored || (pallet.PalletType & BuySellType.Sell) == 0)
+                continue;
+
+            _lookup.GetEntitiesIntersecting(uid, _cargoPalletContents,
+                LookupFlags.Dynamic | LookupFlags.Sundries);
+        }
     }
 }
