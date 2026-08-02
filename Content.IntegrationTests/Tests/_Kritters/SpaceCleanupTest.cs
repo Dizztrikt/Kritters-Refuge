@@ -5,6 +5,7 @@ using Content.Server._Kritters.SpaceCleanup;
 using Content.Server._Kritters.SpaceCleanup.Components;
 using Content.Shared._Kritters.CCVar;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Singularity.Components;
 using Robust.Shared.Console;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
@@ -152,6 +153,38 @@ public sealed class SpaceCleanupTest
             Assert.That(entities.EntityExists(item), Is.False);
             Assert.That(entities.EntityExists(mob), Is.True);
         });
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task PreservesEntitiesWithSingularityComponentDuringCleanup()
+    {
+        await using var pair = await GetTestPairAsync();
+        var server = pair.Server;
+        var entities = server.ResolveDependency<IEntityManager>();
+        var janitor = entities.System<AggressiveSpaceJanitorSystem>();
+        var map = await pair.CreateTestMap();
+        EntityUid singularity = default;
+
+        await server.WaitAssertion(() =>
+        {
+            singularity = entities.SpawnEntity("Crowbar", new MapCoordinates(new Vector2(100, 100), map.MapId));
+            entities.AddComponent<SingularityComponent>(singularity);
+
+            Assert.That(janitor.RunCleanup(), Is.EqualTo(0));
+            Assert.That(entities.HasComponent<AggressiveSpaceJanitorTrackedComponent>(singularity), Is.False);
+            var entries = janitor.GetInspectionEntries(["Crowbar"], Array.Empty<Type>());
+            Assert.That(entries, Has.Count.EqualTo(1));
+            Assert.That(entries[0].IneligibilityReason, Is.EqualTo("singularity"));
+            Assert.That(entities.IsQueuedForDeletion(singularity), Is.False);
+            janitor.ForceSpaceCleanup();
+            Assert.That(entities.IsQueuedForDeletion(singularity), Is.False);
+            Assert.That(janitor.ForceSpacePrototypeCleanup("Crowbar"), Is.EqualTo(0));
+            Assert.That(entities.IsQueuedForDeletion(singularity), Is.False);
+        });
+
+        await server.WaitRunTicks(1);
+        await server.WaitAssertion(() => Assert.That(entities.EntityExists(singularity), Is.True));
         await pair.CleanReturnAsync();
     }
 

@@ -67,7 +67,7 @@ public sealed partial class SpaceJanitorSystem : EntitySystem
         if (deleted == 0)
             return;
 
-        var report = $"Space janitor cleanup sweep queued {deleted} entities for deletion.";
+        var report = $"Bluespace Janitorial Services cleanup sweep queued {deleted} entities for deletion.";
         Log.Info(report);
         _chat.SendAdminAnnouncement(report);
     }
@@ -126,7 +126,7 @@ public sealed partial class SpaceJanitorSystem : EntitySystem
             _container.EmptyContainer(storage2.Container);
         }
         var myCoords = Transform(uid).LocalPosition;
-        Log.Info($"Space janitor sent entity {ToPrettyString(uid)} at {myCoords} to the shadow realm for being in space too long.");
+        Log.Info($"Bluespace Janitorial Services sent entity {ToPrettyString(uid)} at {myCoords} to the shadow realm for being in space too long.");
         QueueDel(uid);
         return true;
     }

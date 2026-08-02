@@ -10,6 +10,7 @@ using Content.Shared.Construction.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Singularity.Components;
 using Content.Shared._Goobstation.Vehicles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
@@ -445,6 +446,7 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
             || HasComp<ActorComponent>(uid)
             || HasComp<DeletionCensusExemptComponent>(uid)
             || HasComp<AggressiveSpaceJanitorExemptComponent>(uid)
+            || HasComp<SingularityComponent>(uid)
             || HasComp<MachineComponent>(uid)
             || HasComp<ComputerComponent>(uid))
         {
@@ -512,6 +514,9 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
 
     private bool IsForceEligible(EntityUid uid, TransformComponent xform, EntityUid? grid)
     {
+        if (HasComp<SingularityComponent>(uid))
+            return false;
+
         if (xform.Anchored || _containers.IsEntityOrParentInContainer(uid, xform: xform))
             return false;
 
@@ -551,7 +556,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
             || HasComp<MapComponent>(uid)
             || HasComp<MapGridComponent>(uid)
             || HasComp<ActorComponent>(uid)
-            || HasComp<AggressiveSpaceJanitorExemptComponent>(uid))
+            || HasComp<AggressiveSpaceJanitorExemptComponent>(uid)
+            || HasComp<SingularityComponent>(uid))
         {
             return false;
         }
@@ -580,6 +586,8 @@ public sealed partial class AggressiveSpaceJanitorSystem : EntitySystem
             return "mob";
         if (HasComp<AggressiveSpaceJanitorExemptComponent>(uid))
             return "exempt";
+        if (HasComp<SingularityComponent>(uid))
+            return "singularity";
         if (HasComp<DeletionCensusExemptComponent>(uid))
             return "deletion-census exempt";
         if (HasComp<MachineComponent>(uid) || HasComp<ComputerComponent>(uid))
