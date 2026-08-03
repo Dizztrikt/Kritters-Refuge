@@ -96,3 +96,14 @@ Entries:
   id: 333
   time: '2026-08-02T23:14:30.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/51
+- author: Virnazush
+  changes:
+    - type: Fix
+      message: >-
+        issues with sold items not being able to be purchased at market (i think
+        so at least.)
+    - type: Fix
+      message: singularities will no longer be deleted by the garbage collector
+  id: 334
+  time: '2026-08-03T05:09:55.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/52
