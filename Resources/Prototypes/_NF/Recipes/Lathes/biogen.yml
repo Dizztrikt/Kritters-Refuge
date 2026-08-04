@@ -659,6 +659,14 @@
     state: seed
 
 - type: latheRecipe
+  id: NFBioGenCannabisSeeds
+  parent: BioGenSeedsRecipe
+  result: CannabisSeeds
+  icon:
+    sprite: Objects/Specific/Hydroponics/cannabis.rsi
+    state: seed
+
+- type: latheRecipe
   id: NFBioGenChanterelleSeeds
   parent: BioGenSeedsRecipe
   result: ChanterelleSeeds
@@ -880,6 +888,14 @@
   result: TeaPlantSeeds
   icon:
     sprite: Objects/Specific/Hydroponics/tea_plant.rsi
+    state: seed
+
+- type: latheRecipe
+  id: NFBioGenTobaccoSeeds
+  parent: BioGenSeedsRecipe
+  result: TobaccoSeeds
+  icon:
+    sprite: Objects/Specific/Hydroponics/tobacco.rsi
     state: seed
 
 - type: latheRecipe
