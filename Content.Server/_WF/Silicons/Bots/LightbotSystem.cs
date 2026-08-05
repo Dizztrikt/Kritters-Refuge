@@ -1,5 +1,6 @@
 using Content.Shared.Light.Components;
 using Content.Shared._WF.Silicons.Bots;
+using Content.Server.Light.Components;
 
 namespace Content.Server._WF.Silicons.Bots;
 

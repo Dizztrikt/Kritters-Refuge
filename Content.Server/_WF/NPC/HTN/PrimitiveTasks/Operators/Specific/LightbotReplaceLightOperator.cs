@@ -5,6 +5,7 @@ using Robust.Shared.Audio.Systems;
 using Content.Server.NPC.HTN.PrimitiveTasks;
 using Content.Server.NPC;
 using Content.Server.NPC.HTN;
+using Content.Server.Light.Components;
 
 namespace Content.Server._WF.NPC.HTN.PrimitiveTasks.Operators.Specific;
 
