@@ -1,18 +1,18 @@
 - type: loadout
   id: ContractorTennisball
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
-  price: 300
+  # effects:
+  # - !type:GroupLoadoutEffect # Kritters
+  #   proto: ContractorT1
+  # price: 300
   storage:
     back:
     - TennisBall
 
 - type: loadout
   id: ContractorAccessConfigurator
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 5000
   storage:
     back:

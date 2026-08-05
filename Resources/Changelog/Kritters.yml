@@ -1,0 +1,109 @@
+Entries:
+- author: dijonmustard01
+  changes:
+    - type: Add
+      message: >-
+        Added an alternative plasteel recipe using cobalt in the industrial ore
+        processor
+    - type: Tweak
+      message: >-
+        Put a cobalt requirement on the recipes of the hyper capacity power
+        cell, the microreactor, and the power drill.
+  id: 326
+  time: '2026-07-17T19:13:13.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/43
+- author: Virnazush
+  changes:
+    - type: Add
+      message: Added Space Janny cleanup administration tools.
+    - type: Tweak
+      message: >-
+        Improved Novakin physiology, visual effects, and revival behavior.
+        People can now reliably play as them.
+    - type: Fix
+      message: >-
+        Fixed RCD tile previews, storage dragging, upgraded gyroscope power,
+        material reclaimer audio, character color saving, kiss failure feedback,
+        and IPC recharging issues.
+  id: 327
+  time: '2026-07-18T00:59:52.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/42
+- author: Virnazush
+  changes:
+    - type: Fix
+      message: >-
+        Novakin Revive bug revolving around them being sent to crit even though
+        they should be alive
+    - type: Fix
+      message: >-
+        Novakin when out of fuel would cool down past 0k, which should be
+        physically impossible, this has been remedied.
+    - type: Fix
+      message: Lithograph having to be cycled before it can print.
+    - type: Fix
+      message: >-
+        Various localization issues which caused certain emotes or actions to
+        not display correctly
+  id: 328
+  time: '2026-07-20T02:02:40.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/45
+- author: Virnazush
+  changes:
+    - type: Fix
+      message: Lizards can now make their sounds again
+    - type: Fix
+      message: >-
+        Mass Scanner, regardless of its handheld or stationary construction,
+        will now be able to show IFF.
+    - type: Fix
+      message: Minor graphical and lightning issues, at least I think so.
+    - type: Fix
+      message: Removed Lone Digger from the Jukebox because of Copyright
+    - type: Fix
+      message: Batteries not showing charge indication.
+    - type: Add
+      message: Readded funny wizard/cult recharging items.
+  id: 329
+  time: '2026-07-27T16:18:49.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/46
+- author: Kashieru1987
+  changes:
+    - type: Remove
+      message: removed all hour requirements for loadout items, clothing, and whatnot!
+  id: 330
+  time: '2026-07-28T22:06:28.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/48
+- author: Kashieru1987
+  changes:
+    - type: Add
+      message: Added the Artifact Analysis Console Flatpack to the FlatpackVend.
+  id: 331
+  time: '2026-07-28T22:15:17.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/47
+- author: Kashieru1987
+  changes:
+    - type: Add
+      message: >-
+        Suit helmets can now be worn over hats! No more taking off hats before
+        putting on your helmet!
+  id: 332
+  time: '2026-07-29T23:44:54.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/50
+- author: Kashieru1987
+  changes:
+    - type: Tweak
+      message: ChemMasterUI now updates when dumped into!
+  id: 333
+  time: '2026-08-02T23:14:30.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/51
+- author: Virnazush
+  changes:
+    - type: Fix
+      message: >-
+        issues with sold items not being able to be purchased at market (i think
+        so at least.)
+    - type: Fix
+      message: singularities will no longer be deleted by the garbage collector
+  id: 334
+  time: '2026-08-03T05:09:55.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/52

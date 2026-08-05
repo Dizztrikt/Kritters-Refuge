@@ -12,9 +12,9 @@
 
 - type: loadout
   id: StationRepClothingUniformJumpsuitMilitarySr
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitarySr

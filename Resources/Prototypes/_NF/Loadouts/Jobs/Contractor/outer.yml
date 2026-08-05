@@ -9,9 +9,9 @@
 
 - type: loadout
   id: ContractorClothingOuterHardsuitVoidParamed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -76,9 +76,9 @@
 #T1
 - type: loadout
   id: ContractorClothingOuterHoodieBlack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -88,9 +88,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJensen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -100,9 +100,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatGentle
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -112,9 +112,9 @@
 
 - type: loadout
   id: ContractorClothingOuterJacketChef
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -124,9 +124,9 @@
 
 - type: loadout
   id: ContractorClothingOuterHoodieChaplain
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -136,9 +136,9 @@
 
 - type: loadout
   id: ContractorClothingOuterNunRobe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -148,9 +148,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLab
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -160,9 +160,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabGene
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -172,9 +172,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabChem
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -184,9 +184,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatRobo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -196,9 +196,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabViro
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -208,9 +208,9 @@
 
 - type: loadout
   id: ContractorClothingOuterBioScientist
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -220,9 +220,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCoat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -232,9 +232,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCoatLong
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -244,9 +244,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterAtmos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -256,9 +256,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterHydro
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -268,9 +268,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterBar
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -280,9 +280,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterChef
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -292,9 +292,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -304,9 +304,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterMusician
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -316,9 +316,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCargo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -328,9 +328,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterMiner
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -340,9 +340,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterEngi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -352,9 +352,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterMed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -364,9 +364,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterChem
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -376,9 +376,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatParamedicWB
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -388,9 +388,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterPara
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -400,9 +400,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterGen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -412,9 +412,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterSci
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -424,9 +424,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterRobo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -436,9 +436,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterViro
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -449,9 +449,9 @@
 #T2
 - type: loadout
   id: ContractorClothingOuterWinterClown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -461,9 +461,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterMime
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -473,9 +473,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -485,9 +485,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterRD
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -497,9 +497,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCMO
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -509,9 +509,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCE
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -521,9 +521,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabCmo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -533,9 +533,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabSeniorPhysician
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -545,9 +545,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatRD
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -557,9 +557,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatLabSeniorResearcher
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -569,9 +569,9 @@
 
 - type: loadout
   id: ContractorClothingOuterFlannelRed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -581,9 +581,9 @@
 
 - type: loadout
   id: ContractorClothingOuterFlannelBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -593,9 +593,9 @@
 
 - type: loadout
   id: ContractorClothingOuterFlannelGreen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -605,9 +605,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatHyenhSweater
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -617,9 +617,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatInspector
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -629,9 +629,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatTrench
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -641,9 +641,9 @@
 
 - type: loadout
   id: ContractorClothingOuterDameDane
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -653,9 +653,9 @@
 
 - type: loadout
   id: ContractorClothingOuterWinterCoatPlaid
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -665,9 +665,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatBomber
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -677,9 +677,9 @@
 
 - type: loadout
   id: ContractorClothingOuterPlagueSuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -689,9 +689,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatBishop
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -701,9 +701,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatWitchHunter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -713,9 +713,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatCardinal
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -726,9 +726,9 @@
 # Punk stuff
 - type: loadout
   id: ContractorClothingOuterCoatBomberPunkRed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -738,9 +738,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketLeather
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -750,9 +750,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketBiker
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -762,9 +762,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketJamrock
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -774,9 +774,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatBomberAerostatic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -786,9 +786,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketLettermanBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -798,9 +798,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketLettermanBrown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -810,9 +810,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketLettermanRed
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -822,9 +822,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatJacketLettermanMagenta
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -834,9 +834,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatBomberPinkSleeves
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -847,9 +847,9 @@
 - type: loadout
   id: ContractorClothingOuterCoatBomberRandomized
   name: punk jacket (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -859,9 +859,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatAcidRaincoat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -871,9 +871,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatAcidRaincoatBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -883,9 +883,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatAcidRaincoatGreen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -895,9 +895,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatAcidRaincoatMagenta
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -907,9 +907,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatAcidRaincoatYellow
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -921,9 +921,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorWetFloorSign
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -933,9 +933,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatExpensive
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
@@ -945,9 +945,9 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatSpaceAsshole
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable

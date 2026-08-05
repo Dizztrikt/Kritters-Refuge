@@ -56,7 +56,7 @@ public sealed partial class PowerCellSystem : SharedPowerCellSystem
                 return;
             }
 
-            _sprite.LayerSetVisible((uid, args.Sprite), PowerCellVisualLayers.Unshaded, false);
+            _sprite.LayerSetVisible((uid, args.Sprite), PowerCellVisualLayers.Unshaded, true);
             _sprite.LayerSetRsiState((uid, args.Sprite), PowerCellVisualLayers.Unshaded, $"o{level}");
         }
     }

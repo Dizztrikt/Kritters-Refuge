@@ -26,36 +26,36 @@
 #T1
 - type: loadout
   id: ContractorClothingEyesGlassesJamjar
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     eyes: ClothingEyesGlassesJamjar
 
 - type: loadout
   id: ContractorClothingEyesGlassesChemical
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesGlassesChemical
 
 - type: loadout
   id: ContractorClothingEyesHudDiagnostic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesHudDiagnostic
 
 - type: loadout
   id: ContractorClothingEyesGlassesMeson
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesGlassesMeson
@@ -63,9 +63,9 @@
 # Kritters
 - type: loadout
   id: ContractorClothingEyesGlassesMesonBRNZ
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 0 # Mono
   equipment:
     eyes: ClothingEyesGlassesMesonBRNZ
@@ -73,9 +73,9 @@
 
 - type: loadout
   id: ContractorClothingEyesHudMedical
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesHudMedical
@@ -83,9 +83,9 @@
 - type: loadout
   id: ContractorClothingEyesPunkGoggles
   name: punk goggles (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesPunkGoggles
@@ -93,9 +93,9 @@
 - type: loadout
   id: ContractorClothingEyesPunkInfoShades
   name: punk infoshades (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 750
   equipment:
     eyes: ClothingEyesPunkInfoShades
@@ -104,18 +104,18 @@
 #T2
 - type: loadout
   id: ContractorClothingEyesEyepatchHudDiag
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1250
   equipment:
     eyes: ClothingEyesEyepatchHudDiag
 
 - type: loadout
   id: ContractorClothingEyesEyepatchHudMedical
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects:  # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1250
   equipment:
     eyes: ClothingEyesEyepatchHudMedical
