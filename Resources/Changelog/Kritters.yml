@@ -107,3 +107,10 @@ Entries:
   id: 334
   time: '2026-08-03T05:09:55.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/52
+- author: Kashieru1987
+  changes:
+    - type: Add
+      message: Added cannabis and tobacco seeds to the biogenerator!
+  id: 335
+  time: '2026-08-06T04:32:15.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/53
