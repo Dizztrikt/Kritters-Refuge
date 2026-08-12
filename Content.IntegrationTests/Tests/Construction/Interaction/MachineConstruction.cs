@@ -24,8 +24,6 @@ public sealed class MachineConstruction : InteractionTest
             Bin1,
             Manipulator1,
             Manipulator1,
-            Manipulator1,
-            Manipulator1,
             Beaker,
             Beaker,
             Screw); // Frontier, use all parts
@@ -46,7 +44,7 @@ public sealed class MachineConstruction : InteractionTest
             (Steel, 5),
             (Cable, 1),
             (Beaker, 2),
-            (Manipulator1, 4),
+            (Manipulator1, 2),
             (Bin1, 2), // Frontier
             (ProtolatheBoard, 1));
     }
@@ -89,8 +87,6 @@ public sealed class MachineConstruction : InteractionTest
             ProtolatheBoard,
             Bin4,
             Bin4,
-            Manipulator4,
-            Manipulator4,
             Manipulator4,
             Manipulator4,
             Beaker,

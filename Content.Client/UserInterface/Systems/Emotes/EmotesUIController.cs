@@ -19,12 +19,12 @@ using Robust.Shared.Utility;
 namespace Content.Client.UserInterface.Systems.Emotes;
 
 [UsedImplicitly]
-public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayState>
+public sealed partial class EmotesUIController : UIController, IOnStateChanged<GameplayState>
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IClientPreferencesManager _preferencesManager = default!;
 
     private MenuButton? EmotesButton => UIManager.GetActiveUIWidgetOrNull<MenuBar.Widgets.GameTopMenuBar>()?.EmotesButton;
     private SimpleRadialMenu? _menu;
@@ -68,6 +68,8 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
                 new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/plug.png"))),
             [EmoteCategory.Felinid] = ("emote-menu-category-felinid",
                 new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/cat.png"))),
+            [EmoteCategory.Novakin] = ("emote-menu-category-novakin",
+                new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Actions/firestarter.png"))),
         };
 
     private static readonly HashSet<EmoteCategory> AlwaysEnabledCategories = new()
@@ -200,6 +202,9 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             if (!CanHasUseEmote(emote, player.Value))
                 continue;
 
+            if (!Loc.TryGetString(emote.Name, out var emoteName))
+                continue;
+
             if (!emotesByCategory.TryGetValue(emote.Category, out var list))
             {
                 list = new List<RadialMenuOption>();
@@ -209,7 +214,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             var actionOption = new RadialMenuActionOption<EmotePrototype>(HandleRadialButtonClick, emote)
             {
                 Sprite = emote.Icon,
-                ToolTip = Loc.GetString(emote.Name)
+                ToolTip = emoteName
             };
             list.Add(actionOption);
         }

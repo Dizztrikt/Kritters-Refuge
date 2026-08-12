@@ -6,10 +6,10 @@ using Robust.Client.GameObjects;
 namespace Content.Client.PowerCell;
 
 [UsedImplicitly]
-public sealed class PowerCellSystem : SharedPowerCellSystem
+public sealed partial class PowerCellSystem : SharedPowerCellSystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SpriteSystem _sprite = default!;
 
     public override void Initialize()
     {
@@ -56,7 +56,7 @@ public sealed class PowerCellSystem : SharedPowerCellSystem
                 return;
             }
 
-            _sprite.LayerSetVisible((uid, args.Sprite), PowerCellVisualLayers.Unshaded, false);
+            _sprite.LayerSetVisible((uid, args.Sprite), PowerCellVisualLayers.Unshaded, true);
             _sprite.LayerSetRsiState((uid, args.Sprite), PowerCellVisualLayers.Unshaded, $"o{level}");
         }
     }

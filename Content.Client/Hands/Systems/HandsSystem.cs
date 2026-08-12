@@ -22,16 +22,16 @@ using Robust.Shared.Utility;
 namespace Content.Client.Hands.Systems
 {
     [UsedImplicitly]
-    public sealed class HandsSystem : SharedHandsSystem
+    public sealed partial class HandsSystem : SharedHandsSystem
     {
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
-        [Dependency] private readonly IUserInterfaceManager _ui = default!;
+        [Dependency] private IPlayerManager _playerManager = default!;
+        [Dependency] private IUserInterfaceManager _ui = default!;
 
-        [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-        [Dependency] private readonly StrippableSystem _stripSys = default!;
-        [Dependency] private readonly SpriteSystem _sprite = default!;
-        [Dependency] private readonly ExamineSystem _examine = default!;
-        [Dependency] private readonly DisplacementMapSystem _displacement = default!;
+        [Dependency] private SharedContainerSystem _containerSystem = default!;
+        [Dependency] private StrippableSystem _stripSys = default!;
+        [Dependency] private SpriteSystem _sprite = default!;
+        [Dependency] private ExamineSystem _examine = default!;
+        [Dependency] private DisplacementMapSystem _displacement = default!;
 
         public event Action<string, HandLocation>? OnPlayerAddHand;
         public event Action<string>? OnPlayerRemoveHand;
@@ -92,12 +92,12 @@ namespace Content.Client.Hands.Systems
                     addedHands.Add(newHand);
                 }
 
-                foreach (var name in component.Hands.Keys)
+                var removedHands = component.Hands.Keys
+                    .Where(name => !state.HandNames.Contains(name))
+                    .ToList();
+                foreach (var name in removedHands)
                 {
-                    if (!state.HandNames.Contains(name))
-                    {
-                        RemoveHand(uid, name, component);
-                    }
+                    RemoveHand(uid, name, component);
                 }
 
                 component.SortedHands.Clear();
@@ -112,13 +112,19 @@ namespace Content.Client.Hands.Systems
 
             _stripSys.UpdateUi(uid);
 
-            if (component.ActiveHand == null && state.ActiveHand == null)
-                return; //edge case
+            if (component.ActiveHand?.Name == state.ActiveHand)
+                return;
 
-            if (component.ActiveHand != null && state.ActiveHand != component.ActiveHand.Name)
+            if (state.ActiveHand == null)
             {
-                SetActiveHand(uid, component.Hands[state.ActiveHand!], component);
+                SetActiveHand(uid, null, component);
+                if (uid == _playerManager.LocalEntity)
+                    OnPlayerSetActiveHand?.Invoke(null);
+                return;
             }
+
+            if (component.Hands.TryGetValue(state.ActiveHand, out var activeHand))
+                SetActiveHand(uid, activeHand, component);
         }
         #endregion
 

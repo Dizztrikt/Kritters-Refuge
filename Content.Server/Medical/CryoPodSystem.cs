@@ -10,7 +10,6 @@ using Content.Server.NodeContainer.Nodes;
 using Content.Server.Temperature.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Atmos;
-using Content.Shared.UserInterface;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -24,8 +23,6 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Medical.Cryogenics;
-using Content.Shared.MedicalScanner;
-using Content.Shared.Power;
 using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -36,22 +33,21 @@ namespace Content.Server.Medical;
 
 public sealed partial class CryoPodSystem : SharedCryoPodSystem
 {
-    [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!;
-    [Dependency] private readonly GasCanisterSystem _gasCanisterSystem = default!;
-    [Dependency] private readonly ClimbSystem _climbSystem = default!;
-    [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-    [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly SharedToolSystem _toolSystem = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
-    [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly NodeContainerSystem _nodeContainer = default!;
-    [Dependency] private readonly GasAnalyzerSystem _gasAnalyzerSystem = default!;
-    [Dependency] private readonly HealthAnalyzerSystem _healthAnalyzerSystem = default!;
+    [Dependency] private AtmosphereSystem _atmosphereSystem = default!;
+    [Dependency] private GasCanisterSystem _gasCanisterSystem = default!;
+    [Dependency] private ClimbSystem _climbSystem = default!;
+    [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private BloodstreamSystem _bloodstreamSystem = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private SharedToolSystem _toolSystem = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private MetaDataSystem _metaDataSystem = default!;
+    [Dependency] private ReactiveSystem _reactiveSystem = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private NodeContainerSystem _nodeContainer = default!;
+    [Dependency] private GasAnalyzerSystem _gasAnalyzerSystem = default!;
+    [Dependency] private HealthAnalyzerSystem _healthAnalyzerSystem = default!;
 
     public override void Initialize()
     {
@@ -87,8 +83,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         var gasMix = _gasAnalyzerSystem.GenerateGasMixEntry("Cryo pod", air.Air);
         var (beakerCapacity, beaker) = GetBeakerInfo(entity);
         var injecting = GetInjectingReagents(entity);
-        var health = _healthAnalyzerSystem.GetHealthAnalyzerUiState(entity, patient);
-        health.ScanMode = true;
+        var health = _healthAnalyzerSystem.GetHealthAnalyzerUiState(entity, patient, true);
 
         UI.ServerSendUiMessage(
             entity.Owner,
@@ -119,26 +114,6 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
                 }
             }
         }
-    }
-
-    private void OnPowerChanged(Entity<CryoPodComponent> entity, ref PowerChangedEvent args)
-    {
-        // Needed to avoid adding/removing components on a deleted entity
-        if (Terminating(entity))
-        {
-            return;
-        }
-
-        if (args.Powered)
-        {
-            EnsureComp<ActiveCryoPodComponent>(entity);
-        }
-        else
-        {
-            RemComp<ActiveCryoPodComponent>(entity);
-            _uiSystem.CloseUi(entity.Owner, HealthAnalyzerUiKey.Key);
-        }
-        UpdateAppearance(entity.Owner, entity.Comp);
     }
 
     private void OnCryoPodUpdateAtmosphere(Entity<CryoPodComponent> entity, ref AtmosDeviceUpdateEvent args)

@@ -13,12 +13,12 @@ using System.Numerics;
 
 namespace Content.Server.Weapons.Melee;
 
-public sealed class MeleeWeaponSystem : SharedMeleeWeaponSystem
+public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
 {
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly DamageExamineSystem _damageExamine = default!;
-    [Dependency] private readonly LagCompensationSystem _lag = default!;
-    [Dependency] private readonly SharedColorFlashEffectSystem _color = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private DamageExamineSystem _damageExamine = default!;
+    [Dependency] private LagCompensationSystem _lag = default!;
+    [Dependency] private SharedColorFlashEffectSystem _color = default!;
 
     public override void Initialize()
     {
@@ -85,6 +85,11 @@ public sealed class MeleeWeaponSystem : SharedMeleeWeaponSystem
 
     protected override void DoDamageEffect(List<EntityUid> targets, EntityUid? user, TransformComponent targetXform)
     {
+        targets.RemoveAll(target => !EntityManager.EntityExists(target));
+
+        if (targets.Count == 0 || !EntityManager.EntityExists(targetXform.Owner))
+            return;
+
         var filter = Filter.Pvs(targetXform.Coordinates, entityMan: EntityManager).RemoveWhereAttachedEntity(o => o == user);
         _color.RaiseEffect(Color.Red, targets, filter);
     }

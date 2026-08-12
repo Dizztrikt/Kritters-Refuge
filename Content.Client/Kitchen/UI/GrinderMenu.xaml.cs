@@ -12,8 +12,8 @@ namespace Content.Client.Kitchen.UI
     [GenerateTypedNameReferences]
     public sealed partial class GrinderMenu : FancyWindow
     {
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
 
         private readonly Dictionary<int, EntityUid> _chamberVisualContents = new();
 
@@ -127,7 +127,9 @@ namespace Content.Client.Kitchen.UI
                 foreach (var (reagent, quantity) in reagents)
                 {
                     var reagentName = _prototypeManager.TryIndex(reagent.Prototype, out ReagentPrototype? proto)
-                        ? Loc.GetString($"{quantity} {proto.LocalizedName}")
+                        ? Loc.GetString("grinder-menu-beaker-content",
+                            ("quantity", quantity),
+                            ("reagent", proto.LocalizedName))
                         : "???";
                     BeakerContentBox.BoxContents.AddItem(reagentName);
                 }

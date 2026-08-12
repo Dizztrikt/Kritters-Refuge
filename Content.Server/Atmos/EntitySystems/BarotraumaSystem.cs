@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
+using Content.Shared._Kritters.Components;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage;
@@ -12,13 +13,13 @@ using Robust.Shared.Containers;
 
 namespace Content.Server.Atmos.EntitySystems
 {
-    public sealed class BarotraumaSystem : EntitySystem
+    public sealed partial class BarotraumaSystem : EntitySystem
     {
-        [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!;
-        [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-        [Dependency] private readonly AlertsSystem _alertsSystem = default!;
-        [Dependency] private readonly IAdminLogManager _adminLogger= default!;
-        [Dependency] private readonly InventorySystem _inventorySystem = default!;
+        [Dependency] private AtmosphereSystem _atmosphereSystem = default!;
+        [Dependency] private DamageableSystem _damageableSystem = default!;
+        [Dependency] private AlertsSystem _alertsSystem = default!;
+        [Dependency] private IAdminLogManager _adminLogger= default!;
+        [Dependency] private InventorySystem _inventorySystem = default!;
 
         private const float UpdateTimer = 1f;
         private float _timer;
@@ -140,11 +141,20 @@ namespace Content.Server.Atmos.EntitySystems
         }
 
         /// <summary>
+        /// Re-evaluates innate and worn pressure protection after a physiology state changes.
+        /// </summary>
+        public void RefreshProtection(EntityUid uid, BarotraumaComponent? barotrauma = null)
+        {
+            if (Resolve(uid, ref barotrauma, false))
+                UpdateCachedResistances(uid, barotrauma);
+        }
+
+        /// <summary>
         /// Returns adjusted pressure after having applied resistances from equipment and innate (if any), to check against a low pressure hazard threshold
         /// </summary>
         public float GetFeltLowPressure(EntityUid uid, BarotraumaComponent barotrauma, float environmentPressure)
         {
-            if (barotrauma.HasImmunity)
+            if (barotrauma.HasImmunity || HasComp<NovakinPressureImmunityComponent>(uid))
             {
                 return Atmospherics.OneAtmosphere;
             }
@@ -158,7 +168,7 @@ namespace Content.Server.Atmos.EntitySystems
         /// </summary>
         public float GetFeltHighPressure(EntityUid uid, BarotraumaComponent barotrauma, float environmentPressure)
         {
-            if (barotrauma.HasImmunity)
+            if (barotrauma.HasImmunity || HasComp<NovakinPressureImmunityComponent>(uid))
             {
                 return Atmospherics.OneAtmosphere;
             }
@@ -239,7 +249,7 @@ namespace Content.Server.Atmos.EntitySystems
                     // Deal damage and ignore resistances. Resistance to pressure damage should be done via pressure protection gear.
                     _damageableSystem.TryChangeDamage(uid, barotrauma.Damage * Atmospherics.LowPressureDamage, true, false,
                     // Mono: DamageOriginFlag arg to stop armor plate system mitigation
-                    originFlag: DamageableSystem.DamageOriginFlag.Barotrauma);
+                    originFlag: DamageableSystem.DamageOriginFlag.Environmental);
 
                     if (!barotrauma.TakingDamage)
                     {
@@ -256,7 +266,7 @@ namespace Content.Server.Atmos.EntitySystems
                     // Deal damage and ignore resistances. Resistance to pressure damage should be done via pressure protection gear.
                     _damageableSystem.TryChangeDamage(uid, barotrauma.Damage * damageScale,
                     // Mono: DamageOriginFlag arg
-                    originFlag: DamageableSystem.DamageOriginFlag.Barotrauma);
+                    originFlag: DamageableSystem.DamageOriginFlag.Environmental);
 
                     if (!barotrauma.TakingDamage)
                     {

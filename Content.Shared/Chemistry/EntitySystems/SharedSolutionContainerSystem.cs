@@ -65,15 +65,15 @@ public partial record struct SolutionAccessAttemptEvent(string SolutionName)
 [UsedImplicitly]
 public abstract partial class SharedSolutionContainerSystem : EntitySystem
 {
-    [Dependency] protected readonly IPrototypeManager PrototypeManager = default!;
-    [Dependency] protected readonly ChemicalReactionSystem ChemicalReactionSystem = default!;
-    [Dependency] protected readonly ExamineSystemShared ExamineSystem = default!;
-    [Dependency] protected readonly SharedAppearanceSystem AppearanceSystem = default!;
-    [Dependency] protected readonly SharedHandsSystem Hands = default!;
-    [Dependency] protected readonly SharedContainerSystem ContainerSystem = default!;
-    [Dependency] protected readonly MetaDataSystem MetaDataSys = default!;
-    [Dependency] protected readonly INetManager NetManager = default!;
-    [Dependency] protected readonly TagSystem _tag = default!;
+    [Dependency] protected IPrototypeManager PrototypeManager = default!;
+    [Dependency] protected ChemicalReactionSystem ChemicalReactionSystem = default!;
+    [Dependency] protected ExamineSystemShared ExamineSystem = default!;
+    [Dependency] protected SharedAppearanceSystem AppearanceSystem = default!;
+    [Dependency] protected SharedHandsSystem Hands = default!;
+    [Dependency] protected SharedContainerSystem ContainerSystem = default!;
+    [Dependency] protected MetaDataSystem MetaDataSys = default!;
+    [Dependency] protected INetManager NetManager = default!;
+    [Dependency] protected TagSystem _tag = default!;
 
     private SharedAphrodisiacChecker _helper = new(); // Coyote
 
@@ -335,11 +335,13 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
         // Coyote: Ensure component on container if there is aphrodisiacs on the solution
         if (_helper.CheckForAphrodisiacs(PrototypeManager, solution)
         && TryComp<ContainedSolutionComponent>(soln.Owner, out var containedSolution)
-        && !HasComp<MindContainerComponent>(containedSolution.Container) // Filter out (most) mobs
-        && TryComp<TagComponent>(containedSolution.Container, out var tagComp)
+        && TryGetEntity(containedSolution.NetContainer, out var container)
+        && container is { } containerUid
+        && !HasComp<MindContainerComponent>(containerUid) // Filter out (most) mobs
+        && TryComp<TagComponent>(containerUid, out var tagComp)
         && !_tag.HasTag(tagComp, _helper.HideTag))
         {
-            var lacedComp = EnsureComp<AphroLacedVisibilityComponent>(containedSolution.Container);
+            var lacedComp = EnsureComp<AphroLacedVisibilityComponent>(containerUid);
             lacedComp.Laced = true;
             lacedComp.Solution = solution.Name ?? "";
         }

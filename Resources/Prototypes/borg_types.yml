@@ -186,6 +186,7 @@
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars
+    # Kritters: medical borgs opt into the Novakin-only integrity bar.
     damageContainers:
     - Biological
   - type: ShowHealthIcons
@@ -469,6 +470,7 @@
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars
+    # Kritters: medical borgs opt into the Novakin-only integrity bar.
     damageContainers:
     - Biological
   - type: ShowHealthIcons

@@ -1,31 +1,46 @@
+using System.Collections.Generic;
 using System.Numerics;
 using Content.Client.Gameplay;
-using Content.Shared.Hands.Components;
+using Content.Client.Hands.Systems;
+using Robust.Client.GameObjects;
+using Robust.Client.Graphics;
 using Content.Shared.Interaction;
+using Content.Shared.Maps;
+using Content.Shared.RCD;
 using Content.Shared.RCD.Components;
 using Content.Shared.RCD.Systems;
 using Robust.Client.Placement;
+using Robust.Client.Placement.Modes;
 using Robust.Client.Player;
 using Robust.Client.State;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 
 namespace Content.Client.RCD;
 
-public sealed class AlignRCDConstruction : PlacementMode
+public sealed partial class AlignRCDConstruction : SnapgridCenter
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly SharedMapSystem _mapManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
     private readonly SharedMapSystem _mapSystem;
+    private readonly HandsSystem _handsSystem;
     private readonly RCDSystem _rcdSystem;
     private readonly SharedTransformSystem _transformSystem;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IStateManager _stateManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IStateManager _stateManager = default!;
+    [Dependency] private IPrototypeManager _protoManager = default!;
+    [Dependency] private ITileDefinitionManager _tileDefs = default!;
 
     private const float SearchBoxSize = 2f;
     private const float PlaceColorBaseAlpha = 0.5f;
 
     private EntityCoordinates _unalignedMouseCoords = default;
+    private readonly SpriteSystem _sprite;
+    private string? _lastRcdTilePreviewId;
+
+    public override bool HasLineMode => false;
+    public override bool HasGridMode => false;
 
     /// <summary>
     /// This placement mode is not on the engine because it is content specific (i.e., for the RCD)
@@ -34,7 +49,9 @@ public sealed class AlignRCDConstruction : PlacementMode
     {
         IoCManager.InjectDependencies(this);
         _mapSystem = _entityManager.System<SharedMapSystem>();
+        _handsSystem = _entityManager.System<HandsSystem>();
         _rcdSystem = _entityManager.System<RCDSystem>();
+        _sprite = _entityManager.System<SpriteSystem>();
         _transformSystem = _entityManager.System<SharedTransformSystem>();
 
         ValidPlaceColor = ValidPlaceColor.WithAlpha(PlaceColorBaseAlpha);
@@ -45,6 +62,9 @@ public sealed class AlignRCDConstruction : PlacementMode
         _unalignedMouseCoords = ScreenToCursorGrid(mouseScreen);
         MouseCoords = _unalignedMouseCoords.AlignWithClosestGridTile(SearchBoxSize, _entityManager);
 
+        Grid = null;
+        SnapSize = 1f;
+
         var gridId = _transformSystem.GetGrid(MouseCoords);
 
         if (!_entityManager.TryGetComponent<MapGridComponent>(gridId, out var mapGrid))
@@ -53,18 +73,53 @@ public sealed class AlignRCDConstruction : PlacementMode
         CurrentTile = _mapSystem.GetTileRef(gridId.Value, mapGrid, MouseCoords);
 
         float tileSize = mapGrid.TileSize;
+        Grid = mapGrid;
+        SnapSize = tileSize;
         GridDistancing = tileSize;
 
         if (pManager.CurrentPermission!.IsTile)
         {
             MouseCoords = new EntityCoordinates(MouseCoords.EntityId, new Vector2(CurrentTile.X + tileSize / 2,
                 CurrentTile.Y + tileSize / 2));
+            UpdateRcdTilePlacementPreview();
         }
         else
         {
+            _lastRcdTilePreviewId = null;
             MouseCoords = new EntityCoordinates(MouseCoords.EntityId, new Vector2(CurrentTile.X + tileSize / 2 + pManager.PlacementOffset.X,
                 CurrentTile.Y + tileSize / 2 + pManager.PlacementOffset.Y));
         }
+    }
+
+    private void UpdateRcdTilePlacementPreview()
+    {
+        var player = _playerManager.LocalSession?.AttachedEntity;
+        if (player == null
+            || !_handsSystem.TryGetActiveItem(player.Value, out var held)
+            || !_entityManager.TryGetComponent<RCDComponent>(held, out var rcd))
+            return;
+
+        var prototype = _protoManager.Index(rcd.ProtoId);
+        if (prototype.Mode != RcdMode.ConstructTile)
+            return;
+
+        var tileTypeId = prototype.Prototype;
+        if (tileTypeId == null)
+            return;
+        if (tileTypeId == _lastRcdTilePreviewId)
+            return;
+        if (!_tileDefs.TryGetDefinition(tileTypeId, out var definition)
+            || definition is not ContentTileDefinition tile
+            || tile.Sprite is not { } spritePath)
+            return;
+
+        _lastRcdTilePreviewId = tileTypeId;
+        pManager.CurrentTextures = new List<IDirectionalTextureProvider>
+        {
+            _sprite.RsiStateLike(new SpriteSpecifier.Texture(spritePath))
+        };
+        if (pManager.CurrentPermission != null)
+            pManager.CurrentPermission.TileType = tile.TileId;
     }
 
     public override bool IsValidPosition(EntityCoordinates position)
@@ -88,10 +143,8 @@ public sealed class AlignRCDConstruction : PlacementMode
         }
 
         // Determine if player is carrying an RCD in their active hand
-        if (!_entityManager.TryGetComponent<HandsComponent>(player, out var hands))
+        if (player == null || !_handsSystem.TryGetActiveItem(player.Value, out var heldEntity))
             return false;
-
-        var heldEntity = hands.ActiveHand?.HeldEntity;
 
         if (!_entityManager.TryGetComponent<RCDComponent>(heldEntity, out var rcd))
             return false;

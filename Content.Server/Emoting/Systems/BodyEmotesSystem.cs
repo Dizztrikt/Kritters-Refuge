@@ -6,10 +6,10 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.Emoting.Systems;
 
-public sealed class BodyEmotesSystem : EntitySystem
+public sealed partial class BodyEmotesSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private ChatSystem _chat = default!;
 
     public override void Initialize()
     {
@@ -31,11 +31,11 @@ public sealed class BodyEmotesSystem : EntitySystem
             return;
 
         var cat = args.Emote.Category;
-        if (cat.HasFlag(EmoteCategory.Hands))
+        if (cat == EmoteCategory.Hands)
         {
             args.Handled = TryEmoteHands(uid, args.Emote, component);
         }
-        else if (cat.HasFlag(EmoteCategory.Lizard))
+        else if (cat == EmoteCategory.Lizard)
         {
             args.Handled = TryEmoteLizard(uid, args.Emote, component);
         }

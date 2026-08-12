@@ -19,14 +19,14 @@ using static Content.Shared.Damage.DamageableSystem;
 
 namespace Content.Shared.Damage
 {
-    public sealed class DamageableSystem : EntitySystem
+    public sealed partial class DamageableSystem : EntitySystem
     {
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-        [Dependency] private readonly INetManager _netMan = default!;
-        [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
-        [Dependency] private readonly IConfigurationManager _config = default!;
-        [Dependency] private readonly SharedChemistryGuideDataSystem _chemistryGuideData = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private SharedAppearanceSystem _appearance = default!;
+        [Dependency] private INetManager _netMan = default!;
+        [Dependency] private MobThresholdSystem _mobThreshold = default!;
+        [Dependency] private IConfigurationManager _config = default!;
+        [Dependency] private SharedChemistryGuideDataSystem _chemistryGuideData = default!;
 
         private EntityQuery<AppearanceComponent> _appearanceQuery;
         private EntityQuery<DamageableComponent> _damageableQuery;
@@ -165,7 +165,9 @@ namespace Content.Shared.Damage
         public enum DamageOriginFlag
         {
             Explosion, // flag set by ExplosionSystem.Processing
-            Barotrauma // flag set by BarotraumaSystem
+            Barotrauma, // flag set by BarotraumaSystem
+            /// <summary>Damage produced by the world rather than an actor or item.</summary>
+            Environmental
         }
 
         /// <summary>
@@ -202,6 +204,9 @@ namespace Content.Shared.Damage
 
             if (before.Cancelled)
                 return null;
+
+            // Kritters: allow physiology handlers to replace a damage specifier without mutating a reusable source.
+            damage = before.Damage;
 
             // Apply resistances
             if (!ignoreResistances)
@@ -341,7 +346,8 @@ namespace Content.Shared.Damage
                 damage.DamageDict.Add(typeId, damageValue);
             }
 
-            TryChangeDamage(uid, damage, interruptsDoAfters: false, origin: args.Origin);
+            TryChangeDamage(uid, damage, interruptsDoAfters: false, origin: args.Origin,
+                originFlag: DamageOriginFlag.Environmental);
         }
 
         private void OnRejuvenate(EntityUid uid, DamageableComponent component, RejuvenateEvent args)
@@ -389,7 +395,7 @@ namespace Content.Shared.Damage
     ///
     ///     For example, armor.
     /// </summary>
-    public sealed class DamageModifyEvent : EntityEventArgs, IInventoryRelayEvent
+    public sealed partial class DamageModifyEvent : EntityEventArgs, IInventoryRelayEvent
     {
         // Whenever locational damage is a thing, this should just check only that bit of armour.
         public SlotFlags TargetSlots { get; } = ~SlotFlags.POCKET;
@@ -406,7 +412,7 @@ namespace Content.Shared.Damage
         }
     }
 
-    public sealed class DamageChangedEvent : EntityEventArgs
+    public sealed partial class DamageChangedEvent : EntityEventArgs
     {
         /// <summary>
         ///     This is the component whose damage was changed.

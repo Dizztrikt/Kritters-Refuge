@@ -213,6 +213,14 @@
           shouldHave: false
       - !type:Drunk
         boozePower: 2
+    # Ethanol's Alcohol metabolism replaces the inherited metabolism map.
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.06
 
 - type: reagent
   id: Gin

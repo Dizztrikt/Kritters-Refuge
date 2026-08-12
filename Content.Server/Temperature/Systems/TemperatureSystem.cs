@@ -17,13 +17,13 @@ using Content.Shared.Projectiles;
 
 namespace Content.Server.Temperature.Systems;
 
-public sealed class TemperatureSystem : EntitySystem
+public sealed partial class TemperatureSystem : EntitySystem
 {
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly TemperatureSystem _temperature = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private AtmosphereSystem _atmosphere = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private TemperatureSystem _temperature = default!;
 
     /// <summary>
     ///     All the components that will have their damage updated at the end of the tick.
@@ -282,7 +282,8 @@ public sealed class TemperatureSystem : EntitySystem
 
             var diff = Math.Abs(temperature.CurrentTemperature - heatDamageThreshold);
             var tempDamage = c / (1 + a * Math.Pow(Math.E, -heatK * diff)) - y;
-            _damageable.TryChangeDamage(uid, temperature.HeatDamage * tempDamage, ignoreResistances: true, interruptsDoAfters: false);
+            _damageable.TryChangeDamage(uid, temperature.HeatDamage * tempDamage, ignoreResistances: true,
+                interruptsDoAfters: false, originFlag: DamageableSystem.DamageOriginFlag.Environmental);
         }
         else if (temperature.CurrentTemperature <= coldDamageThreshold)
         {
@@ -296,7 +297,8 @@ public sealed class TemperatureSystem : EntitySystem
             var coldDamageScaleThreshold = Math.Max(Math.Abs(coldDamageThreshold), Atmospherics.MinimumTemperatureDeltaToConsider);
             var tempDamage =
                 Math.Sqrt(diff * (Math.Pow(temperature.DamageCap.Double(), 2) / coldDamageScaleThreshold));
-            _damageable.TryChangeDamage(uid, temperature.ColdDamage * tempDamage, ignoreResistances: true, interruptsDoAfters: false);
+            _damageable.TryChangeDamage(uid, temperature.ColdDamage * tempDamage, ignoreResistances: true,
+                interruptsDoAfters: false, originFlag: DamageableSystem.DamageOriginFlag.Environmental);
         }
         else if (temperature.TakingDamage)
         {

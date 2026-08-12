@@ -1,9 +1,9 @@
 # T2
 - type: loadout
   id: ContractorBibleDruid
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 500
   inhand:
   - BibleDruid
@@ -11,9 +11,9 @@
 # T3
 - type: loadout
   id: LoadoutExperimentalHypo
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 50000
   inhand:
     - HypoExperimental

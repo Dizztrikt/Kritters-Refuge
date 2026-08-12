@@ -9,6 +9,7 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Fluids.EntitySystems;
 using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Storage;
 using JetBrains.Annotations;
@@ -28,16 +29,16 @@ namespace Content.Server.Chemistry.EntitySystems
     /// <seealso cref="ChemMasterComponent"/>
     /// </summary>
     [UsedImplicitly]
-    public sealed class ChemMasterSystem : EntitySystem
+    public sealed partial class ChemMasterSystem : EntitySystem
     {
-        [Dependency] private readonly PopupSystem _popupSystem = default!;
-        [Dependency] private readonly AudioSystem _audioSystem = default!;
-        [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-        [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-        [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
-        [Dependency] private readonly StorageSystem _storageSystem = default!;
-        [Dependency] private readonly LabelSystem _labelSystem = default!;
-        [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+        [Dependency] private PopupSystem _popupSystem = default!;
+        [Dependency] private AudioSystem _audioSystem = default!;
+        [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
+        [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+        [Dependency] private UserInterfaceSystem _userInterfaceSystem = default!;
+        [Dependency] private StorageSystem _storageSystem = default!;
+        [Dependency] private LabelSystem _labelSystem = default!;
+        [Dependency] private ISharedAdminLogManager _adminLogger = default!;
 
         [ValidatePrototypeId<EntityPrototype>]
         private const string PillPrototypeId = "Pill";
@@ -51,6 +52,7 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, EntInsertedIntoContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, EntRemovedFromContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
+            SubscribeLocalEvent<ChemMasterComponent, DrainedTargetEvent>(SubscribeUpdateUiState);
 
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetModeMessage>(OnSetModeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortingTypeCycleMessage>(OnCycleSortingTypeMessage);

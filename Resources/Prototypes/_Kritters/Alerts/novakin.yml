@@ -1,0 +1,51 @@
+- type: alert
+  id: NovakinGasReserve
+  category: Battery
+  icons:
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery0
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery1
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery2
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery3
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery4
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery5
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery6
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery7
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery8
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery9
+  - sprite: /Textures/Interface/Alerts/battery.rsi
+    state: battery10
+  name: alerts-novakin-gas-name
+  description: alerts-novakin-gas-desc
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: alert
+  id: NovakinTemperature
+  category: Temperature
+  icons:
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: cold1
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: cold2
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: cold3
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: hot1
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: hot2
+  - sprite: /Textures/Interface/Alerts/temperature.rsi
+    state: hot3
+  name: alerts-novakin-temperature-name
+  description: alerts-novakin-temperature-desc
+  minSeverity: 1
+  maxSeverity: 6

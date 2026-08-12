@@ -18,9 +18,9 @@ namespace Content.Client.Humanoid;
 [GenerateTypedNameReferences]
 public sealed partial class MarkingPicker : Control
 {
-    [Dependency] private readonly MarkingManager _markingManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private MarkingManager _markingManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
 
     private readonly SpriteSystem _sprite;
 
@@ -282,7 +282,7 @@ public sealed partial class MarkingPicker : Control
                     || GetMarkingName(m)
                         .ToLower()
                         .Contains(filter.ToLower())))
-            .OrderBy(p => Loc.GetString(GetMarkingName(p)));
+            .OrderBy(GetMarkingName);
 
         foreach (var marking in sortedMarkings)
         {

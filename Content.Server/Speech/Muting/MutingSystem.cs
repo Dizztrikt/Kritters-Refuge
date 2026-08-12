@@ -10,9 +10,9 @@ using Content.Shared.Speech.Muting;
 
 namespace Content.Server.Speech.Muting
 {
-    public sealed class MutingSystem : EntitySystem
+    public sealed partial class MutingSystem : EntitySystem
     {
-        [Dependency] private readonly PopupSystem _popupSystem = default!;
+        [Dependency] private PopupSystem _popupSystem = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -27,7 +27,7 @@ namespace Content.Server.Speech.Muting
                 return;
 
             //still leaves the text so it looks like they are pantomiming a laugh
-            if (args.Emote.Category.HasFlag(EmoteCategory.Vocal))
+            if (args.Emote.Category.UsesVocalSounds())
                 args.Handled = true;
         }
 

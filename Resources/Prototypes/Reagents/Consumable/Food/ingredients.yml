@@ -216,7 +216,6 @@
   meltingPoint: -16.0
   tileReactions:
   - !type:FlammableTileReaction {}
-
 - type: reagent
   id: CapsaicinOil
   name: reagent-name-capsaicin-oil

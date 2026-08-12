@@ -15,9 +15,9 @@
 #T1
 - type: loadout
   id: ContractorClothingMaskSterile
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 200
   storage:
     back: 
@@ -25,9 +25,9 @@
 
 - type: loadout
   id: ContractorClothingMaskGas
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 300
   storage:
     back:
@@ -36,9 +36,9 @@
 - type: loadout
   id: ContractorClothingMaskPunkHalf
   name: punk halfmask (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -47,9 +47,9 @@
 #T2
 - type: loadout
   id: ContractorClothingMaskGasExplorer
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   storage:
     back:
@@ -57,9 +57,9 @@
 
 - type: loadout
   id: ContractorClothingMaskGasCaptain
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   storage:
     back:
@@ -67,9 +67,9 @@
 
 - type: loadout
   id: ContractorClothingMaskGasAtmos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   storage:
     back:
@@ -77,9 +77,9 @@
 
 - type: loadout
   id: ContractorClothingMaskPlague
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1500
   storage:
     back:
@@ -87,9 +87,9 @@
 
 - type: loadout
   id: ContractorClothingMaskMime
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1500
   storage:
     back: 
@@ -97,9 +97,9 @@
 
 - type: loadout
   id: ContractorClothingMaskScaredMime
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1500
   storage:
     back:
@@ -107,9 +107,9 @@
 
 - type: loadout
   id: ContractorClothingMaskSadMime
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1500
   storage:
     back:
@@ -117,9 +117,9 @@
 
 - type: loadout
   id: ContractorClothingMaskClown
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 2500
   storage:
     back:
@@ -127,9 +127,9 @@
 
 - type: loadout
   id: ContractorClothingMaskClownBald
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 2500
   storage:
     back:

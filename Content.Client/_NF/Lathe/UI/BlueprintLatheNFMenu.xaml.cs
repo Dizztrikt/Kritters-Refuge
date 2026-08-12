@@ -24,8 +24,8 @@ namespace Content.Client._NF.Lathe.UI;
 [GenerateTypedNameReferences]
 public sealed partial class BlueprintLatheNFMenu : DefaultWindow
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     private readonly SpriteSystem _spriteSystem;
     private readonly BlueprintLatheSystem _lathe;
@@ -115,6 +115,9 @@ public sealed partial class BlueprintLatheNFMenu : DefaultWindow
         {
             return;
         }
+
+        if (clientLathe.CurrentRecipes == null || clientLathe.CurrentRecipes.Length != recipeBitset.Length)
+            clientLathe.CurrentRecipes = new int[recipeBitset.Length];
 
         // Find bits in the bitset, add recipes for our current blueprint type.
         for (int i = 0; i < recipeBitset.Length; i++)

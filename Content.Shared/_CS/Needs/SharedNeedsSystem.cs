@@ -1,6 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared._CS.RolePlayIncentiveShared;
+using Content.Shared._Kritters.Components;
+using Content.Shared._Kritters.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Examine;
@@ -27,19 +29,19 @@ namespace Content.Shared._CS.Needs;
 /// <summary>
 /// This handles your needs.
 /// </summary>
-public abstract class SharedNeedsSystem : EntitySystem
+public abstract partial class SharedNeedsSystem : EntitySystem
 {
-    [Dependency] private readonly ISharedPlayerManager _players = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IEntityManager _entMan = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedHumanoidAppearanceSystem _humanoid = default!;
-    [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = null!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private ISharedPlayerManager _players = default!;
+    [Dependency] private MovementSpeedModifierSystem _movement = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IEntityManager _entMan = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedHumanoidAppearanceSystem _humanoid = default!;
+    [Dependency] private ExamineSystemShared _examineSystem = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = null!;
+    [Dependency] private MobStateSystem _mobState = default!;
 
     private int _decayIterations = 1;
     private TimeSpan _nextDecIterRoll = TimeSpan.Zero;
@@ -643,19 +645,36 @@ public abstract class SharedNeedsSystem : EntitySystem
                 continue;
             var sleeping = IsAsleeping(uid);
 
-            foreach (var need in component.Needs.Values)
+            foreach (var (needType, need) in component.Needs)
             {
                 // for (var i = 0; i < _decayIterations; i++)
                 // {
                 //     need.Decay(deltaSeconds, sleeping);
                 //     need.TickDebuffSlows(curTime);
                 // }
-                need.Decay(deltaSeconds, sleeping);
+                var decaySeconds = deltaSeconds;
+                // Kritters: an SSD Novakin Core enters dormancy instead of consuming Fuel at an active player's rate.
+                if (needType == NeedType.Fuel
+                    && TryComp<NovakinPhysiologyComponent>(uid, out var physiology)
+                    && IsPlayerSsdNovakin(uid))
+                {
+                    decaySeconds *= SharedNovakinPhysiologySystem.IsInResourceStasis(EntityManager, uid)
+                        ? 0f
+                        : physiology.SsdFuelDecayMultiplier;
+                }
+
+                need.Decay(decaySeconds, sleeping);
             }
             UpdateEverything(uid, component);
         }
         // RerollDecayIterations();
     }
+
+    private bool IsPlayerSsdNovakin(EntityUid uid)
+        => HasComp<NovakinPhysiologyComponent>(uid)
+           && _mobState.IsAlive(uid)
+           && TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD
+           && TryComp<MindContainerComponent>(uid, out var mind) && mind.HasMind;
 
     private void UpdateEverything(EntityUid uid, NeedsComponent component)
     {

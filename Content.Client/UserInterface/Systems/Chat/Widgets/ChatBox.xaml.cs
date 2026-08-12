@@ -26,8 +26,8 @@ public partial class ChatBox : UIWidget
 {
     private readonly ChatUIController _controller;
     private readonly IEntityManager _entManager;
-    [Dependency] private readonly IConfigurationManager _cfg = default!; // EE - Chat stacking
-    [Dependency] private readonly ILocalizationManager _loc = default!; // EE - Chat stacking
+    [Dependency] private IConfigurationManager _cfg = default!; // EE - Chat stacking
+    [Dependency] private ILocalizationManager _loc = default!; // EE - Chat stacking
 
     public bool Main { get; set; }
 
@@ -196,12 +196,7 @@ public partial class ChatBox : UIWidget
 
     private void OnChannelFilter(ChatChannel channel, bool active)
     {
-        Contents.Clear();
-
-        foreach (var message in _controller.History)
-        {
-            OnMessageAdded(message.Item2);
-        }
+        Repopulate();
 
         if (active)
         {
@@ -537,7 +532,7 @@ public partial class ChatBox : UIWidget
     }
 
     // EE - Chat stacking
-    private sealed class ChatStackData
+    private sealed partial class ChatStackData
     {
         public NetEntity Entity; // Frontier: speaker
         public string Message; // Frontier: base message
