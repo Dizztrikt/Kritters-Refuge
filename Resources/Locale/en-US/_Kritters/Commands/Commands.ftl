@@ -15,3 +15,4 @@ command-description-npc-joinFaction = add an entity to a faction
 command-description-npc-leaveFaction = remove an entity from a faction
 command-description-npc-leaveAllFactions = remove an entity from all factions
 command-description-npc-isFactionMember = test if the entity is part of a faction
+command-description-npc-factions = print faction information about an entity
