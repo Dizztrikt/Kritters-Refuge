@@ -27,8 +27,8 @@ public sealed partial class MailCommand : ToolshedCommand
     private const string MailContainer = "contents";
 
 
-    [CommandImplementation("containerTo")]
-    public void MailContainerTo(
+    [CommandImplementation("contentsTo")]
+    public void MailContentsTo(
         [CommandInvocationContext] IInvocationContext shell,
         [PipedArgument] EntityUid containerUid,
         [CommandArgument] EntityUid recipientUid,

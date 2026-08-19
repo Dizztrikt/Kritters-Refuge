@@ -1,7 +1,7 @@
 command-description-onfloor = Test or filter if an object is directly on the floor of a grid
 command-description-mail-now = Generate a new wave of mail and send out queued mail
 command-description-mail-to = Mail items to an entity using the mail system
-command-description-mail-containerTo = Mail items within a container to an entity using the mail system
+command-description-mail-contentsTo = Mail items within a container to an entity using the mail system
 
 command-description-npc-setBehavior = set the (HTN) behavior of an entity
 
