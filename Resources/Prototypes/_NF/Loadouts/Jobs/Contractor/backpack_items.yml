@@ -31,9 +31,9 @@
 #T1
 - type: loadout
   id: ContractorCigarCase
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -41,9 +41,9 @@
 
 - type: loadout
   id: ContractorNFAshtray
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 200
   storage:
     back:
@@ -51,9 +51,9 @@
 
 - type: loadout
   id: ContractorTapeRecorder
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 1000
   storage:
     back:
@@ -62,9 +62,9 @@
 #T2
 - type: loadout
   id: ContractorSmokingPipeFilledTobacco
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -72,9 +72,9 @@
 
 - type: loadout
   id: ContractorTobaccoPouchBrownFilled
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -82,9 +82,9 @@
 
 - type: loadout
   id: ContractorTobaccoPouchBlueFilled
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -92,9 +92,9 @@
 
 - type: loadout
   id: ContractorTobaccoPouchRedFilled
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 800
   storage:
     back:
@@ -102,9 +102,9 @@
 
 - type: loadout
   id: ContractorTobaccoPouchPurpleFilled
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -112,9 +112,9 @@
 
 - type: loadout
   id: ContractorVape
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -123,9 +123,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorCigarGoldCase
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2000
   storage:
     back:
@@ -143,9 +143,9 @@
 #T1
 - type: loadout
   id: ContractorLighter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 200
   storage:
     back:
@@ -154,9 +154,9 @@
 #T2
 - type: loadout
   id: ContractorFlippoLighter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 500
   storage:
     back:
@@ -165,9 +165,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorFlippoEngravedLighter
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 5000
   storage:
     back:
@@ -185,9 +185,9 @@
 #T1
 - type: loadout
   id: ContractorDrinkShinyFlask
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -196,9 +196,9 @@
 #T2
 - type: loadout
   id: ContractorDrinkFlask
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 1000
   storage:
     back:
@@ -207,9 +207,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorDrinkVacuumFlask
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2000
   storage:
     back:
@@ -241,9 +241,9 @@
 #T1
 - type: loadout
   id: ContractorBasketball
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 300
   storage:
     back:
@@ -251,9 +251,9 @@
 
 - type: loadout
   id: ContractorFootball
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 300
   storage:
     back:
@@ -261,9 +261,9 @@
 
 - type: loadout
   id: ContractorBeachBall
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 300
   storage:
     back:
@@ -272,9 +272,9 @@
 #T2
 - type: loadout
   id: ContractorCrayonBox
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 600
   storage:
     back:
@@ -282,9 +282,9 @@
 
 - type: loadout
   id: ContractorSoapNT
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 800
   storage:
     back:
@@ -292,9 +292,9 @@
 
 - type: loadout
   id: ContractorCardBoxBlack
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 2000
   storage:
     back:
@@ -303,9 +303,9 @@
 #T3 for lols
 - type: loadout
   id: ContractorWristwatchGold
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2500
   storage:
     back:
@@ -313,9 +313,9 @@
 
 - type: loadout
   id: ContractorSilverRing
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2750
   storage:
     back:
@@ -323,9 +323,9 @@
 
 - type: loadout
   id: ContractorGoldRing
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 3000
   storage:
     back:
@@ -334,9 +334,9 @@
 # T2
 - type: loadout
   id: ContractorMonkeyCubeWrapped
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 500
   storage:
     back:
@@ -344,9 +344,9 @@
 
 - type: loadout
   id: ContractorKoboldCubeWrapped
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 500
   storage:
     back:
@@ -356,9 +356,9 @@
 #T1
 - type: loadout
   id: ContractorPlushieSharkGrey
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -366,9 +366,9 @@
 
 - type: loadout
   id: ContractorPlushieSharkBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -376,9 +376,9 @@
 
 - type: loadout
   id: ContractorPlushieSharkPink
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -386,9 +386,9 @@
 
 - type: loadout
   id: ContractorHarmonicaInstrument
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -396,9 +396,9 @@
 
 - type: loadout
   id: ContractorSaxophoneInstrument
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -406,9 +406,9 @@
 
 - type: loadout
   id: ContractorAcousticGuitarInstrument
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   storage:
     back:
@@ -417,9 +417,9 @@
 #T2
 - type: loadout
   id: ContractorPonderingOrb
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   price: 5000
   storage:
     back:
@@ -428,9 +428,9 @@
 #T3
 - type: loadout
   id: ContractorPlushieRGBee
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 10000
   storage:
     back:
@@ -438,9 +438,9 @@
 
 - type: loadout
   id: ContractorMysterySpaceBladeBox
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2400
   storage:
     back:
@@ -448,9 +448,9 @@
 
 - type: loadout
   id: ContractorHoloGraffitiProjector
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 10000
   storage:
     back:
@@ -458,9 +458,9 @@
 
 - type: loadout
   id: ContractorCrayonMagic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 30000
   storage:
     back:
@@ -468,9 +468,9 @@
 
 - type: loadout
   id: ContractorSprayPainterMagic
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 30000
   storage:
     back:

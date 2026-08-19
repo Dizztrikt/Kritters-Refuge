@@ -8,9 +8,9 @@
 
 - type: loadout
   id: JanitorNFPlunger
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -20,9 +20,9 @@
 
 - type: loadout
   id: JanitorNFClothingHeadHatCone
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
@@ -32,9 +32,9 @@
 
 - type: loadout
   id: JanitorNFGoldenPlunger
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable

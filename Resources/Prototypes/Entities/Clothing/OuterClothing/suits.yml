@@ -125,6 +125,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      under-clothing: !type:ContainerSlot {} # Kritters
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
 
@@ -240,6 +241,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      under-clothing: !type:ContainerSlot {} # Kritters
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
 
@@ -260,6 +262,8 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      under-clothing: !type:ContainerSlot {} # Kritters
+
   - type: Construction
     graph: ClothingOuterSuitIan
     node: suit
@@ -284,6 +288,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      under-clothing: !type:ContainerSlot {} # Kritters
   - type: CatWearable # Frontier
 
 - type: entity

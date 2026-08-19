@@ -20,36 +20,36 @@
 #T1
 - type: loadout
   id: FloofClothingCollarEpi # ContractorNeck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     neck: ClothingNeckCollarEpi
 
 - type: loadout
   id: FloofClothingCollarEngi # ContractorNeck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     neck: ClothingNeckCollarEngi
 
 - type: loadout
   id: FloofClothingCollarLogi # ContractorNeck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     neck: ClothingNeckCollarLogi
 
 - type: loadout
   id: FloofClothingShockCollar # ContractorNeck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT1
   price: 500
   equipment:
     neck: ClothingNeckShockCollar
@@ -59,9 +59,9 @@
 #T3
 - type: loadout
   id: FloofClothingCollarCmd # ContractorNeck
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT3
+  # effects: # Kritters
+  # - !type:GroupLoadoutEffect
+  #   proto: ContractorT3
   price: 2500
   equipment:
     neck: ClothingNeckCollarCmd

@@ -42,6 +42,7 @@
     AirlockGlassShuttleFlatpack: 4294967295 # Infinite
     # Science
     MachineArtifactAnalyzerFlatpack: 4294967295 # Infinite
+    ComputerAnalysisConsoleFlatpack: 4294967295 # Infinite # Kritters: add Analysis Console to vendor
     ResearchAndDevelopmentServerFlatpack: 4294967295 # Infinite
     BlueprintLithographFlatpack: 4294967295 # Infinite
     TeslaGroundingRodFlatpack: 4294967295 # Infinite

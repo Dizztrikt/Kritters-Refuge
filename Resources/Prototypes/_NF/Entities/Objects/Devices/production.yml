@@ -398,11 +398,15 @@
         shader: unshaded
     - type: MachineBoard
       prototype: StaffRechargerWizard
-      # requirements:
-        # ShardCrystalBlue: 2
-        # CandleBlue: 2
-      # stackRequirements:
-        # CableHV: 10
+      stackRequirements:
+        CableHV: 10
+      tagRequirements:
+        CrystalBlue:
+          amount: 2
+          defaultPrototype: ShardCrystalBlue
+        CandleBlue:
+          amount: 2
+          defaultPrototype: CandleBlue
     - type: PhysicalComposition
       materialComposition:
         Paper: 200
@@ -450,11 +454,15 @@
         shader: unshaded
     - type: MachineBoard
       prototype: StaffRechargerCult
-      # requirements:
-        # ShardCrystalRed: 2
-        # CandleRed: 2
-      # stackRequirements:
-        # CableHV: 10
+      stackRequirements:
+        CableHV: 10
+      tagRequirements:
+        CrystalRed:
+          amount: 2
+          defaultPrototype: ShardCrystalRed
+        CandleRed:
+          amount: 2
+          defaultPrototype: CandleRed
 
 - type: entity
   id: ScrollCultForge
@@ -489,11 +497,15 @@
         shader: unshaded
     - type: MachineBoard
       prototype: BloodCultProp02
-      # requirements:
-        # ShardCrystalRed: 2
-        # CandleRed: 2
-      # stackRequirements:
-        # CableHV: 10
+      stackRequirements:
+        CableHV: 10
+      tagRequirements:
+        CrystalRed:
+          amount: 2
+          defaultPrototype: ShardCrystalRed
+        CandleRed:
+          amount: 2
+          defaultPrototype: CandleRed
 
 - type: entity
   id: PortableSMESMachineCircuitboard
@@ -524,10 +536,6 @@
     requirements:
       MatterBin: 1
       Manipulator: 1
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
 
 - type: entity
   id: ElectricRangeMachineCircuitboard

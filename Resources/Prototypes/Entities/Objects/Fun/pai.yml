@@ -67,6 +67,7 @@
       SiliconMemory: 30
   - type: RadarConsole
     maxRange: 256
+    maxIffRange: 512
     followEntity: true
   - type: TypingIndicator
     proto: robot
