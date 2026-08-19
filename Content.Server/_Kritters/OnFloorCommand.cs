@@ -17,11 +17,6 @@ public sealed partial class OnFloorCommand : ToolshedCommand
 
     private SharedTransformSystem? _xform;
 
-    private const string BlankMailPrototype = "MailAdminFun";
-    private const string BlankLargeMailPrototype = "MailLargeAdminFun"; // Frontier: large mail
-    private const string Container = "storagebase";
-    private const string MailContainer = "contents";
-
     [CommandImplementation]
     public IEnumerable<EntityUid> OnFloorIter(
         [CommandInvocationContext] IInvocationContext shell,
@@ -57,15 +52,20 @@ public sealed partial class OnFloorCommand : ToolshedCommand
         [CommandArgument] bool includeSubfloor = false
     )
     {
-        if (Deleted(input) || !_entityManager.TryGetComponent<TransformComponent>(input, out var transform))
+        if (Deleted(input))
             return inverted;
+
+        if (!_entityManager.TryGetComponent<TransformComponent>(input, out var transform))
+            return inverted;
+
+        if (transform.Anchored && _entityManager.HasComponent<SubFloorHideComponent>(input))
+            return includeSubfloor != inverted;
 
         if (transform.Anchored ? !includeAnchored : !includeUnanchored)
+        {
             return inverted;
-
-        if (_entityManager.HasComponent<SubFloorHideComponent>(input))
-            return inverted;
-
+        }
+        
         if (!_entityManager.HasComponent<MapGridComponent>(transform.ParentUid))
             return inverted;
 

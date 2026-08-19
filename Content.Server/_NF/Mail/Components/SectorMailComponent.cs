@@ -6,7 +6,7 @@ namespace Content.Server._NF.Mail.Components;
 /// <summary>
 /// Tracks all mail statistics for mail activity in the sector.
 /// </summary>
-[RegisterComponent, Access([typeof(MailSystem), typeof(MailNowCommand), typeof(MailCommand)])]
+[RegisterComponent, Access([typeof(MailSystem), typeof(MailCommand)])]
 public sealed partial class SectorMailComponent : Component // Frontier: Station->Sector
 {
     [DataField]

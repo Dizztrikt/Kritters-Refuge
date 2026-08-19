@@ -13,7 +13,7 @@ namespace Content.Server._DV.Mail;
 
 // Kritters: replaced with toolshead commands
 [ToolshedCommand, AdminCommand(AdminFlags.Fun)]
-public sealed class MailCommand : ToolshedCommand
+public sealed partial class MailCommand : ToolshedCommand
 {
     [Dependency] private IEntityManager _entityManager = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
@@ -42,7 +42,6 @@ public sealed class MailCommand : ToolshedCommand
         var mailSystem = _entitySystemManager.GetEntitySystem<MailSystem>();
         var containerSystem = _entitySystemManager.GetEntitySystem<SharedContainerSystem>();
         var sectorService = _entitySystemManager.GetEntitySystem<SectorServiceSystem>(); // Frontier
-
 
         // Frontier: sector-wide mail
         if (!_entityManager.TryGetComponent(sectorService.GetServiceEntity(), out SectorMailComponent? sectorMail))
@@ -123,9 +122,9 @@ public sealed class MailCommand : ToolshedCommand
         [CommandInvocationContext] IInvocationContext shell,
         [PipedArgument] IEnumerable<EntityUid> contentsUids,
         [CommandArgument] EntityUid recipientUid,
-        [CommandArgument] bool isFragile,
-        [CommandArgument] bool isPriority,
-        [CommandArgument] bool isLarge
+        [CommandArgument] bool isFragile = false,
+        [CommandArgument] bool isPriority = false,
+        [CommandArgument] bool isLarge = false
     )
     {
 
