@@ -107,3 +107,26 @@ Entries:
   id: 334
   time: '2026-08-03T05:09:55.0000000+00:00'
   url: https://github.com/Dizztrikt/Kritters-Refuge/pull/52
+- author: Kashieru1987
+  changes:
+    - type: Add
+      message: Added cannabis and tobacco seeds to the biogenerator!
+  id: 335
+  time: '2026-08-06T04:32:15.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/53
+- author: Kashieru1987
+  changes:
+    - type: Tweak
+      message: >-
+        all instruments can now be played from within pockets and bags (if
+        they're holdeable)!
+  id: 336
+  time: '2026-08-06T04:33:19.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/55
+- author: Kashieru1987
+  changes:
+    - type: Add
+      message: Added wayfarer's lightbot!
+  id: 337
+  time: '2026-08-10T23:59:58.0000000+00:00'
+  url: https://github.com/Dizztrikt/Kritters-Refuge/pull/54
