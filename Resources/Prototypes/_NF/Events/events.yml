@@ -4,10 +4,10 @@
     children:
 #    - id: NFBreakerFlip # this suffocates people :c
 #    - id: NFIonStorm # Coyote: Edit This currently results in unfixable ion laws and drone lawset
-    - id: NFPowerGridCheck
+    # - id: NFPowerGridCheck # Kritters: this keeps causing annoyences
     - id: NFRandomSentience
     - id: NFSolarFlare
-    - id: NFVentClog
+    # - id: NFVentClog # Kritters: this keeps causing annoyences
     - id: NFBluespaceCargoCrate
     - id: NFBluespaceMcCargoCrate
     - id: NFBluespaceSyndicateCrate

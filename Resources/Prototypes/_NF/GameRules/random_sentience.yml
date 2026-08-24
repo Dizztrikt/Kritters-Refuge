@@ -6,8 +6,9 @@
     weight: 6
     duration: 1
     reoccurrenceDelay: 240 # Once per four hours.
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
+    #Kritters, dont play audio, doesnt make sense
+    #startAudio:
+    #  path: /Audio/Announcements/attention.ogg
   - type: RandomSentienceRule
     minSentiences: 2
     maxSentiences: 5
