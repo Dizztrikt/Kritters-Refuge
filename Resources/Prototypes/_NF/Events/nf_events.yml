@@ -16,15 +16,17 @@
     startAnnouncement: bluespace-cargo-event-announcement
     startAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_normal_crate.ogg
+      volume: 0
     weight: 5
     duration: 35
-    reoccurrenceDelay: 120
+    minimumPlayers: 30 # Kritters 0<30 this keeps flooding people with junk
+    reoccurrenceDelay: 480 #Kritters 180<480 (now 8 hours)
   - type: BluespaceCargoRule
     spawnerPrototype: RandomCargoSpawner
     flashPrototype: EffectFlashBluespaceQuiet
     requireSafeAtmosphere: true
     minimumSpawns: 2
-    maximumSpawns: 5
+    maximumSpawns: 3
 
 - type: entity
   id: NFBluespaceMcCargoCrate
@@ -39,7 +41,8 @@
     weight: 5
     duration: 35
     maximumPlayers: 20
-    reoccurrenceDelay: 180
+    minimumPlayers: 5 # Kritters 0<5 this keeps flooding people with junk, food is kinda nice though
+    reoccurrenceDelay: 480 #Kritters 180<480 (now 8 hours)
   - type: BluespaceCargoRule
     spawnerPrototype: CrateFoodMcCargo
     flashPrototype: EffectFlashMcBluespace
@@ -56,11 +59,38 @@
     weight: 1
     duration: 35
     earliestStart: 90
-    minimumPlayers: 20
+    maximumPlayers: 20
+    minimumPlayers: 5 # Kritters 0<5 this keeps attacking people with junk
     reoccurrenceDelay: 480 # 8 hours
   - type: BluespaceCargoRule
     spawnerPrototype: CrateSyndicateSurplusBundle
     maximumSpawns: 1
+
+# Kritters: add a low population variant
+- type: entity
+  id: NFSmugglingFaxLowpop
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    weight: 4 # half as common as NFSmugglingFax
+    duration: 35
+    earliestStart: 50
+    minimumPlayers: 2
+    maximumPlayers: 20 # does not exceed the miniumum players of NFSmugglingFax
+    reoccurrenceDelay: 480 # 8 hours
+  - type: RandomFaxRule
+    minFaxes: 1
+    maxFaxes: 2
+    name: deaddrop-faxed-hint-name
+    prototypeId: PaperDeadDropFax
+    content: deaddrop-faxed-hint-content # Default contents, will be edited.
+    stampedBy:
+    - stampedName: deaddrop-faxed-hint-signature
+      stampedColor: "#850000"
+    stampState: paper_stamp-syndicate
+    preFaxActions:
+    - !type:GetRandomDeadDropAction
+
 
 - type: entity
   id: NFSmugglingFax
@@ -90,6 +120,7 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
+    #Kritters: what what? why 100?
     weight: 100 # Fairly common.
     minimumPlayers: 10
     duration: 35

@@ -1,0 +1,16 @@
+- type: entityTable
+  id: KrittersCalmEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children: []
+    # - id: KrittersBluespaceLocker #Kritters, will enable soon
+
+- type: entity
+  id: KrittersBluespaceLocker
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    weight: 2
+    reoccurrenceDelay: 480 #Kritters 5<480 (now 8 hours)
+    earliestStart: 1
+    duration: 1
+  - type: BluespaceLockerRule

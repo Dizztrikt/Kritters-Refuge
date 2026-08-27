@@ -179,6 +179,8 @@
         tableId: NFBasicCalmEventsTable
       - !type:NestedSelector
         tableId: NFCalmPestEventsTable
+      - !type:NestedSelector
+        tableId: KrittersCalmEventsTable
 
 - type: entity
   id: NFBasicStationEventScheduler
